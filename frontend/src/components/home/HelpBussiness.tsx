@@ -13,7 +13,7 @@ function HelpBussiness() {
         {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
     ]
   return (
-    <div className="flex flex-col mx-auto md:py-[60px] gap-5  bg-background-white-100 ">
+    <div className="flex flex-col mx-auto md:py-[60px] gap-5 md:px-[125px]  bg-background-white-100 ">
         <div className=' w-full flex flex-col gap-[30px]'>
             <span className='text-heading/[68.99px] font-normal md:py-[10px]'>Let’s see how we can help your business</span>
             <div className='grid grid-cols-3 gap-[30px]'>
@@ -23,7 +23,7 @@ function HelpBussiness() {
                             <img src="/icons/book.png" alt="" className='md:w-[29px] object-contain' />
                             <span className='text-[20px]/[23px] font-bold'>{item.title}</span>
                         </div>
-                        <div className='md:w-[263px] mx-auto text-justify'>
+                        <div className=' md:w-[310px]  mx-auto text-justify'>
                             <span className='text-body/[20px] text-justify text-gray-100 '>{item.subheading}</span>
                         </div>
                     </div>

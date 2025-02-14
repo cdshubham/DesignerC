@@ -85,7 +85,7 @@ function CampaignArea() {
           <span>Engaging Visual Creatives </span>
           <span>That Drive Results</span>
         </div>
-        <div className="flex justify-between items-center mx-auto gap-20">
+        <div className="flex items-center justify-around  md:pl-[125px] gap-20">
           {card.map((item) => (
             <div className="flex flex-col md:w-[308px] gap-5">
               <img src={item.logo} alt="" className="w-[40px] object-contain" />
