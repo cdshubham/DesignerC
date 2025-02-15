@@ -10,7 +10,7 @@ function Hiring() {
           For Candidates
         </span>
         <span className="w-[152px] h-[48px] flex items-center justify-center border-b-2 ">
-          For Candidates
+          For Enterprises
         </span>
       </div>
 

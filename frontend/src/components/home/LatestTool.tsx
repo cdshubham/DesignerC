@@ -1,6 +1,9 @@
 import React from 'react'
 
-function LatestTool() {
+interface props {
+    toolsimg:string[];
+}
+function LatestTool({toolsimg}:props) {
     const images=[
         {img:"/logos/Tool1.png"},
         {img:"/logos/Tool2.png"},

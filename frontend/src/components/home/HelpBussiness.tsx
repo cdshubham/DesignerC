@@ -1,7 +1,17 @@
 import React from 'react'
 import WhiteButton from '../ui/WhiteButton'
 
-function HelpBussiness() {
+
+
+interface props 
+{
+ heading:string;
+ cardscontent:{
+    heading:string;
+    content:string;
+ }[];
+}
+function HelpBussiness({heading,cardscontent}:props) {
     const options =[
         {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
         {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},

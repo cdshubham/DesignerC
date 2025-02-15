@@ -41,31 +41,42 @@ function DesignWillBenifitYou() {
                 Creatives that Drives Revenue 💵
               </span>
               <span className="text-body/[20.7px] text-justify">
-              Strategically crafted concepts that captivates engagement and
-              boost conversions to maximize Profitability.
-              
+                Strategically crafted concepts that captivates engagement and
+                boost conversions to maximize Profitability.
               </span>
               <button className="flex md:w-[140px] text-background-blue-100 font-normal text-cta  items-center gap-1">
                 <span> Know more</span>
                 <MdArrowOutward />
               </button>
             </div>
-            <img src="/images/creative.png" alt="" className=" md:w-[327px] absolute object-contain bottom-0 right-2" />
+            <div className="flex w-full justify-center">
+              <img
+                src="/images/creative.png"
+                alt=""
+                className=" md:w-[327px] absolute object-contain bottom-0 right-1/2 translate-x-1/2"
+              />
+            </div>
           </div>
           <div className="md:px-[60px] md:py-[30px] col-span-2  bg-background-white-100 text-black  rounded-t-cards-raduis rounded-l-cards-raduis  relative overflow-hidden">
             <div className="flex flex-col gap-[20px] md:w-[599px]">
               <span className="text-[32px]/[36px] font-bold ">
-              Top-notch quality, consistently delivered with excellence 😍
+                Top-notch quality, consistently delivered with excellence 😍
               </span>
               <span className="text-body/[20.7px] text-justify">
-              Scale your content with precisely crafted visuals that ensure consistency and lasting impact, seamlessly aligning with your brand to create engaging, resonant results.
+                Scale your content with precisely crafted visuals that ensure
+                consistency and lasting impact, seamlessly aligning with your
+                brand to create engaging, resonant results.
               </span>
               <button className="flex md:w-[140px] text-background-blue-100 font-normal text-cta  items-center gap-1">
                 <span> Know more</span>
                 <MdArrowOutward />
               </button>
             </div>
-            <img src="/images/excellence.png" alt="" className=" md:w-[707px] absolute object-contain -bottom-12 -right-4" />
+            <img
+              src="/images/excellence.png"
+              alt=""
+              className=" md:w-[707px] absolute object-contain -bottom-12 -right-4"
+            />
           </div>
         </div>
       </div>
