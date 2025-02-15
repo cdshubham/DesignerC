@@ -75,17 +75,17 @@ const BenefitProcess = () => {
         Designera will Benefit You.
       </h1>
 
-      <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-[60px]">
         {processes.map((process, index) => (
-          <div key={index} className={`flex p-6  ${process.bgColor} w-full p-[60px] px-[80px] gap-[80px] h-[620px] max-h-[620px] `}>
+          <div key={index} className={`flex p-6  ${process.bgColor} w-full p-[30px] px-[80px] gap-[80px] h-[620px] max-h-[620px] rounded-[16px] `}>
             {" "}
             <div className="flex flex-col gap-[30px] py-[60px]">
               <div className="flex gap-2 items-center">
-                <span className={`w-[32px] h-[32px] ${process.bulletColor} rounded-[6px] `}></span><span className="text-footer/[18px] font-semibold ">{process.process}</span>
+                <span className={`w-[32px] h-[32px] ${process.bulletColor} rounded-[2px] `}></span><span className="text-footer/[18px] font-semibold ">{process.process}</span>
               </div>
 
               <h3 className="text-mediumheading/[52px] font-semibold">{process.title}</h3>
-              <ul className="space-y-[30px]">{process.descriptions.map((item)=>
+              <ul className="space-y-[30px]" >{process.descriptions.map((item)=>
             (
                 <li><span className="font-semibold text-body">{item.descriptiontitile}</span><span className="text-body">{item.description}</span></li>
             ))}</ul>

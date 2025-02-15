@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import facebook from '/public/images/facebook.png';
+import insta from '/public/images/insta.png';
+import linkedin from '/public/images/linkedin.png';
 
 import india from '/public/images/india.png';
 
@@ -110,11 +113,15 @@ const Footer = () => {
           <ul className="space-y-[8px]">
             <li>About Us</li>
             <li>Careers</li>
-            <li>Join Team</li>
+            <li className="py-[8px]">
+              <span className=" bg-background-blue-100 rounded-[2px] text-white p-[8px]  ">
+                Join Team
+              </span>
+            </li>
           </ul>
         </div>
         <div className="flex flex-col gap-[20px]">
-          <h3 className="font-bold mb-2 text-yellow-200">ADDRESS</h3>
+          <h3 className="font-bold mb-2 text-yellow-200 ">ADDRESS</h3>
           <ul className="space-y-[8px]">
             <li>Address</li>
           </ul>
@@ -129,22 +136,31 @@ const Footer = () => {
             <li>
               or Write us at{" "}
               <p>
-                <Link href="desginera@gmail.com">designera@gmail.com</Link>
+                <Link
+                  href="desginera@gmail.com"
+                  className="text-background-blue-100 "
+                >
+                  designera@gmail.com
+                </Link>
               </p>
             </li>
           </ul>
         </div>
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">SOCIAL</h3>
-          <ul className="space-y-[8px]">
-            <li>Blogs</li>
-            <li>Our Work</li>
-            <li>Community</li>
-            <li>E-books</li>
-          </ul>
+          <div className="flex flex-col gap-[8px]">
+            <div className="flex gap-[10px]">
+              <Image src={facebook} alt="" />
+              <Image src={insta} alt="" />
+            </div>
+            <div className="flex gap-[10px]">
+              <Image src={linkedin} alt="" />
+              <Image src={facebook} alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex justify-between text-footersmall/[15.6px] text-light-violet-text">
+      <div className="flex justify-between text-footersmall/[15.6px] text-light-violet-text items-center">
         <div className="flex gap-[30px]">
           <span>© 2024, Designera Inc. All Rights Reserved</span>
           <span>Terms of service</span>
@@ -154,7 +170,7 @@ const Footer = () => {
         <div className="flex  items-center">
           <span>A Proud&nbsp;</span>
           <Image src={india} alt="India flag" width={30} height={30} />
-          <span>&nbsp;Company</span>
+          <span>&nbsp;Design Agency</span>
         </div>
       </div>
     </div>

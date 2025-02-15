@@ -34,7 +34,7 @@ const ProcessSteps = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center md:py-[60px] md:px-[129px]">
+    <div className="flex flex-col items-center gap-[30px] md:py-[60px] md:px-[129px]">
       <h1 className="text-heading/[69px]">
         Intuitive Customer Interfaces Process to Meet Your Needs
       </h1>
@@ -51,7 +51,7 @@ const ProcessSteps = () => {
               <div className={`flex flex-col p-6 rounded-lg  py-[36px] `}>
                 <div className="flex gap">
                   <span
-                    className={` h-[32px] w-[32px] aspect-square `}
+                    className={` h-[32px] w-[32px] aspect-square rounded-[2px] `}
                     style={{ backgroundColor: step.color }}
                   ></span>
                   <span className="text-subheading/[29px] font-semibold px-[16px] ">
@@ -68,12 +68,12 @@ const ProcessSteps = () => {
             </div>
 
             <div
-              className={`w-full md:min-w-[500px] md:max-w-[500px]   md:h-[476px]`}
+              className={`w-full md:min-w-[500px] md:max-w-[500px] md:h-[476px]`}
             >
               <Image
                 src={step.image}
                 alt={step.title}
-                className="object-cover h-full w-full rounded-lg"
+                className="object-cover h-full w-full rounded-[4px]"
               />
             </div>
           </div>

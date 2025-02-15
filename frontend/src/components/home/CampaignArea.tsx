@@ -15,10 +15,21 @@ interface carditem {
 interface props {
  heading:string;
  coloredHeading:string;
+ image?:string;
  color:string;
+ cardheading1:string;
+ cardheading2:string;
  cards:carditem[];
  keypoints?:string[];
 }
+
+
+const colorClasses:any = {
+  "yellow-100": "text-yellow-100",
+  "highlight-purple": "text-highlight-purple",
+  "highlight-green": "text-highlight-green",
+  // Add more colors as needed
+};
 
 function CampaignArea({
   heading = "Driving Sales and Capturing Attention Through",
@@ -29,6 +40,9 @@ function CampaignArea({
     "Communicate your brand’s story.",
     "Impactful Marketing Collateral.",
   ],
+  image="/images/home.png",
+  cardheading1="Engaging Visual Creatives",
+  cardheading2="That Drive Results",
   cards=[
     {
       logo: "/icons/schedule.png",
@@ -70,12 +84,14 @@ function CampaignArea({
   ];
   return (
     <div className="flex flex-col w-full  gap-5  mx-auto  bg-background-blue-300 text-white  justify-between ">
-      <div className="  mx-auto flex px-[178px] gap-[80px]  ">
-        <div className=" md:w-[624px] flex flex-col gap-5 md:pt-16  ">
+      <div className="  mx-auto flex px-[178px] gap-[30px] items-center ">
+        <div className=" md:w-[624px] flex flex-col gap-5 md:pt-16 pr-28  ">
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
 
-            <span className={`text-${color}`}>{coloredHeading}</span>
+            <span  className={colorClasses[color] || "text-yellow-100"}>
+              {coloredHeading}
+            </span>
           </div>
           <div className="text-body/[20.7px]  ">
             <ul className="list-disc px-8 font-normal flex flex-col gap-1">
@@ -89,8 +105,8 @@ function CampaignArea({
             className="text-cta font-bold md:w-[153px] md:h-[37px] hover:bg-yellow-100 hover:text-black"
           />
         </div>
-        <div>
-          <img src="/images/home.png" alt="" />
+        <div className="max-h-[476px] max-w-[443px] min-h-max min-w-max">
+          <img src={image} alt="" />
         </div>
       </div>
 
@@ -110,10 +126,10 @@ function CampaignArea({
 
       <div className="flex flex-col md:py-[60px] md:gap-[56px]  ">
         <div className="text-heading/[68.99px] text-center flex flex-col ">
-          <span>Engaging Visual Creatives </span>
-          <span>That Drive Results</span>
+          <span>{cardheading1}</span>
+          <span>{cardheading2}</span>
         </div>
-        <div className="flex items-center justify-around  md:pl-[125px] gap-20">
+        <div className="flex items-center justify-around  md:p-[125px] gap-20">
           {cards.map((item) => (
             <div className="flex flex-col md:w-[308px] gap-5">
               <img src={item.logo} alt="" className="w-[40px] object-contain" />

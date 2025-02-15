@@ -44,7 +44,7 @@ function MileStones() {
             <img
               src={item.img}
               alt=""
-              className="w-[369px] h-[305px] object-contain"
+              className="max-w-[369px] max-h-[305px] object-cover"
             />
             <h3 className='text-center text-[24px] font-semibold '>{item.category}</h3>
           </div>

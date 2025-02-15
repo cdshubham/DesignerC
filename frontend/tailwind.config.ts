@@ -24,6 +24,8 @@ export default {
         "line-blue": "#D1CCFF",
         "light-violet": "#998FD3",
         "light-violet-text": "#8A7ECD",
+        "highlight-purple": "#BF80FF",
+        "highlight-green": "#ADFFD8",
       },
       fontFamily: {
         helvetica: ["Helvetica", "sans-serif"],
@@ -35,7 +37,7 @@ export default {
         cta: "16px",
         footer: "14px",
         footersmall: "12px",
-        mediumheading:"48px"
+        mediumheading: "48px",
       },
       borderRadius: {
         "cards-raduis": "8px",

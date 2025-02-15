@@ -20,16 +20,15 @@ import BenefitProcess from './Benefit2'
 
 function Parent() {
   return (
-    <div className=" w-full">
-      <Add />
-      <Navbar />
+    <div className=" w-full ">
+
       <CampaignArea />
       <HelpBussiness />
       <LatestTool />
-      <ProcessSteps />
+   
 
       <DesignWillBenifitYou />
-      <BenefitProcess />
+    
       <Portfolio />
       <CaseStudy />
       <Clients />
