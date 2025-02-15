@@ -124,12 +124,12 @@ function CampaignArea({
         </Marquee>
       </div>
 
-      <div className="flex flex-col md:py-[60px] md:gap-[56px]  ">
+      <div className="flex flex-col md:py-[60px] md:gap-[60px]  ">
         <div className="text-heading/[68.99px] text-center flex flex-col ">
           <span>{cardheading1}</span>
           <span>{cardheading2}</span>
         </div>
-        <div className="flex items-center justify-around  md:p-[125px] gap-20">
+        <div className="flex items-center justify-around  md:px-[125px] gap-20">
           {cards.map((item) => (
             <div className="flex flex-col md:w-[308px] gap-5">
               <img src={item.logo} alt="" className="w-[40px] object-contain" />
