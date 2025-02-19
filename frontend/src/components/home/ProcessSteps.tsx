@@ -1,43 +1,56 @@
 // components/ProcessSteps.js
-import yellow from '/public/images/yellow.png';
-import purple from '/public/images/purple.png';
-import green from '/public/images/green.png';
+
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
-const ProcessSteps = () => {
-  const steps = [
-    {
-      title: "Dive Into User Insights",
-      description:
-        "We unravel user behaviors, craft detailed personas, and map out their journeys to uncover unique needs.",
-      image: yellow, // Replace with your image path
-      step: "Step 1",
-      color: "#FFCA33",
-    },
-    {
-      title: "Craft Stunning Interfaces",
-      description:
-        "Bringing ideas to life, we design sleek, intuitive prototypes and visually striking user experiences.",
-      image: green, // Replace with your image path
-      step: "Step 2",
-      color: "#4DE593",
-    },
-    {
-      title: "Test and Execute",
-      description:
-        "With rigorous usability testing and fine-tuning, we polish every detail to deliver flawless experiences.",
-      image: purple, // Replace with your image path
-      step: "Step 3",
-      color: "#B78EF0",
-    },
-  ];
+interface Item {
+  title: string;
+  description: string;
+  image: string;
+  step: string;
+  color: string;
+}
 
+interface ProcessStepsProps {
+  steps?: Item[];
+  mainheading:string; // Optional prop
+}
+
+const defaultSteps: Item[] = [
+  {
+    title: "Dive Into User Insights",
+    description:
+      "We unravel user behaviors, craft detailed personas, and map out their journeys to uncover unique needs.",
+    image: "/images/yellow.png", // Replace with your image path
+    step: "Step 1",
+    color: "#FFCA33",
+  },
+  {
+    title: "Craft Stunning Interfaces",
+    description:
+      "Bringing ideas to life, we design sleek, intuitive prototypes and visually striking user experiences.",
+    image: "/images/green.png", // Replace with your image path
+    step: "Step 2",
+    color: "#4DE593",
+  },
+  {
+    title: "Test and Execute",
+    description:
+      "With rigorous usability testing and fine-tuning, we polish every detail to deliver flawless experiences.",
+    image: "/images/purple.png", // Replace with your image path
+    step: "Step 3",
+    color: "#B78EF0",
+  },
+];
+
+const ProcessSteps: React.FC<ProcessStepsProps> = ({
+  steps = defaultSteps,mainheading="Hire Writers from Designera or  get Pre-Vetted Top Expert Writers for your Project"
+}) => {
   return (
     <div className="flex flex-col items-center gap-[30px] md:py-[60px] md:px-[129px]">
-      <h1 className="text-heading/[69px]">
-        Intuitive Customer Interfaces Process to Meet Your Needs
-      </h1>
+      <div className="text-heading/[69px] w-full flex justify-start">
+        <span className="w-[80%] ">{mainheading}</span>
+      </div>
 
       <div className="flex flex-col gap-[30px]">
         {steps.map((step, index) => (
@@ -51,7 +64,7 @@ const ProcessSteps = () => {
               <div className={`flex flex-col p-6 rounded-lg  py-[36px] `}>
                 <div className="flex gap">
                   <span
-                    className={` h-[32px] w-[32px] aspect-square rounded-[2px] `}
+                    className={`h-[32px] w-[32px] aspect-square rounded-[2px]`}
                     style={{ backgroundColor: step.color }}
                   ></span>
                   <span className="text-subheading/[29px] font-semibold px-[16px] ">
@@ -62,7 +75,9 @@ const ProcessSteps = () => {
                   <h3 className="text-mediumheading/[52px] mt-2">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-body text-gray-100">{step.description}</p>
+                  <p className="mt-2 text-body text-gray-100">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -74,6 +89,8 @@ const ProcessSteps = () => {
                 src={step.image}
                 alt={step.title}
                 className="object-cover h-full w-full rounded-[4px]"
+                width={500}
+                height={476}
               />
             </div>
           </div>

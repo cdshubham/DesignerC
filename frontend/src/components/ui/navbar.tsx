@@ -5,7 +5,7 @@ function Navbar() {
   const navnames = ["Plateform", "Solutions", "Resources", "Talent Network"];
   
   return (
-    <div className="flex w-full  mx-auto  bg-background-blue-300 text-white items-center justify-between md:px-[130px] md:py-[10px] border-b border-background-white-100/50">
+    <div className="flex w-full  mx-auto  bg-background-blue-300 text-white items-center justify-between md:px-[130px] md:py-[10px] border-b border-background-white-100/50 sticky">
       <div className="flex gap-4 items-center font-normal ">
         <img
           src="/logos/designeralogo.png"

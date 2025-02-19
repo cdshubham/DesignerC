@@ -9,7 +9,7 @@ interface props {
 }
 const Solutioncard = ({title,content,className,color1,color2}:props) => {
   return (
-    <div className={`h-[334px] w-[232px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] ${className}`}>
+    <div className={`min-h-[334px] min-w-[232px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] ${className}`}>
       <div className="flex  justify-between items-center">
         <span className="text-xl">{title}</span>
         <Image

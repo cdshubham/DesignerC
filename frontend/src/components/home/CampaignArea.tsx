@@ -1,7 +1,7 @@
 import React from "react";
 import BlueButton from "../ui/BlueButton";
 import Marquee from "react-fast-marquee";
-
+import Image from "next/image";
 
 
 interface carditem {
@@ -24,10 +24,12 @@ interface props {
 }
 
 
-const colorClasses:any = {
+const colorClasses: any = {
   "yellow-100": "text-yellow-100",
   "highlight-purple": "text-highlight-purple",
   "highlight-green": "text-highlight-green",
+  "highlight-greenblue": "text-[#25C3E5]",
+  "highlight-radiumgreen": "text-[#B2FE11]",
   // Add more colors as needed
 };
 
@@ -84,8 +86,8 @@ function CampaignArea({
   ];
   return (
     <div className="flex flex-col w-full  gap-5  mx-auto  bg-background-blue-300 text-white  justify-between ">
-      <div className="  mx-auto flex px-[178px] gap-[30px] items-center ">
-        <div className=" md:w-[624px] flex flex-col gap-5 md:pt-16 pr-28  ">
+      <div className="  mx-auto flex px-[178px]  items-center ">
+        <div className=" md:w-[580px] flex flex-col gap-5 md:pt-16 pr-28  ">
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
 
@@ -105,8 +107,8 @@ function CampaignArea({
             className="text-cta font-bold md:w-[153px] md:h-[37px] hover:bg-yellow-100 hover:text-black"
           />
         </div>
-        <div className="max-h-[476px] max-w-[443px] min-h-max min-w-max">
-          <img src={image} alt="" />
+        <div className="max-h-[61px] max-w-[574px] min-h-max min-w-max">
+          <Image src={image} alt="" height={621} width={574} className="object-cover" />
         </div>
       </div>
 

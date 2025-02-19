@@ -12,6 +12,7 @@ import MileStones from "@/components/home/MileStones";
 import Portfolio from "@/components/home/Portfolio";
 import ProcessSteps from "@/components/home/ProcessSteps";
 import Service from "@/components/home/Service";
+import With3images from "@/components/home/With3images";
 
 
 const page = () => {
@@ -61,6 +62,7 @@ const page = () => {
     <HelpBussiness />
     <LatestTool />
     <ProcessSteps />
+    <With3images />
 {/* 
     <DesignWillBenifitYou /> */}
     {/* <BenefitProcess /> */}

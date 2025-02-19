@@ -25,8 +25,8 @@ const page = () => {
           "Customer-Centric Designs Powered by Data.",
         ],
         image: "/images/uxuihome.png",
-        cardheading1: "User-Centric UI/UX That",
-        cardheading2: "Creates Lasting Impact",
+        cardheading1: "From Vision to Reality with Thoughtful",
+        cardheading2: "Product Design",
         cards: [
           {
             logo: "/icons/marketready.png",
@@ -54,16 +54,18 @@ const page = () => {
           },
         ],
       };
+
    return (<div className=" w-full">
     <CampaignArea {...data} />
     <HelpBussiness />
     <LatestTool />
+
     {/* <ProcessSteps /> */}
 
-    <DesignWillBenifitYou />
-    {/* <BenefitProcess /> */}
+    {/* <DesignWillBenifitYou /> */}
+    <BenefitProcess />
     <Portfolio />
-    <CaseStudy />
+    {/* <CaseStudy /> */}
     <Clients />
     {/* <Hiring /> */}
     <MileStones />

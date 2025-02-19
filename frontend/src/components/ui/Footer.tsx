@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import facebook from '/public/images/facebook.png';
-import insta from '/public/images/insta.png';
-import linkedin from '/public/images/linkedin.png';
-
-import india from '/public/images/india.png';
+import facebook from "/public/images/facebook.png";
+import insta from "/public/images/insta.png";
+import linkedin from "/public/images/linkedin.png";
+import india from "/public/images/india.png";
 
 const Footer = () => {
   const platform = {
@@ -20,21 +19,18 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col md:py-[60px] md:px-[129px] gap-[60px] text-background-blue-300 text-footer/[16px] font-helvetica">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6  border-b-[1px] border-line-blue">
+    <div className="flex flex-col md:py-[60px] md:px-[129px] gap-[60px] text-background-blue-300 text-footer/[16px] font-helvetica ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 border-b-[1px] border-line-blue">
+        {/* Platform Section */}
         <div className="flex flex-col gap-[46px]">
           <div className="flex flex-col gap-[20px]">
             <h3 className="font-bold mb-2 text-yellow-200">PLATFORM</h3>
             <ul className="space-y-[8px]">
-              <li>Text 1</li>
-              <li>Text 2</li>
-              <li>Text 3</li>
-              <li>Text 4</li>
-              <li>Text 5</li>
-              <li>Text 6</li>
+              {platform.navs.map((nav, index) => (
+                <li key={index}>{nav.text}</li>
+              ))}
             </ul>
           </div>
-
           <div className="flex flex-col gap-[20px]">
             <h3 className="font-bold mb-2 text-yellow-200">
               YET TO BE DECIDED
@@ -45,6 +41,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        {/* Brand Services Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">BRAND SERVICES</h3>
           <ul className="space-y-[8px]">
@@ -58,6 +55,7 @@ const Footer = () => {
             <li>Launch a Brand</li>
           </ul>
         </div>
+        {/* Martech Services Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">MARTECH SERVICES</h3>
           <ul className="space-y-[8px]">
@@ -72,6 +70,7 @@ const Footer = () => {
             <li>CRM</li>
           </ul>
         </div>
+        {/* Media Services Section */}
         <div className="flex flex-col gap-[46px]">
           <div className="flex flex-col gap-[20px]">
             <h3 className="font-bold mb-2 text-yellow-200">MEDIA SERVICES</h3>
@@ -92,6 +91,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        {/* Resources Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">RESOURCES</h3>
           <ul className="space-y-[8px]">
@@ -107,38 +107,41 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6  border-b-[1px] border-line-blue ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 border-b-[1px] border-line-blue">
+        {/* Company Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">Company</h3>
           <ul className="space-y-[8px]">
             <li>About Us</li>
             <li>Careers</li>
             <li className="py-[8px]">
-              <span className=" bg-background-blue-100 rounded-[2px] text-white p-[8px]  ">
+              <span className="bg-background-blue-100 rounded-[2px] text-white p-[8px]">
                 Join Team
               </span>
             </li>
           </ul>
         </div>
+        {/* Address Section */}
         <div className="flex flex-col gap-[20px]">
-          <h3 className="font-bold mb-2 text-yellow-200 ">ADDRESS</h3>
+          <h3 className="font-bold mb-2 text-yellow-200">ADDRESS</h3>
           <ul className="space-y-[8px]">
             <li>Address</li>
           </ul>
         </div>
         <div className="flex flex-col gap-[20px]"></div>
+        {/* Get in Touch Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">GET IN TOUCH</h3>
           <ul className="space-y-[8px]">
             <li className="whitespace-normal">
-              Please connect with use at <p>+91-XXXXXXXXXX</p>
+              Please connect with us at <p>+91-XXXXXXXXXX</p>
             </li>
             <li>
               or Write us at{" "}
               <p>
                 <Link
-                  href="desginera@gmail.com"
-                  className="text-background-blue-100 "
+                  href="mailto:designera@gmail.com"
+                  className="text-background-blue-100"
                 >
                   designera@gmail.com
                 </Link>
@@ -146,16 +149,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        {/* Social Section */}
         <div className="flex flex-col gap-[20px]">
           <h3 className="font-bold mb-2 text-yellow-200">SOCIAL</h3>
           <div className="flex flex-col gap-[8px]">
             <div className="flex gap-[10px]">
-              <Image src={facebook} alt="" />
-              <Image src={insta} alt="" />
+              <Image src={facebook} alt="Facebook" />
+              <Image src={insta} alt="Instagram" />
             </div>
             <div className="flex gap-[10px]">
-              <Image src={linkedin} alt="" />
-              <Image src={facebook} alt="" />
+              <Image src={linkedin} alt="LinkedIn" />
+              <Image src={facebook} alt="Facebook" />
             </div>
           </div>
         </div>
@@ -167,7 +171,7 @@ const Footer = () => {
           <span>Privacy Policy</span>
           <span>Sitemap</span>
         </div>
-        <div className="flex  items-center">
+        <div className="flex items-center">
           <span>A Proud&nbsp;</span>
           <Image src={india} alt="India flag" width={30} height={30} />
           <span>&nbsp;Design Agency</span>
