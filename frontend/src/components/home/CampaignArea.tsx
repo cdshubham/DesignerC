@@ -30,6 +30,10 @@ const colorClasses: any = {
   "highlight-green": "text-highlight-green",
   "highlight-greenblue": "text-[#25C3E5]",
   "highlight-radiumgreen": "text-[#B2FE11]",
+  "highlight-videoproduction": "text-[#F06F3B]",
+  "highlight-packagingdesign": "text-[#3E7FFF]",
+  "highlight-brandlaunch": "text-[#E2B86E]",
+  "highlight-performancemarketing": "text-[#FF6A49]",
   // Add more colors as needed
 };
 
@@ -91,7 +95,7 @@ function CampaignArea({
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
 
-            <span  className={colorClasses[color] || "text-yellow-100"}>
+            <span className={colorClasses[color] || "text-yellow-100"}>
               {coloredHeading}
             </span>
           </div>
@@ -108,7 +112,13 @@ function CampaignArea({
           />
         </div>
         <div className="max-h-[61px] max-w-[574px] min-h-max min-w-max">
-          <Image src={image} alt="" height={621} width={574} className="object-cover" />
+          <Image
+            src={image}
+            alt=""
+            height={621}
+            width={574}
+            className="object-cover"
+          />
         </div>
       </div>
 
@@ -131,10 +141,16 @@ function CampaignArea({
           <span>{cardheading1}</span>
           <span>{cardheading2}</span>
         </div>
-        <div className="flex items-center justify-around  md:px-[125px] gap-20">
+        <div className="flex items-start justify-around  md:px-[125px] gap-20">
           {cards.map((item) => (
-            <div className="flex flex-col md:w-[308px] gap-5">
-              <img src={item.logo} alt="" className="w-[40px] object-contain" />
+            <div className="flex flex-col md:w-[308px] gap-5 ">
+              <div className="h-[50px]">
+                <img
+                  src={item.logo}
+                  alt=""
+                  className="w-[40px] object-contain"
+                />
+              </div>
 
               <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1">
                 {item.title}
