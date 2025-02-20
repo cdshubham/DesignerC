@@ -34,6 +34,13 @@ const colorClasses: any = {
   "highlight-packagingdesign": "text-[#3E7FFF]",
   "highlight-brandlaunch": "text-[#E2B86E]",
   "highlight-performancemarketing": "text-[#FF6A49]",
+  "highlight-technicalseo": "text-[#12D4FF]",
+  "highlight-customwebdevelopment": "text-[#FF4980]",
+  "highlight-leadgenfunnels": "text-[#D3BBF5]",
+  "highlight-gold-yellow": "text-[#FFD97C]",
+  "highlight-smm": "text-[#FF542F]",
+  "highlight-whatsapp": "text-[#4BEC43]",
+  "highlight-linkedin": "text-[#47B2FF]",
   // Add more colors as needed
 };
 

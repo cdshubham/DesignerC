@@ -27,7 +27,7 @@ const With3images = ({
       </div>
       <div className="flex gap-[30px] justify-around min-h-[438px] max-h-min px-[24px]">
         {content?.map((item, index) => (
-          <div className="h-full flex flex-col justify-between min-w-[367px] gap-[15px]">
+          <div className="h-full flex flex-col justify-between items-center min-w-[367px] gap-[15px]">
             <Image
               width={320}
               height={281}
@@ -35,8 +35,8 @@ const With3images = ({
               alt={item.src}
               className=" rounded-[6px]"
             />
-            <div className="text-subheading font-semibold  ">
-              {item.imagetitle}
+            <div className="text-subheading font-semibold flex justify-center w-full ">
+              <span className="w-[70%] text-center">{item.imagetitle}</span>
             </div>
             <div className="text-body">{item.subtitle}</div>
           </div>
