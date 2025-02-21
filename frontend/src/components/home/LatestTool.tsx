@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface props {
-    toolsimg:string[];
+    toolsimg?:string[];
 }
 function LatestTool({toolsimg}:props) {
     const images=[

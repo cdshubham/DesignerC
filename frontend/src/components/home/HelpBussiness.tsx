@@ -5,10 +5,10 @@ import WhiteButton from '../ui/WhiteButton'
 
 interface props 
 {
- heading:string;
- cardscontent:{
-    heading:string;
-    content:string;
+ heading?:string;
+ cardscontent?:{
+    heading?:string;
+    content?:string;
  }[];
 }
 function HelpBussiness({heading,cardscontent}:props) {
