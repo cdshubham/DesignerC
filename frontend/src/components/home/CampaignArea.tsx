@@ -41,6 +41,10 @@ const colorClasses: any = {
   "highlight-smm": "text-[#FF542F]",
   "highlight-whatsapp": "text-[#4BEC43]",
   "highlight-linkedin": "text-[#47B2FF]",
+  "highlight-affluence": "text-[#94FFD8]",
+  "highlight-influencemarketing": "text-[#FF39B0]",
+  "highlight-eventmarketing": "text-[#FF4F64]",
+  "highlight-CRM": "text-[#FF9839]",
   // Add more colors as needed
 };
 
