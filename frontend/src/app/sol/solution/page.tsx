@@ -39,23 +39,32 @@ const page = () => {
     <div className="flex flex-col ">
       {" "}
       <div className="flex font-helvetica  ">
-        <div className="flex-1 flex flex-col bg-darkblue p-[20px] ">
-          <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
-            <Image src="/images/icons/solutions.png" width={16} height={16} alt="solution icon" className="h-full aspect-square" /> <span className="h-full flex items-end ">SOLUTIONS</span>
-          </div>
-          <div className="grid grid-cols-4">
-            {content.map((item) => (
-              <Solutioncard
-                title={item.title}
-                content={item.content}
-                className={item.className}
-                color1={item.color1}
-                color2={item.color2}
-              />
-            ))}
+        <div className=" flex flex-grow flex-col bg-darkblue  gap-[30px]   ">
+          <div className=" flex flex-col gap-[60px] py-[60px] md:ml-[30px] ">
+            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold ">
+              <Image
+                src="/images/icons/solutions.png"
+                width={16}
+                height={16}
+                alt="solution icon"
+                className="h-full aspect-square"
+              />{" "}
+              <span className="h-full flex items-end ">SOLUTIONS</span>
+            </div>
+            <div className="grid grid-cols-4  w-full">
+              {content.map((item) => (
+                <Solutioncard
+                  title={item.title}
+                  content={item.content}
+                  className={item.className}
+                  color1={item.color1}
+                  color2={item.color2}
+                />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="w-[336px] max-w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[30px] ">
+        <div className="w-[336px] min-w-[300px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[30px] ">
           <div className="flex justify-start items-center gap-4 p-2 py-4">
             <Image
               src="/images/icons/cuboid.png"

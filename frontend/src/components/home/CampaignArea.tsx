@@ -102,7 +102,7 @@ function CampaignArea({
   return (
     <div className="flex flex-col w-full  gap-5  mx-auto  bg-background-blue-300 text-white  justify-between ">
       <div className="  mx-auto flex px-[178px]  items-center ">
-        <div className=" md:w-[580px] flex flex-col gap-5 md:pt-16 pr-28  ">
+        <div className=" md:w-[680px] flex flex-col gap-5 md:pt-16 pr-28  ">
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
 

@@ -26,54 +26,58 @@ const page = () => {
       {" "}
       <div className="flex font-helvetica ">
         <div className="flex-1 flex flex-col bg-darkblue p-[20px] ">
-          <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
-            <Image
-              src="/images/icons/solutions.png"
-              width={16}
-              height={16}
-              alt="solution icon"
-              className="h-full aspect-square"
-            />{" "}
-            <span className="h-full flex items-end ">SOLUTIONS</span>
-          </div>
-          <div className="grid grid-cols-4">
-            {content.map((item) => (
-              <Solutioncard
-                title={item.title}
-                content={item.content}
-                className={item.className}
-                color1={item.color1}
-                color2={item.color2}
-              />
-            ))}
-            <div
-              className={`h-[334px]  flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] col-span-2 w-full bg-gradient-green-solution`}
-            >
-              <div className="flex  justify-between items-center">
-                <span className="text-xl">Join Desgignera Community</span>
-                <Image
-                  src="/images/icons/arrow.png"
-                  width={42}
-                  height={42}
-                  alt="arrow"
+          <div className="flex flex-col gap-[30px] py-[60px] md:ml-[30px]">
+            {" "}
+            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
+              <Image
+                src="/images/icons/solutions.png"
+                width={16}
+                height={16}
+                alt="solution icon"
+                className="h-full aspect-square"
+              />{" "}
+              <span className="h-full flex items-end ">RESOURCES</span>
+            </div>
+            <div className="grid grid-cols-4">
+              {content.map((item) => (
+                <Solutioncard
+                  title={item.title}
+                  content={item.content}
+                  className={item.className}
+                  color1={item.color1}
+                  color2={item.color2}
                 />
-              </div>
-              <div>
-                Explore how our work which help the clients to become top brand
-              </div>
+              ))}
               <div
-                className="min-w-[424px] min-h-[51px] absolute bottom-[100px] right-0 rounded-tl-[6px] rounded-bl-[6px]"
-                style={{ backgroundColor: "#FFFFFF" }}
-              ></div>
-              <div
-                className="min-w-[424px] min-h-[80px] absolute bottom-[30px] right-0 rounded-tl-[6px] rounded-bl-[6px]"
-                style={{ backgroundColor: "#FFFFFF" }}
-              ></div>
-              <div></div>
+                className={`h-[334px]  flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] col-span-2 w-full bg-gradient-green-solution`}
+              >
+                <div className="flex  justify-between items-center">
+                  <span className="text-xl">Join Desgignera Community</span>
+                  <Image
+                    src="/images/icons/arrow.png"
+                    width={42}
+                    height={42}
+                    alt="arrow"
+                  />
+                </div>
+                <div>
+                  Explore how our work which help the clients to become top
+                  brand
+                </div>
+                <div
+                  className="min-w-[424px] min-h-[51px] absolute bottom-[100px] right-0 rounded-tl-[6px] rounded-bl-[6px]"
+                  style={{ backgroundColor: "#FFFFFF" }}
+                ></div>
+                <div
+                  className="min-w-[424px] min-h-[80px] absolute bottom-[30px] right-0 rounded-tl-[6px] rounded-bl-[6px]"
+                  style={{ backgroundColor: "#FFFFFF" }}
+                ></div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[40px] ">
+        <div className="max-w-[336px] min-w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[40px] ">
           <div className="flex justify-start items-center gap-4 p-2 py-4">
             <Image
               src="/images/icons/cuboid.png"

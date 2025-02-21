@@ -23,40 +23,23 @@ const page = () => {
     <div className="flex flex-col">
       <div className="flex font-helvetica ">
         <div className="flex-1 flex flex-col bg-darkblue p-[20px] px-[30px] ">
-          <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
-            <Image
-              src="/images/icons/solutions.png"
-              width={16}
-              height={16}
-              alt="solution icon"
-              className="h-full aspect-square"
-            />{" "}
-            <span className="h-full flex items-end ">SOLUTIONS</span>
-          </div>
-          <div className="flex justify-between">
-            <div
-              className={`min-h-[469px] min-w-[506px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#201563] to-[#6450EC]`}
-            >
-              <div className="flex  justify-between items-center">
-                <span className="text-xl">Get Hired</span>
-                <Image
-                  src="/images/icons/arrow.png"
-                  width={42}
-                  height={42}
-                  alt="arrow"
-                />
-              </div>
-              <div></div>
-
-              <div></div>
+          <div className=" flex flex-col gap-[30px] py-[60px] md:ml-[30px] max-w-[1104px]">
+            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
+              <Image
+                src="/images/icons/solutions.png"
+                width={16}
+                height={16}
+                alt="solution icon"
+                className="h-full aspect-square"
+              />{" "}
+              <span className="h-full flex items-end ">Talent Network</span>
             </div>
-
-            <div className="min-w-[455px] min-h-[469px] max-w-min max-h-min flex flex-col justify-between  ">
+            <div className="flex justify-between">
               <div
-                className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] `}
+                className={`min-h-[469px] min-w-[506px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#201563] to-[#6450EC]`}
               >
                 <div className="flex  justify-between items-center">
-                  <span className="text-xl">Get Talent</span>
+                  <span className="text-xl">Get Hired</span>
                   <Image
                     src="/images/icons/arrow.png"
                     width={42}
@@ -64,31 +47,50 @@ const page = () => {
                     alt="arrow"
                   />
                 </div>
-                <div>Uncover how Brands drive revenue with Designera.</div>
+                <div></div>
 
                 <div></div>
               </div>
 
-              <div
-                className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] `}
-              >
-                <div className="flex  justify-between items-center">
-                  <span className="text-xl">Designera Learning</span>
-                  <Image
-                    src="/images/icons/arrow.png"
-                    width={42}
-                    height={42}
-                    alt="arrow"
-                  />
-                </div>
-                <div>Description</div>
+              <div className="min-w-[455px] min-h-[469px] max-w-min max-h-min flex flex-col justify-between  ">
+                <div
+                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] `}
+                >
+                  <div className="flex  justify-between items-center">
+                    <span className="text-xl">Get Talent</span>
+                    <Image
+                      src="/images/icons/arrow.png"
+                      width={42}
+                      height={42}
+                      alt="arrow"
+                    />
+                  </div>
+                  <div>Uncover how Brands drive revenue with Designera.</div>
 
-                <div></div>
+                  <div></div>
+                </div>
+
+                <div
+                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] `}
+                >
+                  <div className="flex  justify-between items-center">
+                    <span className="text-xl">Designera Learning</span>
+                    <Image
+                      src="/images/icons/arrow.png"
+                      width={42}
+                      height={42}
+                      alt="arrow"
+                    />
+                  </div>
+                  <div>Description</div>
+
+                  <div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[40px] ">
+        <div className="max-w-[336px] min-w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[30px] ">
           <div className="flex justify-start items-center gap-4 p-2 py-4">
             <Image
               src="/images/icons/cuboid.png"
