@@ -18,9 +18,9 @@ interface props {
   coloredHeading: string;
   image?: string;
   color: string;
-  cardheading1: string;
-  cardheading2: string;
-  cards: carditem[];
+  cardheading1?: string;
+  cardheading2?: string;
+  cards?: carditem[];
   keypoints?: string[];
 }
 

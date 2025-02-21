@@ -13,7 +13,7 @@ interface Item {
 
 interface ProcessStepsProps {
   steps?: Item[];
-  mainheading:string; // Optional prop
+  mainheading?:string; // Optional prop
 }
 
 const defaultSteps: Item[] = [

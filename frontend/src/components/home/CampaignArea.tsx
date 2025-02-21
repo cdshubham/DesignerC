@@ -13,13 +13,13 @@ interface carditem {
 }
 
 interface props {
- heading:string;
- coloredHeading:string;
+ heading?:string;
+ coloredHeading?:string;
  image?:string;
- color:string;
- cardheading1:string;
- cardheading2:string;
- cards:carditem[];
+ color?:string;
+ cardheading1?:string;
+ cardheading2?:string;
+ cards?:carditem[];
  keypoints?:string[];
 }
 
