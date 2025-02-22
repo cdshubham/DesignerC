@@ -53,6 +53,7 @@ export default {
         footer: "14px",
         footersmall: "12px",
         mediumheading: "48px",
+        avg:"32px",
       },
       borderRadius: {
         "cards-raduis": "8px",
