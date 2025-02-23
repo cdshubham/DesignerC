@@ -1,4 +1,7 @@
+import Beyondai from "@/components/home/Beyondai";
 import Findopportunities from "@/components/home/Findopportunities";
+import Marketinggoals from "@/components/home/Marketinggoals";
+import Whyjoinus from "@/components/home/Whyjoinus";
 import Withmarquee from "@/components/home/Withmarquee";
 
 const page = () => {
@@ -38,11 +41,36 @@ const page = () => {
         ],
       };
 
+      const marketingdata = {
+        heading: "Achieve your Marketing goals faster by using Designera",
+        image: "/images/marketinggoal.png",
+        cards: [
+          {
+            icon: "/icons/marketinggoal1.png",
+            title: "Interview as a Service Platform",
+            color: "#FFD766",
+          },
+          {
+            icon: "/icons/marketinggoal2.png",
+            title: "Interview as a Service Platform",
+            color: "#8FEFBC",
+          },
+          {
+            icon: "/icons/marketinggoal3.png",
+            title: "Interview as a Service Platform",
+            color: "#4CE6FF",
+          },
+        ],
+      };
 
 
-  return (<div className="w-full font-helvetica">
+
+  return (<div className="w-full flex flex-col  font-helvetica bg-background-blue-300 justify-center">
     <Findopportunities {...findopportunitydata}/>
     <Withmarquee {...marqueedata}/>
+    <Marketinggoals {...marketingdata}/>
+    <Whyjoinus/>
+    <Beyondai/>
   </div>)
 
 }

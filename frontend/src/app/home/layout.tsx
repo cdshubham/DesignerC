@@ -10,13 +10,13 @@ export default function RootLayout({
 }>) {
   return (
     <body className={`antialiased`}>
-      <div className="h-[100vh] w-[100vw] flex flex-col">
-        <div className="sticky top-0 z-10 flex flex-col">
+      <div className="h-[100vh] w-[100vw] flex flex-col bg-background-blue-300 text-white">
+        <div className="sticky top-0 z-10 flex flex-col ">
           <Add />
           <Navbar />
         </div>
         {children}
-        <Footer/>
+        <Footer />
       </div>
     </body>
   );

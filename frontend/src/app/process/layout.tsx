@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <body className={`antialiased`}>
-      <div className="h-[100vh] w-[100vw] flex">
+      <div className="h-[100vh] w-[1440px] flex">
         <Sidebar />
         {children}
       </div>
