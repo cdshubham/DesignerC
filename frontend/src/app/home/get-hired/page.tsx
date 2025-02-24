@@ -1,5 +1,7 @@
 import Beyondai from "@/components/home/Beyondai";
 import Findopportunities from "@/components/home/Findopportunities";
+import Hearfromleaders from "@/components/home/Hearfromleaders";
+import Learnearngrow from "@/components/home/Learnearngrow";
 import Marketinggoals from "@/components/home/Marketinggoals";
 import Whyjoinus from "@/components/home/Whyjoinus";
 import Withmarquee from "@/components/home/Withmarquee";
@@ -64,6 +66,14 @@ const page = () => {
       };
 
 
+      const hearleadersdata = {
+            headingone: "Hear from Leaders",
+            headingtwo: "Who have been there and done that",
+            subheading: "Learn from the best in the industry and get insights on how to grow your career.",
+            color:"yellow-200",
+            image:"/images/hearfromleaders.png",
+      }
+
 
   return (<div className="w-full flex flex-col  font-helvetica bg-background-blue-300 justify-center">
     <Findopportunities {...findopportunitydata}/>
@@ -71,6 +81,8 @@ const page = () => {
     <Marketinggoals {...marketingdata}/>
     <Whyjoinus/>
     <Beyondai/>
+    <Learnearngrow/>
+    {/* <Hearfromleaders  />  some error in design */}
   </div>)
 
 }

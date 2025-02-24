@@ -29,7 +29,7 @@ const Marketinggoals = ({heading,image,cards}:props) => {
           <div className="max-w-full flex justify-between overflow-hidden">
             {cards.map((card) => (
               <div
-                className={`md:min-h-[365px] md:min-w-[374px] max-h-min max-w-min rounded-[16px] border relative p-[32px] overflow-hidden flex flex-col gap-[30px]  `}
+                className={`md:min-h-[365px] md:min-w-[374px] max-h-min max-w-min rounded-[16px] border relative p-[32px] overflow-hidden flex flex-col gap-[30px] bg-gradient-to-b from-[#0C0080] to-[#151137]`} 
                 style={{ borderColor: card.color }}
               >
                 <div className="w-full  flex justify-start items-center">
@@ -40,7 +40,7 @@ const Marketinggoals = ({heading,image,cards}:props) => {
                     alt="cardicon"
                   />
                 </div>
-                <div className="text-avg/[40px] ">{card.title}</div>
+                <div className="text-avg/[40px] font-semibold tracking-wide  ">{card.title}</div>
                 <div
                   className="absolute bottom-0 left-0 right-0 h-[53px] flex justify-center items-center"
                   style={{ backgroundColor: card.color }}

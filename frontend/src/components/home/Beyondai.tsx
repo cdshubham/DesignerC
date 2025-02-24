@@ -63,38 +63,50 @@ const Beyondai = () => {
       <div className="max-w-[1170px] w-[1770px] flex flex-col justify-center items-center py-[60px] gap-[30px] ">
         <div className="text-heading/[69px] ">Beyond the ordinary AI</div>
 
-        <div className=" grid grid-cols-[3fr_1fr_1fr] px-[96px] w-full text-subheading gap-y-4">
-          <div className="font-semibold">Key Benefits</div>{" "}
-          <div className="text-background-blue-100 border-b border-[#0C0080] pl-2 ">
+        <div className=" grid grid-cols-[3fr_1fr_1fr] px-[96px] w-full text-body text-[#0B0720] ">
+          <div className="font-semibold py-3 text-subheading">Key Benefits</div>{" "}
+          <div className="text-background-blue-100 border-b-2 border-[#0C0080] pl-2 py-3 text-subheading">
             Designera
           </div>
-          <div className="text-[#00B1CC] border-b border-[#0C0080] whitespace-nowrap">
+          <div className="text-[#00B1CC] border-b-2 border-[#0C0080] whitespace-nowrap py-3 text-subheading">
             Other Marketplaces
           </div>
-        
-            {tabledata.map((data) => (
-              <div className="contents">
-                
-                <div className="w-full max-w-full">{data.feature}</div>
-                <div className="w-full flex justify-center items-center">
-                  <Image
-                    src={data.designera}
-                    width={36}
-                    height={36}
-                    alt="designera"
-                  />
-                </div>
-                <div className="w-full flex justify-center items-center">
-                  <Image
-                    src={data.other_marketplaces}
-                    width={36}
-                    height={36}
-                    alt="designera"
-                  />
-                </div>
+          {tabledata.map((data, index) => (
+            <div className={`contents`} key={index}>
+              <div
+                key={`feature-${index}`}
+                className={`p-2 ${index % 2 === 0 ? "" : "bg-[#FEF0CE]"} py-5`}
+              >
+                {data.feature}
               </div>
-            ))}
-          
+              <div
+                key={`designera-${index}`}
+                className={`flex justify-center items-center ${
+                  index % 2 === 0 ? "" : "bg-[#FEF0CE]"
+                } py-5`}
+              >
+                <Image
+                  src={data.designera}
+                  width={36}
+                  height={36}
+                  alt="designera"
+                />
+              </div>
+              <div
+                key={`other-${index}`}
+                className={`flex justify-center items-center ${
+                  index % 2 === 0 ? "" : "bg-[#FEF0CE]"
+                } py-5`}
+              >
+                <Image
+                  src={data.other_marketplaces}
+                  width={36}
+                  height={36}
+                  alt="other marketplaces"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
