@@ -13,6 +13,15 @@ const Threesteps = () => {
       gradientcolors:["#070425","#4DE593","#BCF5D7","#070425"]
     }
 
+  const step3 = {
+    name: "Opportunities",
+    color: "#B78EF0",
+    icon: "/icons/lightning.png",
+    description: "Get Opportunities to Work with Top Global Brands",
+    subdiscription:
+      "Get matched with the best-suited creators, as per your industry and use case",
+    gradientcolors: ["#070425", "#BB8AFF", "#B78EF0", "#070425"],
+  };
 
  const networkingaccordian = [{ques:"Meet ups",ans:"Join the community of like-minded people and share your thoughts and ideas."},{ques:"Schedule Master Class",ans:"Schedulte it today"},{ques:"Networking",ans:"Avail the chance to stay connected with Experienced Mentors and peer members"},{ques:"Join community",ans:"Join the community of like-minded people and share your thoughts and ideas."}]
     const step2 = {
@@ -116,6 +125,50 @@ const Threesteps = () => {
               </div>
             </div>
 
+            {/**Opportunities */}
+            <div className="max-w-full grid grid-cols-[1fr_10fr] items-center gap-x-16 gap-y-[30px]">
+              <div className="max-w-full flex justify-center items-center">
+                <div
+                  className="min-h-[33px] min-w-[33px] max-h-min max-w-min flex justify-center items-center border rounded-[6px]"
+                  style={{ borderColor: step3.color }}
+                >
+                  <Image src={step3.icon} width={18} height={15} alt="icon" />
+                </div>
+              </div>
+              <h1
+                style={{ color: step3.color }}
+                className="text-subheading font-semibold"
+              >
+                {step3.name}
+              </h1>
+              <div className="h-full min-w-full flex justify-center py-6">
+                <div
+                  className="w-[4px]  h-full "
+                  style={gradientStyle(step3.gradientcolors)}
+                ></div>
+              </div>
+              <div className="flex flex-col gap-[30px]">
+                <div className="min-w-[770px] max-w-min text-heading/[69px]">
+                  {step3.description}
+                </div>
+                <div className='text-subheading'>
+                  {step3.subdiscription}
+                </div>
+                {/** Networking card */}
+                <div className="min-w-[1060px] min-h-[560px] max-w-min max-h-min rounded-[16px] bg-gradient-to-b from-[#1c155e] to-[#251F60]  gap-[30px]">
+                  {/** Navigation header */}
+                  <Image
+                    src="/images/opportunityimage.png"
+                    width={1060}
+                    height={560}
+                    alt="image"
+                    className="rounded-[16px]"
+                  />
+                  <div className="w-full h-full bg-[#170e6b] rounded-tr-[16px] rounded-br-[16px]"></div>
+                </div>
+              </div>
+            </div>
+            {/**Ends here */}
             {/**NETWORKING PAGE */}
             <div className="max-w-full grid grid-cols-[1fr_10fr] items-center gap-x-16 gap-y-[30px]">
               <div className="max-w-full flex justify-center items-center">

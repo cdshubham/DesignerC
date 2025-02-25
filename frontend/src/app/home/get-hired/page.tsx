@@ -1,4 +1,5 @@
 import Beyondai from "@/components/home/Beyondai";
+import Bookdemoform from "@/components/home/Bookdemoform";
 import Findopportunities from "@/components/home/Findopportunities";
 import Hearfromleaders from "@/components/home/Hearfromleaders";
 import Learnearngrow from "@/components/home/Learnearngrow";
@@ -77,18 +78,77 @@ const page = () => {
       };
 
       
+       //for beyond ai
+      const tabledataa2 = [
+        {
+          feature: "Your brand, your voice",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "No hallucinations, just factual content",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature:
+            "Smarter AI, improved by millions of marketers across the globe",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "Scaling at warp speed",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "Robust editor layer, powered by humans",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "Privacy and data protection",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "Easy plug-and-play with the tools you love",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "End-to-end content control and visibility",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+        {
+          feature: "Collaborative platform",
+          designera: "/icons/checkmark.png",
+          other_marketplaces: "/icons/crossmark.png",
+        },
+      ];
 
-
-  return (<div className="w-full flex flex-col  font-helvetica bg-background-blue-300 justify-center">
-    {/* <Findopportunities {...findopportunitydata}/>
+  return (
+    <div className="w-full flex flex-col  font-helvetica bg-background-blue-300 justify-center">
+      {/* <Findopportunities {...findopportunitydata}/>
     <Withmarquee {...marqueedata}/>
     <Marketinggoals {...marketingdata}/>
     <Whyjoinus/>
     <Beyondai/>
     <Learnearngrow/>
     <Hearfromleaders {...hearleadersdata} /> */}
-    <Threesteps/>
-  </div>)
+      {/* <Threesteps/> */}
+      {/* <Bookdemoform/> */}
+      <Beyondai
+        heading="Why Designera is Beyond AI"
+        tabledata={tabledataa2}
+        darktheme={true}
+        highlight="#0A0066"
+        color1="#FFCC33"
+        color2="#00B1CC"
+      />
+    </div>
+  );
 
 }
 
