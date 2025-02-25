@@ -5,6 +5,7 @@ import Hearfromleaders from "@/components/home/Hearfromleaders";
 import Learnearngrow from "@/components/home/Learnearngrow";
 import Marketinggoals from "@/components/home/Marketinggoals";
 import Threesteps from "@/components/home/Threesteps";
+import Top1withcards from "@/components/home/Top1withcards";
 import Whyjoinus from "@/components/home/Whyjoinus";
 import Withmarquee from "@/components/home/Withmarquee";
 
@@ -128,6 +129,8 @@ const page = () => {
         },
       ];
 
+      
+
   return (
     <div className="w-full flex flex-col  font-helvetica bg-background-blue-300 justify-center">
       {/* <Findopportunities {...findopportunitydata}/>
@@ -138,15 +141,16 @@ const page = () => {
     <Learnearngrow/>
     <Hearfromleaders {...hearleadersdata} /> */}
       {/* <Threesteps/> */}
-      {/* <Bookdemoform/> */}
-      <Beyondai
+      <Bookdemoform/>
+      {/* <Beyondai
         heading="Why Designera is Beyond AI"
         tabledata={tabledataa2}
         darktheme={true}
         highlight="#0A0066"
         color1="#FFCC33"
         color2="#00B1CC"
-      />
+      /> */}
+      <Top1withcards />
     </div>
   );
 

@@ -30,7 +30,7 @@ const page = () => {
         cards: [
           {
             logo: "/icons/marketready.png",
-            title: "Ture ideas into Market Ready",
+            title: "Ture ideas into Market Ready Products",
             subtitle: "Products",
             img: "/icons/clock.png",
             subheading:

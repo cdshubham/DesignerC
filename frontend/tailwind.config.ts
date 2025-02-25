@@ -19,6 +19,8 @@ export default {
           "linear-gradient(to bottom, #11015A, #370197)",
         "gradient-gold-solution":
           "linear-gradient(to bottom, #3A2A29, #E4B156)",
+        "gradient-primary":
+          "linear-gradient(to bottom, #080522, #4031C6)",
       },
 
       colors: {
@@ -46,14 +48,15 @@ export default {
         helvetica: ["Helvetica", "sans-serif"],
       },
       fontSize: {
-        heading: "60px",
+        largeheading:"60px",
+        heading: "48px",
         subheading: "24px",
         body: "18px",
         cta: "16px",
         footer: "14px",
         footersmall: "12px",
         mediumheading: "48px",
-        avg:"32px",
+        avg: "32px",
       },
       borderRadius: {
         "cards-raduis": "8px",

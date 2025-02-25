@@ -8,18 +8,12 @@ const Bookdemoform = () => {
     <div className="w-full flex justify-center items-center text-background-blue-300 bg-[#FFE599] ">
       <div className=" w-[1170px] grid grid-cols-2 py-[60px] gap-[30px]">
         <div className="flex flex-col w-full gap-[20px]">
-          <div className="flex flex-col">
-            <h1 className="text-heading/[69px]">Let's Connect over a</h1>
-            <div className="flex w-full gap-6">
-              <h1 className="text-heading/[69px]">Cup of Coffee</h1>{" "}
-              <Image
-                src="/icons/coffee.png"
-                width={12}
-                height={12}
-                alt="coffee icon"
-              />
-            </div>
-          </div>
+          
+            <h1 className="text-heading/[69px]">
+              Let's Connect over a Cup of Coffee ☕️
+            </h1>
+
+          
 
           <p className="text-body">
             Still confused how Designera can help you. Let's schedule a meeting.
@@ -56,8 +50,13 @@ const Bookdemoform = () => {
             By registering you agree to our Terms of Service and Privacy Policy
           </p>
         </div>
-        <div className='w-full h-full flex justify-center items-center'>
-            <Image src="/images/bulbeye.png" width={469} height={294} alt="bulbeyeimage"/>
+        <div className="w-full h-full flex justify-center items-center">
+          <Image
+            src="/images/bulbeye.png"
+            width={469}
+            height={294}
+            alt="bulbeyeimage"
+          />
         </div>
       </div>
     </div>
