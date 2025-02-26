@@ -8,6 +8,8 @@ import Threesteps from "@/components/home/Threesteps";
 import Top1withcards from "@/components/home/Top1withcards";
 import Whyjoinus from "@/components/home/Whyjoinus";
 import Withmarquee from "@/components/home/Withmarquee";
+import BlueButton from "@/components/ui/BlueButton";
+import WhiteButton from "@/components/ui/WhiteButton";
 
 const page = () => {
   const findopportunitydata = {
@@ -141,7 +143,7 @@ const page = () => {
     <Learnearngrow/>
     <Hearfromleaders {...hearleadersdata} /> */}
       {/* <Threesteps/> */}
-      <Bookdemoform/>
+      <Bookdemoform />
       {/* <Beyondai
         heading="Why Designera is Beyond AI"
         tabledata={tabledataa2}
@@ -150,7 +152,8 @@ const page = () => {
         color1="#FFCC33"
         color2="#00B1CC"
       /> */}
-      <Top1withcards />
+      {/* <Top1withcards /> */}
+      
     </div>
   );
 
