@@ -6,10 +6,10 @@ interface props {
     className:string;
     color1:string;
     color2:string;
-    border:string;
-    selectedCard:string;
+    border?:string;
+    selectedCard?:string;
     
-    setSelectedCard:(val:string)=>void;
+    setSelectedCard?:(val:string)=>void;
     
     
 }
@@ -20,7 +20,7 @@ const Solutioncard = ({title,content,className,color1,color2,border,selectedCard
       style={{
         boxShadow: selectedCard === title ? `0 0 0 2px ${border}` : "",
       }}
-      onClick={() => {setSelectedCard(title)}}
+      onClick={() => {setSelectedCard && setSelectedCard(title)}}
     >
       <div className="flex  justify-between items-center">
         <span className="text-xl">{title}</span>
