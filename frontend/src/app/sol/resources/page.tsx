@@ -21,6 +21,51 @@ const page = () => {
   
   
   ];
+
+     const marketinglinkdata = [
+       {
+         name: "Custom Web Development",
+         description: "Description",
+         link: "/home/custom-web-development",
+       },
+       {
+         name: "Performance Marketing",
+         description: "Description",
+         link: "/home/performance-marketing",
+       },
+       {
+         name: "Lead Gen-Funnel",
+         description: "Description",
+         link: "/home/lead-gen-funnel",
+       },
+       {
+         name: "Technical SEO",
+         description: "Description",
+         link: "/home/technical-seo",
+       },
+       {
+         name: "Market Research/Survey",
+         description: "Description",
+         link: "/home/market-research-survey",
+       },
+       {
+         name: "Social Media Marketing",
+         description: "Description",
+         link: "/home/social-media-management",
+       },
+       {
+         name: "LinkedIn Marketing",
+         description: "Description",
+         link: "/home/linkedin-marketing",
+       },
+       {
+         name: "WhatsApp / Email Marketing",
+         description: "Description",
+         link: "/home/whatsapp-email",
+       },
+     ];
+
+     
   return (
     <div className="flex flex-col">
       {" "}
@@ -87,8 +132,12 @@ const page = () => {
             />{" "}
             <span className="text-[16px] text-white">SERVICES</span>
           </div>
-          {Array.from({ length: 7 }).map((_, index) => (
-            <Solutionservicecard />
+          {marketinglinkdata.map((service, index) => (
+            <Solutionservicecard
+              title={service.name}
+              content={service.description}
+              link={service.link}
+            />
           ))}
         </div>
       </div>
