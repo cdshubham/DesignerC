@@ -4,6 +4,7 @@ import Solutionservicecard from "@/components/home/Solutionservicecard";
 import { link } from "fs";
 import Image from "next/image";
 import { useState } from "react";
+import Marquee from "react-fast-marquee";
 
 
 export interface servicetype {
@@ -201,7 +202,16 @@ const servicemap: Record<string, servicetype[]> = {
 
     const [selectedCard,setSelectedCard] = useState("Creatives");
     const [selectedServices,setSelectedServices] = useState<servicetype[]>(creativeslinkdata);
-
+  const images = [
+    { img: "/logos/adobe.png" },
+    { img: "/logos/airmeet.png" },
+    { img: "/logos/amazon.png" },
+    { img: "/logos/amazonpay.png" },
+    { img: "/logos/appolo.png" },
+    { img: "/logos/axis.png" },
+    { img: "/logos/binance.png" },
+    { img: "/logos/darwing.png" },
+  ];
   return (
     <div className="flex flex-col ">
       {" "}
@@ -228,9 +238,7 @@ const servicemap: Record<string, servicetype[]> = {
                   color2={item.color2}
                   border={item.border}
                   selectedCard={selectedCard}
-                  setSelectedCard={setSelectedCard} 
-                 
-
+                  setSelectedCard={setSelectedCard}
                 />
               ))}
             </div>
@@ -247,18 +255,26 @@ const servicemap: Record<string, servicetype[]> = {
             <span className="text-[16px] text-white">SERVICES</span>
           </div>
           {servicemap[selectedCard].map((service, index) => (
-            <Solutionservicecard title={service.name} content={service.description} link={service.link} />
+            <Solutionservicecard
+              title={service.name}
+              content={service.description}
+              link={service.link}
+            />
           ))}
         </div>
       </div>
       <div className="w-full h-[150px] bg-background-blue-300 relative">
-        <Image
-          src="/images/adobe.png"
-          width={128}
-          height={31}
-          alt="adobe"
-          className="absolute bottom-20 right-4"
-        />
+        <Marquee speed={50}>
+          {images.map((item) => (
+            <div className="w-[138px]  flex items-center md:py-[12.64px]">
+              <img
+                src={item.img}
+                alt=""
+                className="md:w-[128px] object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
