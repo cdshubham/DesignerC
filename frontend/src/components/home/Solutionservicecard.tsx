@@ -1,15 +1,17 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 interface props 
-{
-    title?:string;
-    content?:string;
+{  
+    title:string;
+    content:string;
+    link:string;
 }
 const Solutionservicecard = ({
-  title = "Content Writing",
-  content = "Create authentic content with expert writers.",
+ title,content,link
 }: props) => {
+  const router = useRouter();
   return (
-    <div className="w-full grid grid-cols-[1fr_7fr_2fr] py-3 px-2 border-t border-t-[#B0B0B0] border-t-gradient- text-white justify-center gap-2">
+    <div className="w-full grid grid-cols-[1fr_7fr_2fr] py-3 px-2 border-t border-t-[#B0B0B0] border-t-gradient- text-white justify-center gap-2 hover:cursor-pointer" onClick={()=>{router.push(link)}} >
       <div>
         <Image
           src="/images/icons/cloud.png"

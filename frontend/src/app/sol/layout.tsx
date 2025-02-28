@@ -11,11 +11,10 @@ export default function RootLayout({
 }>) {
   return (
    
-      <body className={`antialiased`}>
-        <Add />
-        <Navbar />
+      <div className={`antialiased`}>
+     
         {children}    
-      </body>
+      </div>
     
   );
 }

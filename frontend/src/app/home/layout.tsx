@@ -9,15 +9,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className={`antialiased`}>
-      <div className="h-[100vh] w-[100vw] flex flex-col bg-background-blue-300 text-white">
-        <div className="sticky top-0 z-10 flex flex-col ">
-          <Add />
-          <Navbar />
-        </div>
+   
+      <div className="h-[100vh] w-[100vw] flex flex-col bg-background-blue-300 ">
+     
         {children}
         <Footer />
       </div>
-    </body>
+   
   );
 }
