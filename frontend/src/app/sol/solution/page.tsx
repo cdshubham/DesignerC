@@ -263,7 +263,7 @@ const servicemap: Record<string, servicetype[]> = {
           ))}
         </div>
       </div>
-      <div className="w-full h-[150px] bg-background-blue-300 relative">
+      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-center">
         <Marquee speed={50}>
           {images.map((item) => (
             <div className="w-[138px]  flex items-center md:py-[12.64px]">
