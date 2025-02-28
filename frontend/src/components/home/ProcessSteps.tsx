@@ -61,7 +61,7 @@ const ProcessSteps: React.FC<ProcessStepsProps> = ({
             } items-center`}
           >
             <div className="h-full w-full flex items-center justify-start">
-              <div className={`flex flex-col p-6 rounded-lg  py-[36px] `}>
+              <div className={`flex flex-col  rounded-lg  py-[36px] `}>
                 <div className="flex gap">
                   <span
                     className={`h-[32px] w-[32px] aspect-square rounded-[2px]`}

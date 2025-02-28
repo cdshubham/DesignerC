@@ -153,7 +153,7 @@ function CampaignArea({
             <span>{cardheading1}</span>
             <span>{cardheading2}</span>
           </div>
-          <div className="flex items-start justify-around  gap-20 w-full">
+          <div className="flex items-start justify-between  gap-20 w-full">
             {cards.map((item) => (
               <div className="flex flex-col md:w-[308px] gap-5 ">
                 <div className="h-[50px]">
