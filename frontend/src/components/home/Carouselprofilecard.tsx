@@ -1,3 +1,4 @@
+import Readmore from "../ui/Readmore";
 import WhiteButton from "../ui/WhiteButton";
 import Image from "next/image";
 const Carouselprofilecard = () => {
@@ -12,18 +13,19 @@ const Carouselprofilecard = () => {
       />
       <div className="h-full w-full flex flex-grow flex-col gap-[25px] p-[30px] bg-[#FF80B7]   text-black rounded-tr-[6px] rounded-br-[6px]">
         <h1 className="text-avg font-bold text-start">Emily Dumas</h1>
-        <p>
+        <p className="font-semibold">
           Senior Content Strategist at The Knot Worldwide (Former - Senior
           Content Marketing Manager, Evernote)
         </p>
-        <p>
+        <p className="font-semibold">
           Emily Dumas is the Senior Content Marketing Manager at Evernote where
           she was in charge of full tunnel content marketing across all
           platforms including SEO, blog, website, social media, and influencer
           campaigns. 
         </p>
         <div className="flex justify-between">
-          <WhiteButton children={"Read More"} img="/icons/downarrow.png" />
+          <Readmore name="Read More" link="/home/CMOS" />
+
           <div className="flex gap-3 pr-4">
             <Image
               src="/icons/twitterx.png"
