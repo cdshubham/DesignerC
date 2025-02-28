@@ -89,7 +89,7 @@ const page = () => {
 
 
   return (
-    <div className="w-full ">
+    <div className="w-full flex flex-col items-center">
       <CampaignArea {...data} />
       <HelpBussiness />
       <LatestTool />
@@ -102,13 +102,13 @@ const page = () => {
       <Clients />
       <MileStones />
       <Faq />
-      {/* <DesignWillBenifitYou /> */}
-      {/* <BenefitProcess /> */}
-      {/* <Portfolio /> */}
+      {/* <DesignWillBenifitYou />
+      <BenefitProcess />
+      <Portfolio />
 
-      {/* <Hiring /> */}
+      <Hiring />
 
-      <Service />
+      <Service /> */}
     </div>
   );
 };

@@ -13,7 +13,7 @@ function MileStones() {
         {img:"/images/rebranding.png",category:"Rebranding"},
     ]
   return (
-    <div className="md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center md:gap-[45px]">
+    <div className="w-full md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center md:gap-[45px]">
       <span className="text-heading/[68.99px] font-normal">
         Designera is best for your business.
       </span>
@@ -38,13 +38,13 @@ function MileStones() {
         Explore Perfect needs with Designera.
       </span>
 
-      <div className="flex w-full items-center   px-[24px] justify-between ">
+      <div className="flex w-full items-center px-[24px] justify-around">
         {images.map((item) => (
           <div className="flex flex-col gap-[20px]">
             <img
               src={item.img}
               alt=""
-              className="max-w-[369px] max-h-[305px] object-cover"
+              className="max-w-[369px] max-h-[305px] object-cover rounded-[8px]"
             />
             <h3 className='text-center text-[24px] font-semibold '>{item.category}</h3>
           </div>

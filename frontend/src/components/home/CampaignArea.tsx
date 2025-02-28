@@ -100,8 +100,8 @@ function CampaignArea({
     { img: "/logos/darwing.png" },
   ];
   return (
-    <div className="flex flex-col w-full   gap-5  mx-auto  bg-background-blue-300 text-white  justify-between ">
-      <div className="  mx-auto flex max-w-[1170px]  items-center ">
+    <div className="flex flex-col w-full   gap-5  mx-auto  bg-background-blue-300 text-white  justify-between items-center ">
+      <div className="  mx-auto flex w-full md:px-[125px] items-center justify-center ">
         <div className=" md:w-[680px]  flex flex-col gap-5 md:pt-16 pr-20  ">
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
@@ -146,36 +146,38 @@ function CampaignArea({
           ))}
         </Marquee>
       </div>
-
-      <div className="flex flex-col md:py-[60px] md:gap-[60px]  ">
-        <div className="text-heading/[68.99px] text-center flex flex-col ">
-          <span>{cardheading1}</span>
-          <span>{cardheading2}</span>
-        </div>
-        <div className="flex items-start justify-around  md:px-[125px] gap-20">
-          {cards.map((item) => (
-            <div className="flex flex-col md:w-[308px] gap-5 ">
-              <div className="h-[50px]">
-                <img
-                  src={item.logo}
-                  alt=""
-                  className="w-[40px] object-contain"
-                />
-              </div>
-
-              <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1">
-                {item.title}
-                <div className="flex gap-1 text-subheading/[27.6px] items-center justify-start font-bold">
-                  <span>{item.subtitle}</span>
-                  <img src={item.img} alt="" className="w-8 object-contain" />
+      <div className="w-full flex justify-center">
+        {" "}
+        <div className="flex flex-col md:py-[60px] md:gap-[60px] w-full md:px-[125px] items-center justify-center   ">
+          <div className="text-heading/[68.99px] text-center flex flex-col ">
+            <span>{cardheading1}</span>
+            <span>{cardheading2}</span>
+          </div>
+          <div className="flex items-start justify-around  gap-20 w-full">
+            {cards.map((item) => (
+              <div className="flex flex-col md:w-[308px] gap-5 ">
+                <div className="h-[50px]">
+                  <img
+                    src={item.logo}
+                    alt=""
+                    className="w-[40px] object-contain"
+                  />
                 </div>
-              </span>
 
-              <span className="text-body font-normal text-justify">
-                {item.subheading}
-              </span>
-            </div>
-          ))}
+                <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1">
+                  {item.title}
+                  <div className="flex gap-1 text-subheading/[27.6px] items-center justify-start font-bold">
+                    <span>{item.subtitle}</span>
+                    <img src={item.img} alt="" className="w-8 object-contain" />
+                  </div>
+                </span>
+
+                <span className="text-body font-normal text-justify">
+                  {item.subheading}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

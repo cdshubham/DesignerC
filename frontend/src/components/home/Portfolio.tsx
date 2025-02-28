@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 function Portfolio() {
   return (
-    <div className="md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col font-normal bg-background-white-200">
+    <div className="w-full md:px-[125px] items-center justify-center  md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col font-normal bg-background-white-200">
       <div className=" flex justify-center gap-[30px] items-center ">
         <div className="flex flex-col md:w-[247px] gap-[30px]">
           <img

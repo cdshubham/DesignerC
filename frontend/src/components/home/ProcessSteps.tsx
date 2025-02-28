@@ -47,7 +47,7 @@ const ProcessSteps: React.FC<ProcessStepsProps> = ({
   steps = defaultSteps,mainheading="Hire Writers from Designera or  get Pre-Vetted Top Expert Writers for your Project"
 }) => {
   return (
-    <div className="flex flex-col items-center gap-[30px] md:py-[60px] md:px-[129px]">
+    <div className="flex flex-col gap-[30px] md:py-[60px] md:px-[125px] items-center justify-center w-full">
       <div className="text-heading/[69px] w-full flex justify-start">
         <span className="w-[80%] ">{mainheading}</span>
       </div>

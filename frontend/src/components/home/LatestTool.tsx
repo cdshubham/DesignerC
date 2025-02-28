@@ -17,19 +17,19 @@ function LatestTool({toolsimg}:props) {
     ]
 
   return (
-    <div className='md:py-[60px] bg-background-white-200 flex flex-col md:gap-[52px]'>
-        <div className='flex flex-col gap-1 text-heading/[68.99px] font-normal text-center'>
-        <div className=''>Expertly Crafted with </div>
+    <div className="md:py-[60px] bg-background-white-200 flex flex-col md:gap-[52px] md:px-[125px] items-center justify-center w-full">
+      <div className="flex flex-col gap-1 text-heading/[68.99px] font-normal text-center">
+        <div className="">Expertly Crafted with </div>
         <div> the Latest Tools</div>
-        </div>
-     
-        <div className='flex w-full justify-center gap-[30px]'>
-            {images.map((item)=>(
-                <img src={item.img} alt="" className='md:w-[69px] object-contain'/>
-            ))}
-        </div>
+      </div>
+
+      <div className="flex w-full justify-center gap-[30px]">
+        {images.map((item) => (
+          <img src={item.img} alt="" className="md:w-[69px] object-contain" />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
 export default LatestTool

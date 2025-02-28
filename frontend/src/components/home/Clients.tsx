@@ -41,11 +41,11 @@ function Clients() {
     },
   ];
   return (
-    <div className="flex flex-col md:py-[60px] bg-background-white-100 md:px-[125px] gap-[30px]">
+    <div className="flex flex-col md:py-[60px] bg-background-white-100 md:px-[125px] items-start justify-center w-full gap-[30px]">
       <span className="text-heading/[68.99px] font-normal ">
         Clients are Pitching about Designera.
       </span>
-      <div className="flex gap-[30px]">
+      <div className="flex gap-[30px] w-full">
         <div className="w-[70px] h-[70px] border-[3px] cursor-pointer border-[#D9D9D9] text-[#D9D9D9] rounded-full flex items-center justify-center">
           <FaArrowLeft size={40} />
         </div>
@@ -53,7 +53,7 @@ function Clients() {
           <FaArrowRight size={40} />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-[30px] ">
+      <div className="w-full grid grid-cols-3 gap-[30px] ">
         {content.map((item, index) => (
           <div className="md:w-[360px] flex flex-col gap-[10px]">
             <div className="flex  text-[#EAEDF0]">

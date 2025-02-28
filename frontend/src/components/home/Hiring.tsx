@@ -4,7 +4,7 @@ import BlueButton from "../ui/BlueButton";
 function Hiring() {
     const content = ["Get Placed with Top Brands Like Google and Amazon","Showcase Your Creative Talent to the World","Get Hired for Projects That Elevate Your Career."]
   return (
-    <div className="md:py-[60px] md:px-[129px] bg-background-white-200 flex flex-col gap-[60px]">
+    <div className=" items-center justify-center w-full md:py-[60px] md:px-[125px] bg-background-white-200 flex flex-col gap-[60px]">
       <div className="text-base font-normal text-[#B0B0B0] flex bg-[#F9F5EC] w-fit">
         <span className="w-[152px] h-[48px] flex items-center justify-center border-b-4 border-background-blue-100 rounded-b-lg text-background-blue-100">
           For Candidates
@@ -33,15 +33,22 @@ function Hiring() {
             opportunities.
           </span>
           <ul className="list-disc text-body/6 font-normal md:px-5">
-                {content.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
-          <BlueButton children="Become Talent" className="w-[153px] py-2 text-white" />
+          <BlueButton
+            children="Become Talent"
+            className="w-[153px] py-2 text-white"
+          />
         </div>
 
         <div className="h-full ">
-            <img src="/images/hiring.png" alt="" className=" object-cover rounded-cta-raduis"/>
+          <img
+            src="/images/hiring.png"
+            alt=""
+            className=" object-cover rounded-cta-raduis"
+          />
         </div>
       </div>
     </div>
