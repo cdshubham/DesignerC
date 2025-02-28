@@ -12,7 +12,7 @@ const Solutionservicecard = ({
 }: props) => {
   const router = useRouter();
   return (
-    <div className="w-full grid grid-cols-[1fr_7fr_2fr] py-3 px-2 border-t border-t-[#B0B0B0] border-t-gradient- text-white justify-center gap-2 hover:cursor-pointer" onClick={()=>{router.push(link)}} >
+    <div className="w-full grid grid-cols-[1fr_7fr_2fr] py-3 px-2 border-t border-t-[#B0B0B0] border-t-gradient- text-white justify-center gap-2 hover:cursor-pointer  " onClick={()=>{router.push(link)}} >
       <div>
         <Image
           src="/images/icons/cloud.png"

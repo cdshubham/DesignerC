@@ -25,7 +25,7 @@ const page = () => {
      {
        name: "Graphic Designing",
        description: "Branding and visual design",
-       link: "/home/graphic-designing",
+       link: "/home",
      },
      {
        name: "Video Production",
