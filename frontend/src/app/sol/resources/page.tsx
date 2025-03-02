@@ -1,6 +1,11 @@
+import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
+import Navigationservice from "@/components/navigation/Navigationservice";
 import Image from "next/image";
+import { useState } from "react";
+import Marquee from "react-fast-marquee";
+import { marketinglinkdata } from "../solution/page";
 
 const page = () => {
   const content = [
@@ -22,58 +27,16 @@ const page = () => {
   
   ];
 
-     const marketinglinkdata = [
-       {
-         name: "Custom Web Development",
-         description: "Description",
-         link: "/home/custom-web-development",
-       },
-       {
-         name: "Performance Marketing",
-         description: "Description",
-         link: "/home/performance-marketing",
-       },
-       {
-         name: "Lead Gen-Funnel",
-         description: "Description",
-         link: "/home/lead-gen-funnel",
-       },
-       {
-         name: "Technical SEO",
-         description: "Description",
-         link: "/home/technical-seo",
-       },
-       {
-         name: "Market Research/Survey",
-         description: "Description",
-         link: "/home/market-research-survey",
-       },
-       {
-         name: "Social Media Marketing",
-         description: "Description",
-         link: "/home/social-media-management",
-       },
-       {
-         name: "LinkedIn Marketing",
-         description: "Description",
-         link: "/home/linkedin-marketing",
-       },
-       {
-         name: "WhatsApp / Email Marketing",
-         description: "Description",
-         link: "/home/whatsapp-email",
-       },
-     ];
-
+    
      
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       {" "}
-      <div className="flex font-helvetica ">
-        <div className="flex-1 flex flex-col bg-darkblue p-[20px] ">
-          <div className="flex flex-col gap-[30px] py-[60px] md:ml-[30px]">
+      <div className="flex font-helvetica h-full ">
+        <div className="flex-grow flex flex-col bg-darkblue pl-[80px] ">
+          <div className="flex flex-col gap-[30px] pt-[30px] pr-[30px] ">
             {" "}
-            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
+            <div className="text-sm text-gold-yellow flex gap-2 items-center font-semibold">
               <Image
                 src="/images/icons/solutions.png"
                 width={16}
@@ -83,7 +46,7 @@ const page = () => {
               />{" "}
               <span className="h-full flex items-end ">RESOURCES</span>
             </div>
-            <div className="grid grid-cols-4">
+            <div className="flex justify-between">
               {content.map((item) => (
                 <Solutioncard
                   title={item.title}
@@ -94,7 +57,7 @@ const page = () => {
                 />
               ))}
               <div
-                className={`h-[334px]  flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] col-span-2 w-full bg-gradient-green-solution`}
+                className={`h-[334px] w-[479px]   flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution`}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Join Desgignera Community</span>
@@ -122,33 +85,20 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[336px] min-w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[40px] ">
-          <div className="flex justify-start items-center gap-4 p-2 py-4">
-            <Image
-              src="/images/icons/cuboid.png"
-              width={14}
-              height={15}
-              alt="Cuboid"
-            />{" "}
-            <span className="text-[16px] text-white">SERVICES</span>
-          </div>
-          {marketinglinkdata.map((service, index) => (
-            <Solutionservicecard
-              title={service.name}
-              content={service.description}
-              link={service.link}
-            />
-          ))}
-        </div>
+        <Navigationservice linkdata={marketinglinkdata} />
       </div>
-      <div className="w-full h-[150px] bg-background-blue-300 relative">
-        <Image
-          src="/images/adobe.png"
-          width={128}
-          height={31}
-          alt="adobe"
-          className="absolute bottom-20 right-4"
-        />
+      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-start pt-[30px]">
+        <Marquee speed={50} className="flex items-center">
+          {marqueimages.map((item) => (
+            <div className="w-[138px]  flex items-center ">
+              <img
+                src={item.img}
+                alt=""
+                className="md:w-[128px] object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

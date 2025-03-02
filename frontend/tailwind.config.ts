@@ -87,7 +87,7 @@ export default {
   		},
   		fontSize: {
   			largeheading: '60px',
-  			heading: '48px',
+  			heading: '60px',
   			subheading: '24px',
   			body: '18px',
   			cta: '16px',
@@ -97,7 +97,7 @@ export default {
   			avg: '32px'
   		},
   		borderRadius: {
-  			'cards-raduis': '8px',
+  			'cardradius': '4px',
   			'cta-raduis': '2px',
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

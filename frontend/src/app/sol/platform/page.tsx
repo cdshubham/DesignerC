@@ -1,8 +1,17 @@
+"use client";
+import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
+;
 import Image from "next/image";
+import { useState } from "react";
+import Marquee from "react-fast-marquee";
+import { marketinglinkdata, servicetype } from "../solution/page";
+import Navigationservice from "@/components/navigation/Navigationservice";
 
 const page = () => {
+
+  console.log(marketinglinkdata);
   const content = [
     {
       title: "Creatives",
@@ -20,10 +29,10 @@ const page = () => {
     },
   ];
   return (
-    <div className="flex flex-col">
-      <div className="flex font-helvetica ">
-        <div className="flex-1 flex flex-col bg-darkblue p-[20px] px-[30px] ">
-          <div className="text-sm text-gold-yellow flex  gap-2 py-4 items-center font-semibold">
+    <div className="flex flex-col w-full">
+      <div className="flex font-helvetica max-w-full  ">
+        <div className="flex flex-grow flex-col bg-darkblue gap-[30px] pt-[30px] pl-[80px] pr-[30px] justify-start">
+          <div className="text-sm text-gold-yellow flex  gap-2  items-center font-semibold">
             <Image
               src="/images/icons/solutions.png"
               width={16}
@@ -39,7 +48,7 @@ const page = () => {
               className={`min-h-[469px] min-w-[276px] max-w-min max-h-min flex flex-col justify-between`}
             >
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-gold-solution `}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-gold-solution `}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Social Media Audit</span>
@@ -55,7 +64,7 @@ const page = () => {
               </div>
 
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-[4px]  bg-gradient-green-solution`}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution`}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Social Media Audit</span>
@@ -71,7 +80,7 @@ const page = () => {
               </div>
 
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-pink-solution `}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-pink-solution `}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Social Media Audit</span>
@@ -87,7 +96,7 @@ const page = () => {
               </div>
             </div>
             <div
-              className={`min-h-[469px] min-w-[676px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-gold-solution `}
+              className={`min-h-[469px] min-w-[686px] max-w-min max-h-min flex flex-col py-[30px] px-[20px] text-white relative gap-[20px] rounded-cardradius bg-gradient-gold-solution `}
             >
               <div className="flex  justify-between items-center">
                 <span className="text-xl"></span> {/*for title */}
@@ -105,29 +114,20 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[40px] ">
-          <div className="flex justify-start items-center gap-4 p-2 py-4">
-            <Image
-              src="/images/icons/cuboid.png"
-              width={14}
-              height={15}
-              alt="Cuboid"
-            />{" "}
-            <span className="text-[16px] text-white">SERVICES</span>
-          </div>
-          {Array.from({ length: 7 }).map((_, index) => (
-            <Solutionservicecard />
-          ))}
-        </div>
+        <Navigationservice linkdata={marketinglinkdata} />
       </div>
-      <div className="w-full h-[150px] bg-background-blue-300 relative">
-        <Image
-          src="/images/adobe.png"
-          width={128}
-          height={31}
-          alt="adobe"
-          className="absolute bottom-20 right-4"
-        />
+      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-start pt-[30px]">
+        <Marquee speed={50} className="flex items-center">
+          {marqueimages.map((item) => (
+            <div className="w-[138px]  flex items-center ">
+              <img
+                src={item.img}
+                alt=""
+                className="md:w-[128px] object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

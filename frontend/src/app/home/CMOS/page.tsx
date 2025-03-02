@@ -220,7 +220,7 @@ const profilesinfo = [
           </div>
           <div className="w-full flex justify-center items-center">
             {/**VEIW MORE BUTTON */}
-            <div className="w-[155px] h-[55px] bg-white rounded-[8px] text-background-blue-300 flex justify-around items-center py-[17px] px-[25px] text-body gap-1"><span>View More</span><div className="h-full flex justify-center items-center"><Image src="/icons/rightarrow.png" width={8} height={8} alt="righarrow.png" /></div></div>
+            <div className="w-[155px] h-[55px] bg-white rounded-cardradius text-background-blue-300 flex justify-around items-center py-[17px] px-[25px] text-body gap-1"><span>View More</span><div className="h-full flex justify-center items-center"><Image src="/icons/rightarrow.png" width={8} height={8} alt="righarrow.png" /></div></div>
           </div>
         </div>
       </div>

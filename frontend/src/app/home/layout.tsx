@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
    
-      <div className="h-[100vh] w-[100vw] flex flex-col bg-background-blue-300 ">
+      <div className="h-[100vh] w-[100vw] flex flex-col bg-background-blue-300 font-helvetica ">
      
         {children}
         <Footer />

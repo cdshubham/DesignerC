@@ -1,6 +1,8 @@
 "use client";
+import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
+import Navigationservice from "@/components/navigation/Navigationservice";
 import { link } from "fs";
 import Image from "next/image";
 import { useState } from "react";
@@ -8,147 +10,172 @@ import Marquee from "react-fast-marquee";
 
 
 export interface servicetype {
+icon:string,
  name:string,
  description:string,
  link:string,
 }
+ const creativeslinkdata = [
+   {
+     icon: "icon1",
+     name: "Content Writing",
+     description: "Create authentic content with expert writers",
+     link: "/home/content-writing",
+   },
+   {
+     icon: "icon2",
+     name: "Graphic Designing",
+     description: "Branding and visual design",
+     link: "/home",
+   },
+   {
+     icon: "icon3",
+     name: "Video Production",
+     description: "Motion graphics, Animations",
+     link: "/home/video-production",
+   },
+   {
+     icon: "icon4",
+     name: "Localization",
+     description: "Motion graphics, Animations",
+     link: "/home/localization",
+   },
+   {
+     icon: "icon5",
+     name: "Product Designing",
+     description: "3D modeling",
+     link: "/home/product",
+   },
+   {
+     icon: "icon6",
+     name: "Packaging Designing",
+     description: "Description",
+     link: "/home/packaging-design",
+   },
+   {
+     icon: "icon7",
+     name: "UX-UI Designing",
+     description: "Description",
+     link: "/home/ui-ux",
+   },
+   {
+     icon: "icon8",
+     name: "Launch a Brand",
+     description: "Re-branding, New Branding",
+     link: "/home/brand-launch",
+   },
+ ];
+
+ const talentnetworklinkdata = [
+   {
+     icon: "icon9",
+     name: "Find a Job",
+     description: "For Candidates",
+     link: "/home/find-a-job",
+   },
+   {
+     icon: "icon10",
+     name: "Hire Professionals",
+     description: "For Businesses",
+     link: "/home/hire-professionals",
+   },
+   {
+     icon: "icon11",
+     name: "Become Interviewer",
+     description: "For Evaluators",
+     link: "/home/become-interviewer",
+   },
+   {
+     icon: "icon12",
+     name: "Upskill your team",
+     description: "For Industry Trainings",
+     link: "/home/upskill-your-team",
+   },
+ ];
+
+ const medialinkData = [
+   {
+     icon: "icon13",
+     name: "Affluence Marketing",
+     description: "Description",
+     link: "/home/affluence-marketing",
+   },
+   {
+     icon: "icon14",
+     name: "Influencer Marketing",
+     description: "Description",
+     link: "/home/influencer-marketing",
+   },
+   {
+     icon: "icon15",
+     name: "Event Marketing",
+     description: "Description",
+     link: "/home/event-marketing",
+   },
+   {
+     icon: "icon16",
+     name: "CRM",
+     description: "Description",
+     link: "/home/crm",
+   },
+ ];
+
+ export const marketinglinkdata:servicetype[] = [
+   {
+     icon: "icon17",
+     name: "Custom Web Development",
+     description: "Description",
+     link: "/home/custom-web-development",
+   },
+   {
+     icon: "icon18",
+     name: "Performance Marketing",
+     description: "Description",
+     link: "/home/performance-marketing",
+   },
+   {
+     icon: "icon19",
+     name: "Lead Gen-Funnel",
+     description: "Description",
+     link: "/home/lead-gen-funnel",
+   },
+   {
+     icon: "icon20",
+     name: "Technical SEO",
+     description: "Description",
+     link: "/home/technical-seo",
+   },
+   {
+     icon: "icon21",
+     name: "Market Research/Survey",
+     description: "Description",
+     link: "/home/market-research-survey",
+   },
+   {
+     icon: "icon22",
+     name: "Social Media Marketing",
+     description: "Description",
+     link: "/home/social-media-management",
+   },
+   {
+     icon: "icon23",
+     name: "LinkedIn Marketing",
+     description: "Description",
+     link: "/home/linkedin-marketing",
+   },
+   {
+     icon: "icon24",
+     name: "WhatsApp / Email Marketing",
+     description: "Description",
+     link: "/home/whatsapp-email",
+   },
+ ];
+
 
 const page = () => {
   
 
-   const creativeslinkdata = [
-     {
-       name: "Content Writing",
-       description: "Create authentic content with expert writers",
-       link: "/home/content-writing",
-     },
-     {
-       name: "Graphic Designing",
-       description: "Branding and visual design",
-       link: "/home",
-     },
-     {
-       name: "Video Production",
-       description: "Motion graphics, Animations",
-       link: "/home/video-production",
-     },
-     {
-       name: "Localization",
-       description: "Motion graphics, Animations",
-       link:"/home/localization"
-     },
-     {
-      name:"Product Designing",
-      description:"3D modeling",
-      link:"/home/product"
-     },
-     {
-      name:"Packaging Designing",
-      description:"Description",
-      link:"/home/packaging-design"
-     },
-     {
-      name:"UX-UI Designing",
-      description:"Description",
-      link:"/home/ui-ux"
-     },
-     {
-      name:"Launch a Brand",
-      description:"Re-branding, New Branding",
-      link:"/home/brand-launch"
-     }
-   ];
-
-
-   const talentnetworklinkdata = [
-     {
-       name: "Find a Job",
-       description: "For Candidates",
-       link: "/home/find-a-job",
-     },
-     {
-       name: "Hire Professionals",
-       description: "For Businesses",
-       link: "/home/hire-professionals",
-     },
-     {
-       name: "Become Interviewer",
-       description: "For Evaluators",
-       link: "/home/become-interviewer",
-     },
-     {
-       name: "Upskill your team",
-       description: "For Industry Trainings",
-       link: "/home/upskill-your-team",
-     },
-   ];
-
-   const medialinkData = [
-     {
-       name: "Affluence Marketing",
-       description: "Description",
-       link: "/home/affluence-marketing",
-     },
-     {
-       name: "Influencer Marketing",
-       description: "Description",
-       link: "/home/influencer-marketing",
-     },
-     {
-       name: "Event Marketing",
-       description: "Description",
-       link: "/home/event-marketing",
-     },
-     {
-       name: "CRM",
-       description: "Description",
-       link: "/home/crm",
-     },
-   ];
-
-   const marketinglinkdata =  [
-  {
-    name: "Custom Web Development",
-    description: "Description",
-    link: "/home/custom-web-development",
-  },
-  {
-    name: "Performance Marketing",
-    description: "Description",
-    link: "/home/performance-marketing",
-  },
-  {
-    name: "Lead Gen-Funnel",
-    description: "Description",
-    link: "/home/lead-gen-funnel",
-  },
-  {
-    name: "Technical SEO",
-    description: "Description",
-    link: "/home/technical-seo",
-  },
-  {
-    name: "Market Research/Survey",
-    description: "Description",
-    link: "/home/market-research-survey",
-  },
-  {
-    name: "Social Media Marketing",
-    description: "Description",
-    link: "/home/social-media-management",
-  },
-  {
-    name: "LinkedIn Marketing",
-    description: "Description",
-    link: "/home/linkedin-marketing",
-  },
-  {
-    name: "WhatsApp / Email Marketing",
-    description: "Description",
-    link: "/home/whatsapp-email",
-  },
-];
-
+ 
 
 const servicemap: Record<string, servicetype[]> = {
   Creatives: creativeslinkdata,
@@ -202,23 +229,14 @@ const servicemap: Record<string, servicetype[]> = {
 
     const [selectedCard,setSelectedCard] = useState("Creatives");
     const [selectedServices,setSelectedServices] = useState<servicetype[]>(creativeslinkdata);
-  const images = [
-    { img: "/logos/adobe.png" },
-    { img: "/logos/airmeet.png" },
-    { img: "/logos/amazon.png" },
-    { img: "/logos/amazonpay.png" },
-    { img: "/logos/appolo.png" },
-    { img: "/logos/axis.png" },
-    { img: "/logos/binance.png" },
-    { img: "/logos/darwing.png" },
-  ];
+
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col w-full ">
       {" "}
-      <div className="flex font-helvetica  ">
-        <div className=" flex flex-grow flex-col bg-darkblue  gap-[30px] py-[60px]   ">
-          <div className=" flex flex-col gap-[30px]  md:ml-[30px] ">
-            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold ">
+      <div className="flex font-helvetica max-w-full ">
+        <div className=" flex flex-grow  bg-darkblue  gap-[30px] pt-[30px]  items-start   ">
+          <div className=" flex flex-col gap-[30px]  w-full pl-[80px]">
+            <div className="text-sm text-gold-yellow flex gap-2  items-center font-semibold ">
               <Image
                 src="/images/icons/solutions.png"
                 width={16}
@@ -226,9 +244,9 @@ const servicemap: Record<string, servicetype[]> = {
                 alt="solution icon"
                 className="h-full aspect-square"
               />{" "}
-              <span className="h-full flex items-end ">SOLUTIONS</span>
+              <span className="w-full h-full flex items-end ">SOLUTIONS</span>
             </div>
-            <div className="grid grid-cols-4  w-full">
+            <div className="flex justify-between w-full pr-[30px]">
               {content.map((item) => (
                 <Solutioncard
                   title={item.title}
@@ -244,29 +262,12 @@ const servicemap: Record<string, servicetype[]> = {
             </div>
           </div>
         </div>
-        <div className="w-[336px] min-w-[300px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[30px] min-h-[590px] max-h-[590px]">
-          <div className="flex justify-start items-center gap-4 p-2 py-4">
-            <Image
-              src="/images/icons/cuboid.png"
-              width={14}
-              height={15}
-              alt="Cuboid"
-            />{" "}
-            <span className="text-[16px] text-white">SERVICES</span>
-          </div>
-          {servicemap[selectedCard].map((service, index) => (
-            <Solutionservicecard
-              title={service.name}
-              content={service.description}
-              link={service.link}
-            />
-          ))}
-        </div>
+        <Navigationservice linkdata={servicemap[selectedCard]} />
       </div>
-      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-center">
-        <Marquee speed={50}>
-          {images.map((item) => (
-            <div className="w-[138px]  flex items-center md:py-[12.64px]">
+      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-start pt-[30px]">
+        <Marquee speed={50} className="flex items-center">
+          {marqueimages.map((item) => (
+            <div className="w-[138px]  flex items-center ">
               <img
                 src={item.img}
                 alt=""

@@ -100,9 +100,9 @@ function CampaignArea({
     { img: "/logos/darwing.png" },
   ];
   return (
-    <div className="flex flex-col w-full   gap-5  mx-auto  bg-background-blue-300 text-white  justify-between items-center ">
-      <div className="  mx-auto flex w-full md:px-[125px] items-center justify-center ">
-        <div className=" md:w-[680px]  flex flex-col gap-5 md:pt-16 pr-20  ">
+    <div className="flex flex-col w-full  mx-auto  bg-background-blue-300 text-white  justify-between items-center py-[60px] ">
+      <div className="  mx-auto flex w-full md:px-[125px] items-center justify-center gap-[30px] pb-[60px] ">
+        <div className=" md:w-[680px]  flex flex-col gap-[30px]    ">
           <div className="flex flex-col  text-heading/[69px] font-normal ">
             <span className="flex flex-wrap ">{heading}</span>
 
@@ -111,7 +111,7 @@ function CampaignArea({
             </span>
           </div>
           <div className="text-body/[20.7px]  ">
-            <ul className="list-disc px-8 font-normal flex flex-col gap-1">
+            <ul className="list-disc px-8 font-normal flex flex-col gap-[20px]">
               {keypoints.map((items, index) => (
                 <li key={index}>{items}</li>
               ))}
@@ -133,8 +133,8 @@ function CampaignArea({
         </div>
       </div>
 
-      <div className="flex  md:h-[150px] items-center gap-4 md:py-[30px] ">
-        <Marquee speed={50}>
+      <div className="flex  md:h-[150px] items-start gap-4 md:pt-[30px] ">
+        <Marquee speed={50} className="flex items-center">
           {images.map((item) => (
             <div className="w-[138px]  flex items-center md:py-[12.64px]">
               <img
@@ -148,14 +148,14 @@ function CampaignArea({
       </div>
       <div className="w-full flex justify-center">
         {" "}
-        <div className="flex flex-col md:py-[60px] md:gap-[60px] w-full md:px-[125px] items-center justify-center   ">
+        <div className="flex flex-col md:pt-[60px] md:gap-[30px] w-full md:px-[125px] items-center justify-center   ">
           <div className="text-heading/[68.99px] text-center flex flex-col ">
-            <span>{cardheading1}</span>
+            <span >{cardheading1}</span>
             <span>{cardheading2}</span>
           </div>
           <div className="flex items-start justify-between  gap-20 w-full">
             {cards.map((item) => (
-              <div className="flex flex-col md:w-[308px] gap-5 ">
+              <div className="flex flex-col md:min-w-[308px] max-w-min gap-[30px] ">
                 <div className="h-[50px]">
                   <img
                     src={item.logo}
@@ -164,10 +164,10 @@ function CampaignArea({
                   />
                 </div>
 
-                <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1">
+                <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1 whitespace-nowrap">
                   {item.title}
                   <div className="flex gap-1 text-subheading/[27.6px] items-center justify-start font-bold">
-                    <span>{item.subtitle}</span>
+                    <span >{item.subtitle}</span>
                     <img src={item.img} alt="" className="w-8 object-contain" />
                   </div>
                 </span>

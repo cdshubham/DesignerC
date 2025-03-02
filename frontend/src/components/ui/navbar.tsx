@@ -7,17 +7,17 @@ function Navbar() {
   const router = useRouter();
 
   const navnames = [
-    { name: "Platform", link: "/platform" },
+    { name: "Platform", link: "/sol/platform" },
     { name: "Solutions", link: "/sol/solution" },
-    { name: "Resources", link: "/resources" },
-    { name: "Talent Network", link: "/talent-network" },
+    { name: "Resources", link: "/sol/resources" },
+    { name: "Talent Network", link: "/sol/Talentnetwork" },
     
   ];  
 
   
   const [selected,setSelected] = useState("");
   return (
-    <div className="flex  w-[100vw]  mx-auto  bg-background-blue-300 text-white items-center justify-between md:px-[130px] md:py-[10px] border-b border-background-white-100/50 sticky">
+    <div className="flex  w-[100vw]  mx-auto  bg-background-blue-300 text-white items-center justify-between md:px-[80px] md:py-[10px] border-b border-background-white-100/50 sticky">
       <div className="flex gap-4 items-center font-normal ">
         <img
           src="/logos/designeralogo.png"

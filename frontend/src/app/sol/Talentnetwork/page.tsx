@@ -1,6 +1,10 @@
+import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
+import Navigationservice from "@/components/navigation/Navigationservice";
 import Image from "next/image";
+import { useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const page = () => {
   const content = [
@@ -20,54 +24,62 @@ const page = () => {
     },
   ];
 
-     const marketinglinkdata = [
-       {
-         name: "Custom Web Development",
-         description: "Description",
-         link: "/home/custom-web-development",
-       },
-       {
-         name: "Performance Marketing",
-         description: "Description",
-         link: "/home/performance-marketing",
-       },
-       {
-         name: "Lead Gen-Funnel",
-         description: "Description",
-         link: "/home/lead-gen-funnel",
-       },
-       {
-         name: "Technical SEO",
-         description: "Description",
-         link: "/home/technical-seo",
-       },
-       {
-         name: "Market Research/Survey",
-         description: "Description",
-         link: "/home/market-research-survey",
-       },
-       {
-         name: "Social Media Marketing",
-         description: "Description",
-         link: "/home/social-media-management",
-       },
-       {
-         name: "LinkedIn Marketing",
-         description: "Description",
-         link: "/home/linkedin-marketing",
-       },
-       {
-         name: "WhatsApp / Email Marketing",
-         description: "Description",
-         link: "/home/whatsapp-email",
-       },
-     ];
+    const marketinglinkdata = [
+      { 
+        icon: "icon21",
+        name: "Custom Web Development",
+        description: "Description",
+        link: "/home/custom-web-development",
+      },
+      {
+        icon: "icon22",
+        name: "Performance Marketing",
+        description: "Description",
+        link: "/home/performance-marketing",
+      },
+      {
+        icon: "icon23",
+        name: "Lead Gen-Funnel",
+        description: "Description",
+        link: "/home/lead-gen-funnel",
+      },
+      {
+        icon: "icon24",
+        name: "Technical SEO",
+        description: "Description",
+        link: "/home/technical-seo",
+      },
+      {
+        icon: "icon25",
+        name: "Market Research/Survey",
+        description: "Description",
+        link: "/home/market-research-survey",
+      },
+      {
+        icon: "icon26",
+        name: "Social Media Marketing",
+        description: "Description",
+        link: "/home/social-media-management",
+      },
+      {
+        icon: "icon27",
+        name: "LinkedIn Marketing",
+        description: "Description",
+        link: "/home/linkedin-marketing",
+      },
+      {
+        icon: "icon28",
+        name: "WhatsApp / Email Marketing",
+        description: "Description",
+        link: "/home/whatsapp-email",
+      },
+    ];
   return (
     <div className="flex flex-col">
       <div className="flex font-helvetica ">
-        <div className="flex-1 flex flex-col bg-darkblue p-[20px] px-[30px] ">
-          <div className=" flex flex-col gap-[30px] py-[60px] md:ml-[30px] max-w-[1104px]">
-            <div className="text-sm text-gold-yellow flex gap-2 py-4 items-center font-semibold">
+        <div className="flex-1 flex flex-col bg-darkblue pt-[30px] pr-[30px] pl-[80px]  ">
+          <div className=" flex flex-col flex-grow gap-[30px]  ">
+            <div className="text-sm text-gold-yellow flex gap-2 items-center font-semibold">
               <Image
                 src="/images/icons/solutions.png"
                 width={16}
@@ -77,7 +89,7 @@ const page = () => {
               />{" "}
               <span className="h-full flex items-end ">Talent Network</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between ">
               <div
                 className={`min-h-[469px] min-w-[506px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#201563] to-[#6450EC]`}
               >
@@ -133,33 +145,20 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[336px] min-w-[336px] flex flex-col bg-gradient-to-b from-[#11015A] to-[#370197] p-[20px] px-[30px] ">
-          <div className="flex justify-start items-center gap-4 p-2 py-4">
-            <Image
-              src="/images/icons/cuboid.png"
-              width={14}
-              height={15}
-              alt="Cuboid"
-            />{" "}
-            <span className="text-[16px] text-white">SERVICES</span>
-          </div>
-          {marketinglinkdata.map((service, index) => (
-            <Solutionservicecard
-              title={service.name}
-              content={service.description}
-              link={service.link}
-            />
-          ))}
-        </div>
+        <Navigationservice linkdata={marketinglinkdata} />
       </div>
-      <div className="w-full h-[150px] bg-background-blue-300 relative">
-        <Image
-          src="/images/adobe.png"
-          width={128}
-          height={31}
-          alt="adobe"
-          className="absolute bottom-20 right-4"
-        />
+      <div className="w-full h-[150px] bg-background-blue-300 relative flex items-start pt-[30px]">
+        <Marquee speed={50} className="flex items-center">
+          {marqueimages.map((item) => (
+            <div className="w-[138px]  flex items-center ">
+              <img
+                src={item.img}
+                alt=""
+                className="md:w-[128px] object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
