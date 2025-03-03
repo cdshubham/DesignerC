@@ -9,7 +9,19 @@ import Marquee from "react-fast-marquee";
 import { marketinglinkdata, servicetype } from "../solution/page";
 import Navigationservice from "@/components/navigation/Navigationservice";
 
+
+export const boxshadow = {
+  yellow: "#FFBF00",
+  green: "#24D171",
+  pink: "#BA40AA",
+  peachpink: "#B75C4E",
+  blue: "#A190FF",
+};
+
 const page = () => {
+
+
+ 
 
   console.log(marketinglinkdata);
   const content = [
@@ -28,19 +40,22 @@ const page = () => {
       color2: "#1EaD5D",
     },
   ];
+
+
+  const [selectedCard, setSelectedCard] = useState("Social Media Audit");
   return (
     <div className="flex flex-col w-full">
       <div className="flex font-helvetica max-w-full  ">
         <div className="flex flex-grow flex-col bg-darkblue gap-[30px] pt-[30px] pl-[80px] pr-[30px] justify-start">
           <div className="text-sm text-gold-yellow flex  gap-2  items-center font-semibold">
             <Image
-              src="/images/icons/solutions.png"
+              src="/icons/platform.png"
               width={16}
               height={16}
               alt="solution icon"
               className="h-full aspect-square"
             />{" "}
-            <span className="h-full flex items-end ">SOLUTIONS</span>
+            <span className="h-full flex items-end ">PLATFORM</span>
           </div>
 
           <div className="flex justify-between">
@@ -48,7 +63,14 @@ const page = () => {
               className={`min-h-[469px] min-w-[276px] max-w-min max-h-min flex flex-col justify-between`}
             >
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-gold-solution `}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-gold-solution hover:cursor-pointer `}
+                style={{
+                  boxShadow:
+                    selectedCard === "Social Media Audit"
+                      ? `0 0 0 2px ${boxshadow.yellow}`
+                      : "",
+                }}
+                onClick={() => setSelectedCard("Social Media Audit")}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Social Media Audit</span>
@@ -64,10 +86,17 @@ const page = () => {
               </div>
 
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution`}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution hover:cursor-pointer`}
+                style={{
+                  boxShadow:
+                    selectedCard === "Talent Marketplace"
+                      ? `0 0 0 2px ${boxshadow.green}`
+                      : "",
+                }}
+                onClick={() => setSelectedCard("Talent Marketplace")}
               >
                 <div className="flex  justify-between items-center">
-                  <span className="text-xl">Social Media Audit</span>
+                  <span className="text-xl">Talent Marketplace</span>
                   <Image
                     src="/images/icons/arrow.png"
                     width={42}
@@ -80,10 +109,17 @@ const page = () => {
               </div>
 
               <div
-                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-pink-solution `}
+                className={`min-h-[137px] min-w-[276px] max-w-min max-h-min flex flex-col p-[20px]   text-white relative gap-[20px] rounded-cardradius bg-gradient-pink-solution hover:cursor-pointer`}
+                onClick={() => setSelectedCard("Designera Learning")}
+                style={{
+                  boxShadow:
+                    selectedCard === "Designera Learning"
+                      ? `0 0 0 2px ${boxshadow.pink}`
+                      : "",
+                }}
               >
                 <div className="flex  justify-between items-center">
-                  <span className="text-xl">Social Media Audit</span>
+                  <span className="text-xl">Designera Learning</span>
                   <Image
                     src="/images/icons/arrow.png"
                     width={42}

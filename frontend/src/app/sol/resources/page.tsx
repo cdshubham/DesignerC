@@ -1,3 +1,5 @@
+"use client";
+
 import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
@@ -6,32 +8,34 @@ import Image from "next/image";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { marketinglinkdata } from "../solution/page";
+import { boxshadow } from "../platform/page";
 
 const page = () => {
   const content = [
     {
-      title: "Creatives",
+      title: "Blog",
       content: "Elevate your brand value with engaging and creative videos",
       className: "bg-gradient-to-b from-[#3A2A29] to-[#E4B156]",
       color1: "#FFFFFF",
       color2: "#1EaD5D",
+      border:boxshadow.yellow,
     },
     {
-      title: "Marketing",
+      title: "Case Studies",
       content: "Leverage technology to reach potential audience faster.",
       className: "bg-gradient-to-b from-[#3C1750] to-[#BD41AD]",
       color1: "#FFFFFF",
       color2: "#1EaD5D",
+      border:boxshadow.pink,
     },
   
   
   ];
 
-    
+     const [selectedCard, setSelectedCard] = useState("Blog");
      
   return (
     <div className="flex flex-col w-full">
-      {" "}
       <div className="flex font-helvetica h-full ">
         <div className="flex-grow flex flex-col bg-darkblue pl-[80px] ">
           <div className="flex flex-col gap-[30px] pt-[30px] pr-[30px] ">
@@ -54,13 +58,23 @@ const page = () => {
                   className={item.className}
                   color1={item.color1}
                   color2={item.color2}
+                  border={item.border}
+                  setSelectedCard={setSelectedCard}
+                  selectedCard={selectedCard}
                 />
               ))}
               <div
-                className={`h-[334px] w-[479px]   flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution`}
+                className={`h-[334px] w-[479px]   flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-cardradius  bg-gradient-green-solution hover:cursor-pointer`}
+                onClick={() => setSelectedCard("Join Designera Community")}
+                style={{
+                  boxShadow:
+                    selectedCard === "Join Designera Community"
+                      ? `0 0 0 2px ${boxshadow.green}`
+                      : "",
+                }}
               >
                 <div className="flex  justify-between items-center">
-                  <span className="text-xl">Join Desgignera Community</span>
+                  <span className="text-xl">Join Designera Community</span>
                   <Image
                     src="/images/icons/arrow.png"
                     width={42}

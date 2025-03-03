@@ -18,30 +18,31 @@ function Navbar() {
   const [selected,setSelected] = useState("");
   return (
     <div className="flex  w-[100vw]  mx-auto  bg-background-blue-300 text-white items-center justify-between md:px-[80px] md:py-[10px] border-b border-background-white-100/50 sticky">
-      <div className="flex gap-4 items-center font-normal ">
+      <div className="flex gap-[40px] items-center font-normal ">
         <img
           src="/logos/designeralogo.png"
           alt=""
           className="md:w-[138px] object-contain"
         />
-
-        {navnames.map((items, index) => (
-          <button
-            className={`${
-              selected === items.name ? "text-yellow-100" : ""
-            } text-cta cursor-pointer font-helvetica font-normal text-white flex items-center gap-1`}
-            onClick={() => {
-              setSelected(items.name);
-              router.push(items.link);
-            }}
-          >
-            <span>{items.name}</span>
-            <MdKeyboardArrowDown
-              size={20}
-              className={`${selected === items.name ? "rotate-180" : ""}`}
-            />
-          </button>
-        ))}
+        <div className="flex items-center gap-[20px]">
+          {navnames.map((items, index) => (
+            <button
+              className={`${
+                selected === items.name ? "text-yellow-100" : ""
+              } text-cta cursor-pointer font-helvetica font-normal text-white flex items-center gap-1`}
+              onClick={() => {
+                setSelected(items.name);
+                router.push(items.link);
+              }}
+            >
+              <span>{items.name}</span>
+              <MdKeyboardArrowDown
+                size={20}
+                className={`${selected === items.name ? "rotate-180" : ""}`}
+              />
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="text-cta font-normal flex gap-5">

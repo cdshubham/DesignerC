@@ -238,7 +238,7 @@ const servicemap: Record<string, servicetype[]> = {
           <div className=" flex flex-col gap-[30px]  w-full pl-[80px]">
             <div className="text-sm text-gold-yellow flex gap-2  items-center font-semibold ">
               <Image
-                src="/images/icons/solutions.png"
+                src="/icons/solutions.png"
                 width={16}
                 height={16}
                 alt="solution icon"

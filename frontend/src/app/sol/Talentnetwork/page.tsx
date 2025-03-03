@@ -1,10 +1,10 @@
+"use client";
 import { marqueimages } from "@/components/data";
-import Solutioncard from "@/components/home/Solutioncard";
-import Solutionservicecard from "@/components/home/Solutionservicecard";
 import Navigationservice from "@/components/navigation/Navigationservice";
 import Image from "next/image";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { boxshadow } from "../platform/page";
 
 const page = () => {
   const content = [
@@ -74,6 +74,8 @@ const page = () => {
         link: "/home/whatsapp-email",
       },
     ];
+
+    const [selectedCard, setSelectedCard] = useState("Get Hired");
   return (
     <div className="flex flex-col">
       <div className="flex font-helvetica ">
@@ -81,17 +83,24 @@ const page = () => {
           <div className=" flex flex-col flex-grow gap-[30px]  ">
             <div className="text-sm text-gold-yellow flex gap-2 items-center font-semibold">
               <Image
-                src="/images/icons/solutions.png"
+                src="/icons/star2.png"
                 width={16}
                 height={16}
                 alt="solution icon"
                 className="h-full aspect-square"
-              />{" "}
-              <span className="h-full flex items-end ">Talent Network</span>
+              />
+              <span className="h-full flex items-end ">TALENT NETWORK</span>
             </div>
             <div className="flex justify-between ">
               <div
-                className={`min-h-[469px] min-w-[506px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#201563] to-[#6450EC]`}
+                className={`min-h-[469px] min-w-[506px] max-w-min max-h-min flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#201563] to-[#6450EC] hover:cursor-pointer`}
+                onClick={() => setSelectedCard("Get Hired")}
+                style={{
+                  boxShadow:
+                    selectedCard === "Get Hired"
+                      ? `0 0 0 2px ${boxshadow.blue}`
+                      : "",
+                }}
               >
                 <div className="flex  justify-between items-center">
                   <span className="text-xl">Get Hired</span>
@@ -109,7 +118,14 @@ const page = () => {
 
               <div className="min-w-[455px] min-h-[469px] max-w-min max-h-min flex flex-col justify-between  ">
                 <div
-                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] `}
+                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] hover:cursor-pointer`}
+                  onClick={() => setSelectedCard("Get Talent")}
+                  style={{
+                    boxShadow:
+                      selectedCard === "Get Talent"
+                        ? `0 0 0 2px ${boxshadow.pink}`
+                        : "",
+                  }}
                 >
                   <div className="flex  justify-between items-center">
                     <span className="text-xl">Get Talent</span>
@@ -126,7 +142,14 @@ const page = () => {
                 </div>
 
                 <div
-                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] `}
+                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] hover:cursor-pointer`}
+                  onClick={() => setSelectedCard("Designera Learning")}
+                  style={{
+                    boxShadow:
+                      selectedCard === "Designera Learning"
+                        ? `0 0 0 2px ${boxshadow.green}`
+                        : "",
+                  }}
                 >
                   <div className="flex  justify-between items-center">
                     <span className="text-xl">Designera Learning</span>

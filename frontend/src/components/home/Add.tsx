@@ -3,7 +3,7 @@ import React from "react";
 function Add() {
   return (
     <div className=" w-[100vw]  ">
-      <div className="flex bg-background-blue-100 text-white justify-between md:px-[130px] md:py-[10px]">
+      <div className="flex bg-background-blue-100 text-white justify-between md:px-[100px] md:py-[10px]">
         <div className="flex gap-4 items-center">
           <img
             src="/emojie/fire.png"
