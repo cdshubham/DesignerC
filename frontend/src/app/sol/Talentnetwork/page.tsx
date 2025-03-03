@@ -118,7 +118,7 @@ const page = () => {
 
               <div className="min-w-[455px] min-h-[469px] max-w-min max-h-min flex flex-col justify-between  ">
                 <div
-                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] hover:cursor-pointer`}
+                  className={`h-[227px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#3A164F] to-[#BC41AD] hover:cursor-pointer`}
                   onClick={() => setSelectedCard("Get Talent")}
                   style={{
                     boxShadow:
@@ -142,7 +142,7 @@ const page = () => {
                 </div>
 
                 <div
-                  className={`h-[220px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] hover:cursor-pointer`}
+                  className={`h-[227px] w-[455px] flex flex-col py-[30px] px-[20px]   text-white relative gap-[20px] rounded-[4px] bg-gradient-to-b from-[#173342] to-[#29C77B] hover:cursor-pointer`}
                   onClick={() => setSelectedCard("Designera Learning")}
                   style={{
                     boxShadow:

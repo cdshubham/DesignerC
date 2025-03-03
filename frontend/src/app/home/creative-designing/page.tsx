@@ -17,6 +17,7 @@ import With3images from "@/components/home/With3images";
 import Navbar from "@/components/ui/navbar";
 import Expertise from "@/components/home/Expertise";
 import Shopify from "@/components/home/Shopify";
+import Bestforyou from "@/components/home/Bestforyou";
 
 
 const page = () => {
@@ -65,7 +66,7 @@ const page = () => {
     <div className=" w-full ">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+    
 
       <DesignWillBenifitYou />
 
@@ -76,6 +77,7 @@ const page = () => {
     
       <Clients />
       <Hiring />
+      {/* <Bestforyou/> */}
       <MileStones />
       <Faq />
       <Service />

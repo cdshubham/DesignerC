@@ -3,7 +3,7 @@ import WhiteButton from "../ui/WhiteButton";
 import { MdArrowOutward } from "react-icons/md";
 function DesignWillBenifitYou() {
   return (
-    <div className="w-full md:py-[60px] bg-background-blue-100 flex flex-col  text-white md:px-[125px] gap-[60px]">
+    <div className="w-full md:py-[60px] bg-[#F9F5EC] flex flex-col  text-black md:px-[125px] gap-[60px]">
       <span className="md:text-heading/[68.99px]  ">
         Designera Will Benifit You.
       </span>
