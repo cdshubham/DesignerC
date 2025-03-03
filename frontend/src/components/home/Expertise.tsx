@@ -18,7 +18,7 @@ const Expertisecard = ({image,title,subheading}:{ image:string,
           />
         </div>
         <h3 className="text-subheading">{title}</h3>
-        <p className="text-body">
+        <p className="text-body text-justify">
           {subheading}
         </p>
       </div>
@@ -61,7 +61,7 @@ const Expertise = () => {
       },
       {
         image: "/images/expertise/other.png",
-        title: "YouTube",
+        title: "Other Platforms",
         subheading:
           "Have another platform in mind? We’re here for team. With a global team of presentation designers to tap into, we have skills across the board and can cater to any preference.",
       },

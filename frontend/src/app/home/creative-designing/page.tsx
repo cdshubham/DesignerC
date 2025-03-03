@@ -16,6 +16,7 @@ import Service from "@/components/home/Service";
 import With3images from "@/components/home/With3images";
 import Navbar from "@/components/ui/navbar";
 import Expertise from "@/components/home/Expertise";
+import Shopify from "@/components/home/Shopify";
 
 
 const page = () => {
@@ -60,18 +61,19 @@ const page = () => {
     ],
   };
 
-  return ( <div className=" w-full ">
-
+  return (
+    <div className=" w-full ">
       <CampaignArea {...data} />
       <HelpBussiness />
       <LatestTool />
-   
-      
+
       <DesignWillBenifitYou />
-    
-      <Portfolio />
+
       <CaseStudy />
-      <Expertise/>
+      <Expertise />
+      <Shopify/>
+      <Portfolio />
+    
       <Clients />
       <Hiring />
       <MileStones />

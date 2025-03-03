@@ -45,7 +45,7 @@ function HelpBussiness({heading,cardscontent}:props) {
                 <h1 className="text-start text-body font-semibold">
                   Logo Design
                 </h1>
-                <p className="justified text-[#67737E] text-footer">
+                <p className="text-justify text-[#67737E] text-footer">
                   Craft unique and memorable logos that embody your brand’s
                   identity, leaving a lasting impression on your audience.
                 </p>
