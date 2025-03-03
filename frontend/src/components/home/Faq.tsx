@@ -48,7 +48,7 @@ function Faq() {
                   <FiPlus />
                 </div>  }
               </div>
-              <span className="text-body/5 font-normal">{item.sub}</span>
+              <span className="text-body/[27px] font-normal">{item.sub}</span>
             </div>
           </li>
         ))}
