@@ -5,7 +5,7 @@ function DesignWillBenifitYou() {
   return (
     <div className="w-full md:py-[60px] bg-[#F9F5EC] flex flex-col  text-black md:px-[125px] gap-[60px]">
       <span className="md:text-heading/[68.99px]  ">
-        Designera Will Benifit You.
+        Designera Will Benefit You.
       </span>
       <div className="flex flex-col gap-[36px]">
         <div className="grid grid-cols-2 max-h-[387px] overflow-hidden bg-background-white-100  rounded-cardradius ">
