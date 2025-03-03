@@ -92,7 +92,7 @@ const page = () => {
     <div className=" w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+      
       <With3images
         heading="Process"
         subheading="Our top-tier market research and consultancy services are designed to uncover insights that drive growth, tailored to your unique needs. 

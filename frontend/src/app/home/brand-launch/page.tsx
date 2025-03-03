@@ -91,7 +91,7 @@ const page = () => {
     <div className=" w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+      
       <With3images />
       <Bookademo color={"highlight-brandlaunch"} heading="Affordable subtitling services with" coloredHeading="quick TAT" image="/images/brandlaunchutil.png"/>
       <Portfolio />

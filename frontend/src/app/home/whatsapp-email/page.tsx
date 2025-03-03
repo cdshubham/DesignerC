@@ -92,7 +92,7 @@ const page = () => {
     <div className=" w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+   
       <ProcessSteps {...stepsdata} />
       <Portfolio />
       {/* <DesignWillBenifitYou /> */}

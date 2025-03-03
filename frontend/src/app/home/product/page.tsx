@@ -58,7 +58,7 @@ const page = () => {
    return (<div className=" w-full">
     <CampaignArea {...data} />
     <HelpBussiness />
-    <LatestTool />
+  
 
     {/* <ProcessSteps /> */}
 

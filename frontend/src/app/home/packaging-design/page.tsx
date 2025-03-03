@@ -89,7 +89,7 @@ const page = () => {
     <div className=" w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+     
       <ProcessSteps
         mainheading={stepsdata.mainheading}
         steps={stepsdata.steps}

@@ -64,9 +64,7 @@ function Parent() {
 
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
-   
-      
+    
       <DesignWillBenifitYou />
     
       <Portfolio />

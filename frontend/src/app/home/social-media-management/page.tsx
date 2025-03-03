@@ -93,7 +93,7 @@ const page = () => {
     <div className=" w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+   
       <DesignWillBenifitYou />
       {/* <With3images
         heading="Services"

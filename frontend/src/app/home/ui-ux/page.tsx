@@ -60,7 +60,7 @@ const page = () => {
     
     <CampaignArea {...data} />
     <HelpBussiness />
-    <LatestTool />
+    
     <ProcessSteps />
     <With3images />
 {/* 

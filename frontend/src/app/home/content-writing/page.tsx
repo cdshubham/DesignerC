@@ -92,7 +92,7 @@ const page = () => {
     <div className="w-full flex flex-col items-center">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <LatestTool />
+     
 
       <ProcessSteps
         mainheading={stepsdata.mainheading}
