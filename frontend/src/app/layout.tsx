@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased w-full `}>
+      <body className={`antialiased w-full h-[100vh] flex flex-col`}>
         <Add />
         <Navbar />
         {children}
