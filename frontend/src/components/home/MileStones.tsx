@@ -13,31 +13,13 @@ function MileStones() {
         {img:"/images/rebranding.png",category:"Rebranding"},
     ]
   return (
-    <div className="w-full md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center md:gap-[45px]">
-      <span className="text-heading/[68.99px] font-normal">
-        Designera is best for your business.
-      </span>
-      <div className="flex ">
-        {content.map((item, index) => (
-          <div
-            className={`flex flex-col gap-2  ${
-              index < content.length - 1
-                ? "border-r border-background-white-100"
-                : ""
-            } px-8`}
-          >
-            <span className="text-heading/[68px] font-bold">
-              {item.heading}
-            </span>
-            <span className="text-base/5 font-nprmal">{item.sub}</span>
-          </div>
-        ))}
-      </div>
-      <div className="md:w-[950px] bg-white mx-auto h-[1px]"></div>
+    <div className="w-full md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center md:gap-[30px]">
       <span className="text-heading/[68.99px] font-normal">
         Explore Perfect needs with Designera.
       </span>
-
+      <span className="text-center text-[#D6D8D2]">
+        Social media creative projects completed to date
+      </span>
       <div className="flex w-full items-center px-[24px] justify-around">
         {images.map((item) => (
           <div className="flex flex-col gap-[20px]">
@@ -46,7 +28,9 @@ function MileStones() {
               alt=""
               className="max-w-[369px] max-h-[305px] object-cover rounded-[8px]"
             />
-            <h3 className='text-center text-[24px] font-semibold '>{item.category}</h3>
+            <h3 className="text-center text-[24px] font-semibold ">
+              {item.category}
+            </h3>
           </div>
         ))}
       </div>

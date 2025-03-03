@@ -29,7 +29,7 @@ function Faq() {
       },
   ];
   return (
-    <div className="w-full bg-background-white-100 md:py-[60px] md:px-[125px] flex flex-col gap-[60px]">
+    <div className="w-full bg-background-white-100 md:py-[60px] md:px-[125px] flex flex-col gap-[30px]">
       <span className="text-heading/[68.99%] font-normal md:pt-[30px]">
         Resolve your Doubts here.
       </span>

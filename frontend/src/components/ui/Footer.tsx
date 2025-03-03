@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col md:py-[60px] md:px-[129px] gap-[60px] text-background-blue-300 text-footer/[16px] font-helvetica bg-white ">
+    <div className="flex flex-col md:py-[60px] md:px-[129px] gap-[30px] text-background-blue-300 text-footer/[16px] font-helvetica bg-white ">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 border-b-[1px] border-line-blue">
         {/* Platform Section */}
         <div className="flex flex-col gap-[46px]">

@@ -12,24 +12,24 @@ import BlueButton from "@/components/ui/BlueButton";
 const page = () => {
 
   return (
-    <div className="w-full flex-grow relative bg-background-blue-300 pt-[60px] flex flex-col justify-between items-center   px-[125px] text-white    ">
+    <div className="w-full max-h-full overflow-hidden flex-grow relative bg-background-blue-300 pt-[60px] flex flex-col gap-[80px] items-center   px-[125px] text-white    ">
       <h1 className="text-heading/[60px]">
         <span>
           <span className="text-[#9857F8]">Accelerate</span> your Revenue
         </span>
       </h1>
-      <p className="text-body w-[40%] text-center flex flex-wrap justify-center items-center ">
-        Welcome to Superspace. Quickly submit a brief, review in platform, keep
-        track of usage and more in one easy place.
-      </p>{" "}
-      <div className="w-full flex flex-col items-center ">
-        {" "}
+
+      <div className="w-full flex flex-col items-center gap-[20px]">
+        <p className="text-body w-[50%] text-center flex flex-wrap justify-center items-center mb-[20px] ">
+          Welcome to Superspace. Quickly submit a brief, review in platform,
+          keep track of usage and more in one easy place.
+        </p>{" "}
         <BlueButton
           children="Get started"
-          className="text-white rounded-cta-raduis w-[153px] h-[37px] text-[16px] mb-[20px]"
+          className="text-white rounded-cta-raduis w-[153px] h-[37px] text-[16px] "
         />
         <div className="w-full flex flex-col items-center ">
-          <div className="flex w-[814px] h-[250px] items-start overflow-hidden max-h-full ">
+          <div className="flex w-[814px] h-[450px] items-start overflow-hidden max-h-full z-[10]">
             <Image
               src="/images/gif/home.gif"
               width={814}
@@ -38,20 +38,20 @@ const page = () => {
               className="object-cover "
             />
           </div>
-          <div className="h-[93px]  bottom-0 flex justify-center items-center">
-            <Marquee speed={50} className="flex items-center">
-              {marqueimages.map((item) => (
-                <div className="w-[138px]  flex items-center ">
-                  <img
-                    src={item.img}
-                    alt=""
-                    className="md:w-[128px] object-contain"
-                  />
-                </div>
-              ))}
-            </Marquee>
-          </div>
         </div>
+      </div>
+      <div className="h-[93px] sticky bottom-0 flex justify-center items-center z-[50] bg-background-blue-300 ">
+        <Marquee speed={50} className="flex items-center">
+          {marqueimages.map((item) => (
+            <div className="w-[138px]  flex items-center ">
+              <img
+                src={item.img}
+                alt=""
+                className="md:w-[128px] object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

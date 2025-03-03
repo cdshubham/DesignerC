@@ -22,17 +22,17 @@ function CaseStudy() {
           <img src={img} className="md:w-[192px] object-contain" />
         ))}
       </div>
-      <div className="text-white flex w-full ">
+      <div className="text-white flex w-full gap-[30px] ">
         <div className="flex flex-col gap-[60px] w-full">
-          <div className="flex flex-col text-[46px]/[52px] gap-2 font-normal">
+          <div className="flex flex-col text-[46px]/[52px] font-normal gap-[30px] ">
             <div className="flex gap-2 items-center">
-              <div className="w-[32px] h-[32px] rounded-cards-raduis bg-yellow-100"></div>
+              <div className="w-[32px] h-[32px] rounded-cardraius bg-yellow-100"></div>
               <span className="text-xs font-semibold">FEATURED CASE STUDY</span>
             </div>
-            <span>"Reimagining a Legacy:</span>
-            <span>Redefining Top's India</span>
-            <span>Brand Identity and Strategy </span>
-            <span>for the Modern Consumer"</span>
+            <span>"Reimagining a Legacy:
+            Redefining Top's India
+            Brand Identity and Strategy 
+            for the Modern Consumer"</span>
             <div className="flex text-[#20DF79] gap-[30px] text-[80px]/[88px] font-normal">
               <div className="flex flex-col gap-4">
                 <span>250%</span>
@@ -54,7 +54,7 @@ function CaseStudy() {
               Read Case Study
             </span>
             <div className="w-[31px] h-[31px] rounded-full flex items-center justify-center bg-background-white-100 text-black cursor-pointer">
-              <FaArrowRight />
+              <FaArrowRight size={20}/>
             </div>
           </div>
         </div>

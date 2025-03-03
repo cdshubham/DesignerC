@@ -8,9 +8,9 @@ function DesignWillBenifitYou() {
         Designera Will Benifit You.
       </span>
       <div className="flex flex-col gap-[36px]">
-        <div className="flex bg-background-white-100 relative w-full mx-auto  md:py-[60px] overflow-hidden md:pl-[60px] lg:pl-[50px] rounded-t-cards-raduis rounded-l-cards-raduis ">
-          <div className="md:max-w-[483px] flex flex-col gap-[30px]  text-black  lg:pr-[125px]">
-            <span className="text-[32px]/[36.8px] text-justify font-bold">
+        <div className="grid grid-cols-2 max-h-[387px] overflow-hidden bg-background-white-100  rounded-cardradius ">
+          <div className="max-w-full px-[50px] pt-[50px] flex flex-col gap-[30px]  text-black  ">
+            <span className="text-[32px]/[36.8px] text-justify font-bold w-[75%]">
               Hire Us or On-board Top 1% Creative Talent ✨
             </span>
             <span className="text-body/[20.7px] text-justify font-normal">
@@ -26,17 +26,18 @@ function DesignWillBenifitYou() {
               className="text-background-blue-100 font-normal text-cta  flex justify-center md:w-[140px]"
             />
           </div>
-
-          <img
-            src="/images/benifit.png"
-            alt=""
-            className=" md:h-[439px] absolute -right-28 top-3  object-contain  "
-          />
+          <div className="h-full flex items-start justify-start">
+            <img
+              src="/images/benifit.png"
+              alt=""
+              className=" md:h-[439px]  object-cover rounded-cardradius  "
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-3 md:gap-[36px] md:h-[573px]">
-          <div className=" md:px-[50px] md:py-[30px] col-span-1  bg-background-white-100 text-black  rounded-cards-raduis relative flex flex-col">
-            <div className="flex flex-col gap-[20px]  ">
+          <div className=" md:px-[50px] md:pt-[40px] col-span-1  bg-background-white-100 text-black  rounded-cards-raduis relative flex flex-col items-center">
+            <div className="flex flex-col gap-[20px] min-w-[327px] ">
               <span className="text-[32px]/[36.8px] font-bold ">
                 Creatives that Drives Revenue 💵
               </span>
@@ -53,7 +54,7 @@ function DesignWillBenifitYou() {
               <img
                 src="/images/creative.png"
                 alt=""
-                className=" md:w-[327px] absolute object-contain bottom-0 right-1/2 translate-x-1/2"
+                className=" md:w-[327px] absolute object-contain top-[260px] right-1/2 translate-x-1/2 rounded-cardradius"
               />
             </div>
           </div>
@@ -72,10 +73,11 @@ function DesignWillBenifitYou() {
                 <MdArrowOutward />
               </button>
             </div>
+
             <img
               src="/images/excellence.png"
               alt=""
-              className=" md:w-[707px] absolute object-contain -bottom-12 -right-4"
+              className=" w-full min-h-[400px] absolute left-[60px] top-[260px]  object-cover rounded-cardradius "
             />
           </div>
         </div>
