@@ -27,9 +27,9 @@ function HelpBussiness({heading,cardscontent}:props) {
 
     
   return (
-    <div className="flex flex-col  md:py-[60px] gap-5   bg-background-white-100 w-full  items-center justify-center ">
+    <div className="flex flex-col  md:py-[60px] gap-5 bg-background-white-100 w-full  items-center justify-center py-9 ">
       <div className=" w-full flex flex-col gap-[30px]">
-        <span className="text-heading/[68.99px] font-normal px-[125px] ">
+        <span className="text-[28px]/[32.2px] md:text-heading/[68.99px] font-normal md:px-[125px] text-center px-8  ">
           Let’s see how we can help your business
         </span>
         <Marquee speed={50}>

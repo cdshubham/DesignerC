@@ -20,7 +20,7 @@ function MileStones() {
       <span className="text-center text-[#D6D8D2]">
         Social media creative projects completed to date
       </span>
-      <div className="flex w-full items-center px-[24px] justify-around">
+      <div className="flex w-full items-center px-[24px] justify-around overflow-auto">
         {images.map((item) => (
           <div className="flex flex-col gap-[20px]">
             <img

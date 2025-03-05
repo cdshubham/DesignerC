@@ -120,7 +120,7 @@ function CampaignArea({
 
           <BlueButton
             children="Book a Demo"
-            className="text-sm md:text-base font-bold md:w-[153px] h-10 md:h-[37px] hover:bg-yellow-100 hover:text-black w-[120px] self-center md:self-start md:ml-4"
+            className="hidden md:flex text-sm md:text-base font-bold md:w-[153px] h-10 md:h-[37px] hover:bg-yellow-100 hover:text-black w-[120px] self-center md:self-start md:ml-4"
           />
         </div>
 
@@ -160,9 +160,9 @@ function CampaignArea({
           {cards.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col w-full md:w-[308px] gap-6 mb-6 md:mb-0"
+              className="flex flex-col w-full md:w-[308px] gap-2 md:gap-6 mb-6 md:mb-0"
             >
-              <div className="h-[50px]">
+              <div className="h-[50px] mb-4 md:mb-0">
                 <img
                   src={item.logo}
                   alt=""
@@ -170,7 +170,7 @@ function CampaignArea({
                 />
               </div>
 
-              <span className="text-2xl md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap">
+              <span className="text-[24px]/[27px] md:text-2xl md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap">
                 {item.title}
                 <div className="flex gap-2 items-center justify-start font-bold text-">
                   <span>{item.subtitle}</span>
@@ -178,7 +178,7 @@ function CampaignArea({
                 </div>
               </span>
 
-              <span className="text-base font-normal text-justify">
+              <span className="text-gray-200 md:text-white text-base font-normal md:text-justify">
                 {item.subheading}
               </span>
             </div>
