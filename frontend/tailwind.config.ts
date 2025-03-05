@@ -101,6 +101,8 @@ export default {
         footersmall: "12px",
         mediumheading: "48px",
         avg: "32px",
+        mobileheading:"36px",
+        mobilesubheading:"28px",
       },
       borderRadius: {
         cardradius: "4px",

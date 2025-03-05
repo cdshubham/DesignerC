@@ -8,7 +8,7 @@ function DesignWillBenifitYou() {
         Designera Will Benefit You.
       </span>
       <div className="flex flex-col gap-[36px]">
-        <div className="grid grid-cols-2 max-h-[387px] overflow-hidden bg-background-white-100  rounded-cardradius ">
+        <div className="flex flex-col md:grid md:grid-cols-2  max-h-[387px] overflow-hidden bg-background-white-100  rounded-cardradius ">
           <div className="max-w-full px-[50px] pt-[50px] flex flex-col gap-[30px]  text-black  ">
             <span className="text-[32px]/[36.8px] text-justify font-bold w-[75%]">
               Hire Us or On-board Top 1% Creative Talent ✨

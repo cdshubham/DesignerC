@@ -27,16 +27,16 @@ function HelpBussiness({heading,cardscontent}:props) {
 
     
   return (
-    <div className="flex flex-col  md:py-[60px] gap-5   bg-background-white-100 w-full  items-center justify-center ">
-      <div className=" w-full flex flex-col gap-[30px]">
-        <span className="text-heading/[68.99px] font-normal px-[125px] ">
+    <div className="flex flex-col py-[40px] md:py-[60px] gap-5   bg-background-white-100 w-full  items-center justify-center ">
+      <div className=" w-full flex flex-col gap-[30px] items-center">
+        <div className="text-start text-mobilesubheading/[32px] md:text-heading/[68.99px]   font-normal px-[30px]  lg:px-[125px] ">
           Let’s see how we can help your business
-        </span>
+        </div>
         <Marquee speed={50}>
           {" "}
           <div className="flex w-full max-w-full overflow-x-hidden  gap-[20px]">
             {options.map((item) => (
-              <div className="flex flex-col rounded-cardradius gap-[20px] h-[418px] min-w-[329px] max-w-min  border border-gray-200 overflow-y-hidden">
+              <div className="flex flex-col rounded-cardradius gap-[20px] h-[413px] min-w-[232px] md:h-[418px] md:min-w-[329px] max-w-min  border border-gray-200 overflow-y-hidden">
                 <Image
                   height={292}
                   width={330}
