@@ -62,7 +62,7 @@ function CaseStudy() {
         <img
           src="/images/pizza.png"
           alt=""
-          className="ms:h-[513px] object-cover"
+          className="md:h-[513px] object-cover"
         />
       </div>
     </div>

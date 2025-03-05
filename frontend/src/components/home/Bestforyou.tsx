@@ -12,6 +12,9 @@ const Card = ({content,main}:any)=>{
     );
 }
 
+
+
+
 const Bestforyou = () => {
   return (
     <div className="w-full md:px-[125px] items-center justify-center md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col bg-[#7B23FD] text-white">
