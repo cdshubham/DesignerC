@@ -11,7 +11,7 @@ function Service() {
      
       </div>
 
-      <div className="flex gap-4 justify-center md:flex-row flex-col w-full">
+      <div className="flex gap-4 justify-center md:flex-row flex-col w-full items-center">
         <WhiteButton
           children="Book a Demo"
           className="md:w-[153px] h-[37px] w-[295px] bg-yellow-100 rounded-[4px] text-black text-cta font-bold"
