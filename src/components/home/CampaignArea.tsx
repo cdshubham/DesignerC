@@ -43,7 +43,6 @@ const colorClasses: any = {
   "highlight-influencemarketing": "text-[#FF39B0]",
   "highlight-eventmarketing": "text-[#FF4F64]",
   "highlight-CRM": "text-[#FF9839]",
-  // Add more colors as needed
 };
 
 function CampaignArea({
@@ -52,7 +51,7 @@ function CampaignArea({
   color = "yellow-100",
   keypoints = [
     "On-board the Top 1% Design Talent.",
-    "Communicate your brand’s story.",
+    "Communicate your brand's story.",
     "Impactful Marketing Collateral.",
   ],
   image = "/images/home.png",
@@ -96,84 +95,94 @@ function CampaignArea({
     { img: "/logos/darwing.png" },
   ];
   return (
-    <div className="flex flex-col w-full  mx-auto  bg-background-blue-300 text-white  justify-between items-center py-[60px] ">
-      <div className="  mx-auto flex w-full md:px-[125px] items-center justify-center gap-[30px] pb-[60px] ">
-        <div className=" md:w-[680px]  flex flex-col gap-[30px]    ">
-          <div className="flex flex-col  text-heading/[69px] font-normal ">
-            <span className="flex flex-wrap ">{heading}</span>
-
-            <span className={colorClasses[color] || "text-yellow-100"}>
+    <div className="flex flex-col w-full mx-auto bg-background-blue-300 text-white justify-between items-center py-10 px-4 sm:px-6 lg:px-[125px]">
+      {/* First Section: Heading, Keypoints, and Image */}
+      <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center gap-6 md:gap-10 pb-15">
+        <div className="flex flex-col w-full md:w-1/2 gap-6 order-2 md:order-1">
+          <div className=" space-y-2 p-2 text-4xl leading-12 lg:text-heading sm:text-3xl md:text-4xl md:leading-[0.9] lg:leading-[1]">
+            <span className="  font-normal  ">{heading}</span>
+            <span
+              className={`pl-2   ${colorClasses[color] || "text-yellow-100"} `}
+            >
               {coloredHeading}
             </span>
           </div>
-          <div className="text-body/[20.7px]  ">
-            <ul className="list-disc px-8 font-normal flex flex-col gap-[20px]">
+
+          <div className="text-base md:text-body">
+            <ul className="list-disc pl-6 md:pl-8 font-normal flex flex-col gap-3 md:gap-5">
               {keypoints.map((items, index) => (
-                <li key={index}>{items}</li>
+                <li key={index} className="text-sm sm:text-base">
+                  {items}
+                </li>
               ))}
             </ul>
           </div>
+
           <BlueButton
             children="Book a Demo"
-            className="text-cta font-bold md:w-[153px] md:h-[37px] hover:bg-yellow-100 hover:text-black"
+            className="text-sm md:text-base font-bold md:w-[153px] h-10 md:h-[37px] hover:bg-yellow-100 hover:text-black w-[120px] self-center"
           />
         </div>
-        <div className="max-h-[61px] max-w-[574px] min-h-max min-w-max">
+
+        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2 mb-6 md:mb-0">
           <Image
             src={image}
-            alt=""
+            alt="Campaign Visual"
             height={621}
             width={574}
-            className="object-cover"
+            className="object-contain w-full max-w-[400px] md:max-w-[500px] lg:max-w-[574px]"
           />
         </div>
       </div>
 
-      <div className="flex  md:h-[150px] items-start gap-4 md:pt-[30px] ">
+      {/* Marquee Section */}
+      <div className="w-full overflow-hidden py-6">
         <Marquee speed={50} className="flex items-center">
-          {images.map((item) => (
-            <div className="w-[138px]  flex items-center md:py-[12.64px]">
+          {images.map((item, index) => (
+            <div key={index} className="px-4 flex items-center justify-center">
               <img
                 src={item.img}
                 alt=""
-                className="md:w-[128px] object-contain"
+                className="max-w-[100px] sm:max-w-[128px] object-contain"
               />
             </div>
           ))}
         </Marquee>
       </div>
-      <div className="w-full flex justify-center">
-        {" "}
-        <div className="flex flex-col md:pt-[60px] md:gap-[30px] w-full md:px-[125px] items-center justify-center   ">
-          <div className="text-heading/[68.99px] text-center flex flex-col ">
-            <span>{cardheading1}</span>
-            <span>{cardheading2}</span>
-          </div>
-          <div className="flex items-start justify-between  gap-20 w-full">
-            {cards.map((item) => (
-              <div className="flex flex-col md:min-w-[308px] max-w-min gap-[30px] ">
-                <div className="h-[50px]">
-                  <img
-                    src={item.logo}
-                    alt=""
-                    className="w-[40px] object-contain"
-                  />
-                </div>
 
-                <span className="text-subheading/[27.6px] text-left font-bold flex flex-col gap-1 whitespace-nowrap">
-                  {item.title}
-                  <div className="flex gap-1 text-subheading/[27.6px] items-center justify-start font-bold">
-                    <span>{item.subtitle}</span>
-                    <img src={item.img} alt="" className="w-8 object-contain" />
-                  </div>
-                </span>
-
-                <span className="text-body font-normal text-justify">
-                  {item.subheading}
-                </span>
+      {/* Cards Section */}
+      <div className="w-full flex flex-col items-center pt-10 md:pt-[60px]">
+        <div className="text-2xl md:text-heading text-center flex flex-col mb-10">
+          <span>{cardheading1}</span>
+          <span>{cardheading2}</span>
+        </div>
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10 w-full">
+          {cards.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col w-full md:w-[308px] gap-6 mb-6 md:mb-0"
+            >
+              <div className="h-[50px]">
+                <img
+                  src={item.logo}
+                  alt=""
+                  className="w-[40px] object-contain"
+                />
               </div>
-            ))}
-          </div>
+
+              <span className="text-lg md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap">
+                {item.title}
+                <div className="flex gap-2 items-center justify-start font-bold">
+                  <span>{item.subtitle}</span>
+                  <img src={item.img} alt="" className="w-8 object-contain" />
+                </div>
+              </span>
+
+              <span className="text-base font-normal text-justify">
+                {item.subheading}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
