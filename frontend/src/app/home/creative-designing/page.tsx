@@ -70,12 +70,12 @@ const page = () => {
 
       <DesignWillBenifitYou />
 
-      <CaseStudy />
+      {/* <CaseStudy /> */}
       <Expertise />
       <Shopify/>
       <Portfolio />
     
-      <Clients />
+      {/* <Clients /> */}
       <Hiring />
       {/* <Bestforyou/> */}
       <MileStones />

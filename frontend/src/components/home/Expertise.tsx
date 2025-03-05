@@ -15,6 +15,7 @@ const Expertisecard = ({image,title,subheading}:{ image:string,
             height={80}
             src={image}
             alt="facebook"
+            className="md:w-[80px] md:h-[80px] w-[64px] h-[64px]"
           />
         </div>
         <h3 className="text-subheading">{title}</h3>
@@ -67,16 +68,16 @@ const Expertise = () => {
       },
     ];
     return (
-      <section className="expertise py-[60px] px-[125px] flex flex-col gap-[30px] justify-center items-center w-full  bg-[#F9F5EC]">
-        <h1 className="text-center text-heading">
+      <section className="expertise md:py-[60px] py-[30px] md:px-[125px] px-[30px] flex flex-col gap-[30px] justify-center items-center w-full  bg-[#F9F5EC]">
+        <h1 className="text-center text-[28px]/[32px] md:text-heading py-[30px] ">
           Expertise Across all Social Media Platforms
         </h1>
-        <p className="w-[70%] text-body text-center">
+        <p className=" md:w-[70%] text-[16px]/[18.4px] md:text-body text-center">
           Rely on our in-depth expertise, as well as the ability to version and
           scale any kind of social media content, static, motion or video across
           your key socialmedia channels.
         </p>
-        <div className="w-full grid grid-cols-3 gap-[40px] py-[30px] gap-y-[40px]">
+        <div className="w-full grid md:grid-cols-3 md:gap-[40px] gap-[30px] py-[30px] md:gap-y-[40px]">
           {data.map((item) => (
             <Expertisecard {...item} />
           ))}

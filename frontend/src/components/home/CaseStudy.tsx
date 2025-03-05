@@ -22,7 +22,7 @@ function CaseStudy() {
           <img src={img} className="md:w-[192px] object-contain" />
         ))}
       </div>
-      <div className="text-white flex w-full gap-[30px] ">
+      <div className="text-white flex w-full gap-[30px] flex-col md:flex-row">
         <div className="flex flex-col gap-[60px] w-full">
           <div className="flex flex-col text-[46px]/[52px] font-normal gap-[30px] ">
             <div className="flex gap-2 items-center">
