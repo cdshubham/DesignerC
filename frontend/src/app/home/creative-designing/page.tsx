@@ -82,6 +82,7 @@ const page = () => {
       <MileStones />
       <Faq />
       <Service />
+      <section></section>
     </div>
   );
 }
