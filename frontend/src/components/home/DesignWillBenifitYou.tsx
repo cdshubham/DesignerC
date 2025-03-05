@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 function DesignWillBenifitYou() {
   return (
     <div className="w-full md:py-[60px] bg-[#F9F5EC] flex flex-col  text-black md:px-[125px] gap-[60px] p-[40px]">
-      <span className="text-[28px]/[32.2px] md:text-heading/[68.99px]  ">
+      <span className="text-[28px]/[32.2px] md:text-[48px]/[55.2px]  ">
         Designera Will Benefit You.
       </span>
       <div className="flex flex-col gap-[30px] md:gap-[36px]">
@@ -23,7 +23,7 @@ function DesignWillBenifitYou() {
             <WhiteButton
               Component={MdArrowOutward}
               children="Hire Designera"
-              className="text-background-blue-100 font-normal text-cta  flex justify-center md:w-[140px] self-start md:self-center mt-4 md:mt-0"
+              className="text-background-blue-100 font-normal text-cta  flex justify-center md:w-[140px] self-start mt-4 md:mt-0"
             />
           </div>
           <div className="h-full flex items-start justify-start">

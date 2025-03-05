@@ -3,9 +3,9 @@ const Card = ({content,main}:any)=>{
     return (
       <div className="flex items-center gap-3 w-full">
         <div className="flex justify-center items-center">
-          <span className="text-body">{content}</span>
+          <span className="text-[18px]/[20.7px]">{content}</span>
         </div>
-        <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-heading/[69px]">
+        <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-[80px]/[91px]">
           {main}
         </div>
       </div>
@@ -17,7 +17,7 @@ const Card = ({content,main}:any)=>{
 
 const Bestforyou = () => {
   return (
-    <div className="w-full p-8 md:px-[125px] items-center justify-center md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col bg-[#7B23FD] text-white">
+    <div className="w-full p-8 md:px-[125px] items-center justify-center md:py-[60px] text-body/[20.7px] gap-[50px] flex flex-col bg-[#7B23FD] text-white">
       <h1 className="text-[48px]/[55.2px] md:text-heading/[69px] md:text-center">
         Designera is best for your business
       </h1>
