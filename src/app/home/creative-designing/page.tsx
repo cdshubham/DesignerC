@@ -75,9 +75,9 @@ const page = () => {
       <Shopify/>
       <Portfolio />
     
-      <Clients />
+      {/* <Clients /> */}
       <Hiring />
-      {/* <Bestforyou/> */}
+      <Bestforyou/>
       <MileStones />
       <Faq />
       <Service />

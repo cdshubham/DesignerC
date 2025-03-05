@@ -95,10 +95,10 @@ function CampaignArea({
     { img: "/logos/darwing.png" },
   ];
   return (
-    <div className="flex flex-col w-full mx-auto bg-background-blue-300 text-white justify-between items-center py-10 px-4 sm:px-6 lg:px-[125px]">
+    <div className="flex flex-col w-full mx-auto bg-background-blue-300 text-white justify-between items-center py-10 ">
       {/* First Section: Heading, Keypoints, and Image */}
       <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center gap-6 md:gap-10 pb-15">
-        <div className="flex flex-col w-full md:w-1/2 gap-6 order-2 md:order-1">
+        <div className="flex flex-col w-full md:w-1/2 gap-6 order-2 md:order-1 px-4 sm:px-6 lg:px-[125px]">
           <div className=" space-y-2 p-2 text-4xl leading-12 lg:text-heading sm:text-3xl md:text-4xl md:leading-[0.9] lg:leading-[1]">
             <span className="  font-normal  ">{heading}</span>
             <span
@@ -152,7 +152,7 @@ function CampaignArea({
 
       {/* Cards Section */}
       <div className="w-full flex flex-col items-center pt-10 md:pt-[60px]">
-        <div className="text-3xl md:text-heading text-center flex flex-col mb-10 md:leading-[1]">
+        <div className="text-4xl md:text-heading text-center flex flex-col mb-10 md:leading-[1]">
           <span>{cardheading1}</span>
           <span>{cardheading2}</span>
         </div>
@@ -160,7 +160,7 @@ function CampaignArea({
           {cards.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col w-full md:w-[308px] gap-6 mb-6 md:mb-0"
+              className="flex flex-col w-full md:w-[308px] gap-6 mb-6 md:mb-0 px-6"
             >
               <div className="h-[50px]">
                 <img
@@ -172,13 +172,13 @@ function CampaignArea({
 
               <span className="text-2xl md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap">
                 {item.title}
-                <div className="flex gap-2 items-center justify-start font-bold text-">
+                <div className="flex gap-2 items-center justify-start font-bold ">
                   <span>{item.subtitle}</span>
                   <img src={item.img} alt="" className="w-8 object-contain" />
                 </div>
               </span>
 
-              <span className="text-base font-normal text-justify">
+              <span className="text-base font-normal text-justify text-gray-400">
                 {item.subheading}
               </span>
             </div>

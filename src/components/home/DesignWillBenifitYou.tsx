@@ -1,84 +1,94 @@
 import React from "react";
 import WhiteButton from "../ui/WhiteButton";
 import { MdArrowOutward } from "react-icons/md";
-function DesignWillBenifitYou() {
+
+function DesignWillBenefitYou() {
   return (
-    <div className="w-full md:py-[60px] bg-[#F9F5EC] flex flex-col  text-black md:px-[125px] gap-[60px]">
-      <span className="md:text-heading/[68.99px]  ">
+    <div className="w-full py-8 md:py-[60px] bg-[#F9F5EC] flex flex-col text-black px-4 md:px-[125px] space-y-8 md:space-y-[60px]">
+      <h1 className="text-2xl md:text-5xl font-bold text-start md:text-left">
         Designera Will Benefit You.
-      </span>
-      <div className="flex flex-col gap-[36px]">
-        <div className="grid grid-cols-2 max-h-[387px] overflow-hidden bg-background-white-100  rounded-cardradius ">
-          <div className="max-w-full px-[50px] pt-[50px] flex flex-col gap-[30px]  text-black  ">
-            <span className="text-[32px]/[36.8px] text-justify font-bold w-[75%]">
+      </h1>
+      
+      <div className="flex flex-col space-y-6 md:space-y-[36px]">
+        {/* First Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-white rounded-lg overflow-hidden shadow-md">
+          <div className="p-6 md:p-[50px] flex flex-col justify-center ">
+            <h2 className="text-xl md:text-[32px] font-bold text-start md:text-left">
               Hire Us or On-board Top 1% Creative Talent ✨
-            </span>
-            <span className="text-body/[20.7px] text-justify font-normal">
+            </h2>
+            <p className="text-base md:text-body text-start md:text-left">
               Collaborate with our expert team for tailored, high-quality
-              designs aligned with your brand’s goals, or onboard top creative
+              designs aligned with your brand's goals, or onboard top creative
               talent for fresh perspectives. Our flexible approach ensures
               impactful, client-focused solutions that resonate with your
               audience.
-            </span>
-            <WhiteButton
-              Component={MdArrowOutward}
-              children="Hire Designera"
-              className="text-background-blue-100 font-normal text-cta  flex justify-center md:w-[140px]"
-            />
+            </p>
+            <div className="flex justify-start text-start items-start">
+              <WhiteButton
+                Component={MdArrowOutward}
+                children="Hire Designera"
+                className="text-background-blue-100 font-normal text-base md:text-cta flex items-start justify-center w-full md:w-[140px] text-start"
+              />
+            </div>
           </div>
-          <div className="h-full flex items-start justify-start">
+          <div className="h-full w-full">
             <img
               src="/images/benifit.png"
-              alt=""
-              className=" md:h-[439px]  object-cover rounded-cardradius  "
+              alt="Design benefit"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 md:gap-[36px] md:h-[573px]">
-          <div className=" md:px-[50px] md:pt-[40px] col-span-1  bg-background-white-100 text-black  rounded-cards-raduis relative flex flex-col items-center">
-            <div className="flex flex-col gap-[20px] min-w-[327px] ">
-              <span className="text-[32px]/[36.8px] font-bold ">
+        {/* Second Section with Two Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[36px]">
+          {/* Left Column */}
+          <div className="bg-white rounded-lg p-6 md:p-[50px] flex flex-col items-center text-start relative">
+            <div className="space-y-4 md:space-y-[20px] max-w-full">
+              <h2 className="text-xl md:text-[32px] font-bold">
                 Creatives that Drives Revenue 💵
-              </span>
-              <span className="text-body/[20.7px] text-justify">
+              </h2>
+              <p className="text-base md:text-body">
                 Strategically crafted concepts that captivates engagement and
                 boost conversions to maximize Profitability.
-              </span>
-              <button className="flex md:w-[140px] text-background-blue-100 font-normal text-cta  items-center gap-1">
-                <span> Know more</span>
+              </p>
+              <button className="mx-auto flex items-center justify-center space-x-1 text-background-blue-100 font-normal text-base md:text-cta">
+                <span>Know more</span>
                 <MdArrowOutward />
               </button>
             </div>
-            <div className="flex w-full justify-center">
+            <div className="mt-8 md:mt-0 md:absolute md:bottom-0">
               <img
                 src="/images/creative.png"
-                alt=""
-                className=" md:w-[327px] absolute object-contain top-[260px] right-1/2 translate-x-1/2 rounded-cardradius"
+                alt="Creative design"
+                className="w-48 md:w-[327px] object-contain rounded-lg"
               />
             </div>
           </div>
-          <div className="md:px-[60px] md:py-[30px] col-span-2  bg-background-white-100 text-black  rounded-t-cards-raduis rounded-l-cards-raduis  relative overflow-hidden">
-            <div className="flex flex-col gap-[20px] md:w-[599px]">
-              <span className="text-[32px]/[36px] font-bold ">
+
+          {/* Right Column */}
+          <div className="md:col-span-2 bg-white rounded-lg p-6 md:p-[60px] relative overflow-hidden">
+            <div className="space-y-4 md:space-y-[20px] max-w-full md:max-w-[599px]">
+              <h2 className="text-xl md:text-[32px] font-bold">
                 Top-notch quality, consistently delivered with excellence 😍
-              </span>
-              <span className="text-body/[20.7px] text-justify">
+              </h2>
+              <p className="text-base md:text-body">
                 Scale your content with precisely crafted visuals that ensure
                 consistency and lasting impact, seamlessly aligning with your
                 brand to create engaging, resonant results.
-              </span>
-              <button className="flex md:w-[140px] text-background-blue-100 font-normal text-cta  items-center gap-1">
-                <span> Know more</span>
+              </p>
+              <button className="flex items-center justify-start space-x-1 text-background-blue-100 font-normal text-base md:text-cta">
+                <span>Know more</span>
                 <MdArrowOutward />
               </button>
             </div>
-
-            <img
-              src="/images/excellence.png"
-              alt=""
-              className=" w-full min-h-[400px] absolute left-[60px] top-[260px]  object-cover rounded-cardradius "
-            />
+            <div className="mt-8 md:mt-0 md:absolute md:bottom-0 md:left-[60px]">
+              <img
+                src="/images/excellence.png"
+                alt="Design excellence"
+                className="w-full md:w-[calc(100%-60px)] h-48 md:h-[400px] object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -86,4 +96,4 @@ function DesignWillBenifitYou() {
   );
 }
 
-export default DesignWillBenifitYou;
+export default DesignWillBenefitYou;

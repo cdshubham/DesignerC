@@ -13,26 +13,36 @@ function MileStones() {
         {img:"/images/rebranding.png",category:"Rebranding"},
     ]
   return (
-    <div className="w-full md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center md:gap-[30px]">
-      <span className="text-heading/[68.99px] font-normal">
-        Explore Perfect needs with Designera.
-      </span>
-      <span className="text-center text-[#D6D8D2]">
-        Social media creative projects completed to date
-      </span>
-      <div className="flex w-full items-center px-[24px] justify-around">
-        {images.map((item) => (
-          <div className="flex flex-col gap-[20px]">
-            <img
-              src={item.img}
-              alt=""
-              className="max-w-[369px] max-h-[305px] object-cover rounded-[8px]"
-            />
-            <h3 className="text-center text-[24px] font-semibold ">
-              {item.category}
-            </h3>
-          </div>
-        ))}
+    <div className="w-full py-10 md:py-[60px] bg-background-blue-300 text-white flex flex-col justify-center items-center space-y-6 md:space-y-[30px]">
+      <div className="text-center px-4">
+        <h2 className="text-xl md:text-[68.99px] font-normal mb-4">
+          Explore Perfect needs with Designera.
+        </h2>
+        <p className="text-sm md:text-base text-[#D6D8D2] max-w-2xl mx-auto">
+          Social media creative projects completed to date
+        </p>
+      </div>
+      
+      <div className="w-full px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+          {images.map((item, index) => (
+            <div 
+              key={index} 
+              className="flex flex-col items-center space-y-4"
+            >
+              <div className="w-full aspect-w-16 aspect-h-9">
+                <img
+                  src={item.img}
+                  alt={item.category}
+                  className="w-full h-full object-cover rounded-[8px]"
+                />
+              </div>
+              <h3 className="text-center text-base md:text-[24px] font-semibold">
+                {item.category}
+              </h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

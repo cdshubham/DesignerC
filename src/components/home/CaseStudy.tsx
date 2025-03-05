@@ -1,5 +1,7 @@
 import React from "react";
-import { FaArrowDown,FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
+import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
+import Marquee from "react-fast-marquee";
 
 function CaseStudy() {
   const images = [
@@ -9,61 +11,93 @@ function CaseStudy() {
     "/logos/rvshare.png",
     "/logos/apolo247.png",
   ];
+
   return (
-    <div className=" md:py-[60px] flex flex-col  bg-background-blue-200 gap-[30px] md:px-[125px] items-center justify-center w-full ">
-      <div className="flex gap-1 text-[#9DA6AF] items-center justify-center">
-        <FaArrowDown />
-        <span className="text-cta/[24px] font-normal ">
+    <div className="bg-background-blue-200 py-8 md:py-12 lg:py-16 ">
+      {/* Instruction Section */}
+      <div className="flex justify-center items-center gap-2 text-[#9DA6AF] mb-6 md:mb-8">
+        <FaArrowDown className="text-sm md:text-base" />
+        <span className="text-sm md:text-base">
           Click on the logos to view the case study
         </span>
       </div>
-      <div className="flex justify-center gap-[40px]">
-        {images.map((img) => (
-          <img src={img} className="md:w-[192px] object-contain" />
+
+      {/* Logo Section */}
+      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
+      <Marquee speed={50} className="flex items-center">
+        {images.map((img, index) => (
+          <div key={index} className="w-20 md:w-32 lg:w-40 h-16 md:h-24 relative">
+            <Image 
+              src={img} 
+              alt={`Logo ${index + 1}`}
+              fill
+              className="object-contain"
+            />
+          </div>
         ))}
+        </Marquee>
       </div>
-      <div className="text-white flex w-full gap-[30px] ">
-        <div className="flex flex-col gap-[60px] w-full">
-          <div className="flex flex-col text-[46px]/[52px] font-normal gap-[30px] ">
-            <div className="flex gap-2 items-center">
-              <div className="w-[32px] h-[32px] rounded-cardraius bg-yellow-100"></div>
-              <span className="text-xs font-semibold">FEATURED CASE STUDY</span>
+
+      {/* Case Study Content */}
+      <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-12 items-center px-4 md:px-12 lg:px-24">
+        {/* Text Content */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6 lg:gap-8">
+          {/* Featured Case Study Header */}
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-8 h-8 rounded-md bg-yellow-100"></div>
+            <span className="text-xs font-semibold text-white">
+              FEATURED CASE STUDY
+            </span>
+          </div>
+
+          {/* Case Study Title */}
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-tight">
+            "Reimagining a Legacy: Redefining Top's India Brand Identity and 
+            Strategy for the Modern Consumer"
+          </h2>
+
+          {/* Statistics */}
+          <div className="flex gap-6 lg:gap-8 text-[#20DF79] flex-col lg:flex-row">
+            <div className="flex flex-col">
+              <span className="text-3xl md:text-4xl lg:text-5xl font-normal">
+                250%
+              </span>
+              <span className="text-xs md:text-sm text-[#C5CCD3]">
+                Increase in Click Rate
+              </span>
             </div>
-            <span>"Reimagining a Legacy:
-            Redefining Top's India
-            Brand Identity and Strategy 
-            for the Modern Consumer"</span>
-            <div className="flex text-[#20DF79] gap-[30px] text-[80px]/[88px] font-normal">
-              <div className="flex flex-col gap-4">
-                <span>250%</span>
-                <span className="text-body/[21.6%] font-normal text-[#C5CCD3]">
-                  Increase in Click Rate
-                </span>
-              </div>
-              <div className="flex flex-col gap-4 ">
-                <span>192k+</span>
-                <span className="text-body/[21.6%] font-normal text-[#C5CCD3]">
-                  Leads Generated with Creatives
-                </span>
-              </div>
+            <div className="flex flex-col">
+              <span className="text-3xl md:text-4xl lg:text-5xl font-normal">
+                192k+
+              </span>
+              <span className="text-xs md:text-sm text-[#C5CCD3]">
+                Leads Generated with Creatives
+              </span>
             </div>
           </div>
 
-          <div className="flex gap-3 items-center">
-            <span className="text-[20px]/[24%] font-normal ">
+          {/* Read Case Study Button */}
+          <div className="flex items-center gap-3 mt-4 md:mt-6">
+            <span className="text-base md:text-lg text-white">
               Read Case Study
             </span>
-            <div className="w-[31px] h-[31px] rounded-full flex items-center justify-center bg-background-white-100 text-black cursor-pointer">
-              <FaArrowRight size={20}/>
+            <div className="w-10 h-10 rounded-full bg-background-white-100 
+              flex items-center justify-center text-black 
+              cursor-pointer hover:bg-gray-200 transition-colors">
+              <FaArrowRight className="text-lg" />
             </div>
           </div>
         </div>
 
-        <img
-          src="/images/pizza.png"
-          alt=""
-          className="ms:h-[513px] object-cover"
-        />
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 relative aspect-video md:aspect-square lg:aspect-[4/3]">
+          <Image 
+            src="/images/pizza.png" 
+            alt="Case Study Image"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );

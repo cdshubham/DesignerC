@@ -1,65 +1,67 @@
 import React from 'react'
-import WhiteButton from '../ui/WhiteButton'
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 
-
-interface props 
-{
- heading?:string;
- cardscontent?:{
-    heading?:string;
-    content?:string;
- }[];
+interface HelpBusinessProps {
+  heading?: string;
+  cardsContent?: {
+    heading?: string;
+    content?: string;
+  }[];
 }
-function HelpBussiness({heading,cardscontent}:props) {
-    const options =[
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},{title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},{title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},{title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},{title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-        {title:"Logo Design",subheading:"Craft unique and memorable logos that embody your brand’s identity, leaving a lasting impression on your audience."},
-    ]
 
+function HelpBusiness({heading, cardsContent}: HelpBusinessProps) {
+  const options = [
+    {title: "Logo Design", subheading: "Craft unique and memorable logos that embody your brand's identity, leaving a lasting impression on your audience."},
+    {title: "Brand Strategy", subheading: "Develop a comprehensive brand strategy that aligns with your business goals and resonates with your target audience."},
+    {title: "Web Design", subheading: "Create stunning, user-friendly websites that showcase your brand and drive customer engagement."},
+    {title: "Social Media Marketing", subheading: "Leverage social platforms to expand your reach and connect with potential customers effectively."},
+    {title: "Content Creation", subheading: "Produce compelling content that tells your brand's story and captures your audience's attention."},
+    {title: "Digital Advertising", subheading: "Implement targeted digital ad campaigns to boost your brand visibility and drive conversions."}
+  ];
 
-    
   return (
-    <div className="flex flex-col  md:py-[60px] gap-5   bg-background-white-100 w-full  items-center justify-center ">
-      <div className=" w-full flex flex-col gap-[30px]">
-        <span className="text-heading/[68.99px] font-normal px-[125px] ">
-          Let’s see how we can help your business
-        </span>
-        <Marquee speed={50}>
-          {" "}
-          <div className="flex w-full max-w-full overflow-x-hidden  gap-[20px]">
-            {options.map((item) => (
-              <div className="flex flex-col rounded-cardradius gap-[20px] h-[418px] min-w-[329px] max-w-min  border border-gray-200 overflow-y-hidden">
-                <Image
-                  height={292}
-                  width={330}
-                  src="/images/redditrecap.png"
-                  alt="reddit recap"
-                  className="rounded-t-cardradius"
-                />
-                <div className="px-[20px] pb-[20px] w-full flex flex-grow flex-col justify-between">
-                  <h1 className="text-start text-body font-semibold">
-                    Logo Design
-                  </h1>
-                  <p className="text-justify text-[#67737E] text-footer">
-                    Craft unique and memorable logos that embody your brand’s
-                    identity, leaving a lasting impression on your audience.
-                  </p>
+    <div className="w-full bg-background-white-100 py-8 md:py-12 lg:py-16">
+      <div className=" mx-auto flex flex-col gap-6 md:gap-8 lg:gap-10">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal text-center">
+          Let's see how we can help your business
+        </h2>
+        
+        <div className="w-full overflow-hidden">
+          <Marquee speed={50} pauseOnHover={true} gradient={false}>
+            <div className="flex space-x-4 md:space-x-6 lg:space-x-8 py-4">
+              {options.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col rounded-lg border border-gray-200 
+                             w-[250px] sm:w-[300px] md:w-[350px] 
+                             transform transition-transform duration-300 
+                             hover:scale-105 hover:shadow-lg gap-11"
+                >
+                  <div className="relative w-full aspect-video">
+                    <Image
+                      fill
+                      src="/images/redditrecap.png"
+                      alt={item.title}
+                      className="rounded-t-lg object-cover"
+                    />
+                  </div>
+                  <div className="p-4 md:p-5 flex flex-col flex-grow">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-gray-600 flex-grow">
+                      {item.subheading}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Marquee>
+              ))}
+            </div>
+          </Marquee>
+        </div>
       </div>
     </div>
   );
 }
 
-export default HelpBussiness
+export default HelpBusiness;
