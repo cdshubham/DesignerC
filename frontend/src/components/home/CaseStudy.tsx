@@ -58,8 +58,8 @@ function CaseStudy() {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col">
-          <div className="flex gap-2 items-center md:hidden">
+        <div className="w-full flex flex-col md:hidden">
+          <div className="flex gap-2 items-center ">
             <div className="w-[32px] h-[32px] rounded-cardraius bg-yellow-100"></div>
             <span className="text-xs font-semibold">FEATURED CASE STUDY</span>
           </div>

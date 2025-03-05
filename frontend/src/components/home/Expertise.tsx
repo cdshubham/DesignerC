@@ -8,19 +8,14 @@ const Expertisecard = ({image,title,subheading}:{ image:string,
     subheading:string,})=>
 {
     return (
-      <div className="w-full flex flex-col justify-start gap-[20px]">
+      <div className="w-full flex flex-col justify-start gap-[25px]">
         <div className="w-full flex justify-start">
-          <Image
-            width={80}
-            height={80}
-            src={image}
-            alt="facebook"
-          />
+          <Image width={80} height={80} src={image} alt="facebook" />
         </div>
-        <h3 className="text-subheading">{title}</h3>
-        <p className="text-body text-justify">
-          {subheading}
-        </p>
+        <div className="flex flex-col gap-[5px] md:gap-[15px]">
+          <h3 className="text-subheading">{title}</h3>
+          <p className="text-body text-justify">{subheading}</p>
+        </div>
       </div>
     );
 }
@@ -67,16 +62,16 @@ const Expertise = () => {
       },
     ];
     return (
-      <section className="expertise py-[60px] px-[125px] flex flex-col gap-[30px] justify-center items-center w-full  bg-[#F9F5EC]">
-        <h1 className="text-center text-heading">
+      <section className="expertise md:py-[60px] py-[40px] md:px-[125px] px-[40px] flex flex-col gap-[30px] justify-center items-center w-full  bg-[#F9F5EC]">
+        <h1 className="text-center md:text-heading text-mobilesubheading/[32px]">
           Expertise Across all Social Media Platforms
         </h1>
-        <p className="w-[70%] text-body text-center">
+        <p className="md:w-[70%] text-body  text-center">
           Rely on our in-depth expertise, as well as the ability to version and
           scale any kind of social media content, static, motion or video across
           your key socialmedia channels.
         </p>
-        <div className="w-full grid grid-cols-3 gap-[40px] py-[30px] gap-y-[40px]">
+        <div className="w-full grid md:grid-cols-3 grid-cols-1 md:gap-[40px] gap-[30px] py-[30px] gap-y-[40px]">
           {data.map((item) => (
             <Expertisecard {...item} />
           ))}
