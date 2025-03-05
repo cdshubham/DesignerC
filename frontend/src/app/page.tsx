@@ -6,11 +6,7 @@ import { marqueimages } from "@/components/data";
 import Marquee from "react-fast-marquee";
 import BlueButton from "@/components/ui/BlueButton";
 
-
-
-
 const page = () => {
-
   return (
     <div className="w-full max-h-full overflow-hidden flex-grow relative bg-background-blue-300 pt-[60px] flex flex-col gap-[80px] items-center   px-[125px] text-white    ">
       <h1 className="text-heading/[60px]">
@@ -40,7 +36,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="h-[93px] sticky bottom-0 flex justify-center items-center z-[50] bg-background-blue-300 ">
+      <div className="h-[93px] relative bottom-0 flex justify-center items-center  bg-background-blue-300 ">
         <Marquee speed={50} className="flex items-center">
           {marqueimages.map((item) => (
             <div className="w-[138px]  flex items-center ">
@@ -55,10 +51,6 @@ const page = () => {
       </div>
     </div>
   );
-}
+};
 
 export default page;
-
-
-
-

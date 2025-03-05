@@ -2,13 +2,11 @@
 import { marqueimages } from "@/components/data";
 import Solutioncard from "@/components/home/Solutioncard";
 import Solutionservicecard from "@/components/home/Solutionservicecard";
-;
 import Image from "next/image";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { marketinglinkdata, servicetype } from "../solution/page";
 import Navigationservice from "@/components/navigation/Navigationservice";
-
 
 export const boxshadow = {
   yellow: "#FFBF00",
@@ -19,10 +17,6 @@ export const boxshadow = {
 };
 
 const page = () => {
-
-
- 
-
   console.log(marketinglinkdata);
   const content = [
     {
@@ -40,7 +34,6 @@ const page = () => {
       color2: "#1EaD5D",
     },
   ];
-
 
   const [selectedCard, setSelectedCard] = useState("Social Media Audit");
   return (

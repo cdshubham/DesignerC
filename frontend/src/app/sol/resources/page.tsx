@@ -18,7 +18,7 @@ const page = () => {
       className: "bg-gradient-to-b from-[#3A2A29] to-[#E4B156]",
       color1: "#FFFFFF",
       color2: "#1EaD5D",
-      border:boxshadow.yellow,
+      border: boxshadow.yellow,
     },
     {
       title: "Case Studies",
@@ -26,14 +26,12 @@ const page = () => {
       className: "bg-gradient-to-b from-[#3C1750] to-[#BD41AD]",
       color1: "#FFFFFF",
       color2: "#1EaD5D",
-      border:boxshadow.pink,
+      border: boxshadow.pink,
     },
-  
-  
   ];
 
-     const [selectedCard, setSelectedCard] = useState("Blog");
-     
+  const [selectedCard, setSelectedCard] = useState("Blog");
+
   return (
     <div className="flex flex-col w-full">
       <div className="flex font-helvetica h-full ">
