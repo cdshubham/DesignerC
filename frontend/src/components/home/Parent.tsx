@@ -68,7 +68,7 @@ function Parent() {
       <DesignWillBenifitYou />
     
       <Portfolio />
-      <CaseStudy />
+      {/* <CaseStudy /> */}
       {/* <Clients /> */}
       <Hiring />
       <MileStones />
