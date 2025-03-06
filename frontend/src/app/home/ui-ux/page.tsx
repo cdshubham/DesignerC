@@ -8,6 +8,7 @@ import Faq from "@/components/home/Faq";
 import HelpBussiness from "@/components/home/HelpBussiness";
 import Hiring from "@/components/home/Hiring";
 import LatestTool from "@/components/home/LatestTool";
+import LaunchProcess from "@/components/home/LaunchProcess";
 import MileStones from "@/components/home/MileStones";
 import Portfolio from "@/components/home/Portfolio";
 import ProcessSteps from "@/components/home/ProcessSteps";
@@ -59,11 +60,12 @@ const page = () => {
       <CampaignArea {...data} />
       <HelpBussiness />
 
-      <ProcessSteps mainheading="Intuitive content ordering process to meet your needs" />
+      <ProcessSteps mainheading="Intuitive content ordering process to meet your needs  " />
       <With3images />
       {/* 
     <DesignWillBenifitYou /> */}
       {/* <BenefitProcess /> */}
+      <LaunchProcess />
       <Portfolio />
       <CaseStudy />
       <Clients />
