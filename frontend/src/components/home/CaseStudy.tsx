@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowDown,FaArrowRight } from "react-icons/fa6";
+import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
 
 function CaseStudy() {
   const images = [

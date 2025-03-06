@@ -28,7 +28,7 @@ function Navbar() {
           width={16}
           height={16}
           alt="solution icon"
-          className="h-full aspect-square"
+          className="h-full aspect-square brightness-200 contrast-200"
         />
       ),
       subItems: <First />,
@@ -42,7 +42,7 @@ function Navbar() {
           width={16}
           height={16}
           alt="solutions icon"
-          className="h-full aspect-square"
+          className="h-full aspect-square brightness-200 contrast-200"
         />
       ),
       subItems: <Second />,
@@ -56,7 +56,7 @@ function Navbar() {
           width={16}
           height={16}
           alt="solutions icon"
-          className="h-full aspect-square"
+          className="h-full aspect-square brightness-200 contrast-200"
         />
       ),
       subItems: <Third />,
@@ -70,7 +70,7 @@ function Navbar() {
           width={16}
           height={16}
           alt="talent network icon"
-          className="h-full aspect-square"
+          className="h-full aspect-square brightness-200 contrast-200"
         />
       ),
       subItems: <Fourth />,
@@ -156,7 +156,7 @@ function Navbar() {
     <>
       <div className="w-full inset-0 z-40">
         {/* Desktop Navbar (unchanged) */}
-        <div className="flex w-full mx-auto bg-background-blue-300 text-white items-center justify-between px-4 py-3 sm:px-6 lg:px-6 xl:px-[80px] xl:py-[10px] border-b border-background-white-100/50 sticky top-0 z-50">
+        <div className="flex w-full mx-auto bg-black text-white items-center justify-between px-4 py-3 sm:px-6 lg:px-6 xl:px-[80px] xl:py-[10px] border-b border-background-white-100/50 sticky top-0 z-50">
           {/* Desktop Navigation (same as before) */}
           <div className="flex gap-[40px] items-center font-normal ">
             <img
@@ -169,7 +169,7 @@ function Navbar() {
               {navnames.map((items, index) => (
                 <button
                   className={` ${
-                    selected === items.name ? "text-yellow-100" : ""
+                    selected === items.name ? "text-yellow-100 " : ""
                   } text-cta cursor-pointer font-helvetica font-normal text-white flex items-center gap-1`}
                   onClick={() => {
                     setSelected(items.name);
@@ -238,7 +238,7 @@ function Navbar() {
                       {/* Button */}
                       <button
                         className={`${
-                          selected === item.name ? "text-yellow-100" : ""
+                          selected === item.name ? "text-yellow-100 " : ""
                         } text-xl sm:text-2xl cursor-pointer font-helvetica font-normal text-white flex gap-2 w-full justify-between pl-8 py-3`}
                         onClick={() => {
                           handleNavClick(item);
@@ -382,61 +382,7 @@ const First = () => {
                 Analyze and optimize your social media presence
               </div>
             </div>
-
-            {/* Talent Marketplace Card */}
-            <div
-              className="min-h-24 w-full lg:min-w-64 flex flex-col p-4 text-white relative gap-2 md:gap-4 rounded-lg bg-gradient-green-solution hover:cursor-pointer transition-all duration-300"
-              style={{
-                boxShadow:
-                  selectedCard === "Talent Marketplace"
-                    ? "0 0 0 2px " + boxshadow.green
-                    : "",
-              }}
-              onClick={() => setSelectedCard("Talent Marketplace")}
-            >
-              <div className="flex justify-between items-center">
-                <span className="text-lg md:text-xl">Talent Marketplace</span>
-                <Image
-                  src="/images/icons/arrow.png"
-                  width={28}
-                  height={28}
-                  alt="arrow"
-                  className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-                />
-              </div>
-              <div className="text-sm md:text-base">
-                Find skilled professionals for your projects
-              </div>
-            </div>
-
-            {/* Designera Learning Card */}
-            <div
-              className="min-h-24 w-full lg:min-w-64 flex flex-col p-4 text-white relative gap-2 md:gap-4 rounded-lg bg-gradient-pink-solution hover:cursor-pointer transition-all duration-300"
-              style={{
-                boxShadow:
-                  selectedCard === "Designera Learning"
-                    ? "0 0 0 2px " + boxshadow.pink
-                    : "",
-              }}
-              onClick={() => setSelectedCard("Designera Learning")}
-            >
-              <div className="flex justify-between items-center">
-                <span className="text-lg md:text-xl">Designera Learning</span>
-                <Image
-                  src="/images/icons/arrow.png"
-                  width={28}
-                  height={28}
-                  alt="arrow"
-                  className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-                />
-              </div>
-              <div className="text-sm md:text-base">
-                Access training and educational resources
-              </div>
-            </div>
-          </div>
-
-          {/* Details panel - visible on all screen sizes */}
+            {/* Details panel - visible on all screen sizes */}
           <div
             className={`
             flex
@@ -495,6 +441,61 @@ const First = () => {
               </button>
             </div>
           </div>
+
+            {/* Talent Marketplace Card */}
+            <div
+              className="min-h-24 w-full lg:min-w-64 flex flex-col p-4 text-white relative gap-2 md:gap-4 rounded-lg bg-gradient-green-solution hover:cursor-pointer transition-all duration-300"
+              style={{
+                boxShadow:
+                  selectedCard === "Talent Marketplace"
+                    ? "0 0 0 2px " + boxshadow.green
+                    : "",
+              }}
+              onClick={() => setSelectedCard("Talent Marketplace")}
+            >
+              <div className="flex justify-between items-center">
+                <span className="text-lg md:text-xl">Talent Marketplace</span>
+                <Image
+                  src="/images/icons/arrow.png"
+                  width={28}
+                  height={28}
+                  alt="arrow"
+                  className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+                />
+              </div>
+              <div className="text-sm md:text-base">
+                Find skilled professionals for your projects
+              </div>
+            </div>
+
+            {/* Designera Learning Card */}
+            <div
+              className="min-h-24 w-full lg:min-w-64 flex flex-col p-4 text-white relative gap-2 md:gap-4 rounded-lg bg-gradient-pink-solution hover:cursor-pointer transition-all duration-300"
+              style={{
+                boxShadow:
+                  selectedCard === "Designera Learning"
+                    ? "0 0 0 2px " + boxshadow.pink
+                    : "",
+              }}
+              onClick={() => setSelectedCard("Designera Learning")}
+            >
+              <div className="flex justify-between items-center">
+                <span className="text-lg md:text-xl">Designera Learning</span>
+                <Image
+                  src="/images/icons/arrow.png"
+                  width={28}
+                  height={28}
+                  alt="arrow"
+                  className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+                />
+              </div>
+              <div className="text-sm md:text-base">
+                Access training and educational resources
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
 

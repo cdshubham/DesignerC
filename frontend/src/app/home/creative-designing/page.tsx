@@ -63,7 +63,7 @@ const page = () => {
   };
 
   return (
-    <div className=" w-full ">
+    <div className="w-full ">
       <CampaignArea {...data} />
       <HelpBussiness />
     
@@ -77,10 +77,12 @@ const page = () => {
     
       {/* <Clients /> */}
       <Hiring />
+      <Bestforyou/>
       {/* <Bestforyou/> */}
       <MileStones />
       <Faq />
       <Service />
+      <section></section>
     </div>
   );
 }

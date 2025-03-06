@@ -43,12 +43,15 @@ export default {
         "gray-100": "#67737E",
         "line-blue": "#D1CCFF",
         "light-violet": "#998FD3",
+        "lighter-violet": "#9857F8",
         "light-violet-text": "#8A7ECD",
         "highlight-purple": "#BF80FF",
         "highlight-green": "#ADFFD8",
         darkblue: "#0E014B",
         "text-grey": "#171A1C",
         "grey-300": "#464D53",
+        "gray-200":"#949494",
+
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

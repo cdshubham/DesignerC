@@ -60,7 +60,7 @@ function Parent() {
     ],
   };
   return (
-    <div className=" w-full ">
+    <div className="w-full">
 
       <CampaignArea {...data} />
       <HelpBussiness />
@@ -68,8 +68,8 @@ function Parent() {
       <DesignWillBenifitYou />
     
       <Portfolio />
-      <CaseStudy />
-      <Clients />
+      {/* <CaseStudy /> */}
+      {/* <Clients /> */}
       <Hiring />
       <MileStones />
       <Faq />
