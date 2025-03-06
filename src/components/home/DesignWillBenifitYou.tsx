@@ -5,29 +5,27 @@ import { MdArrowOutward } from "react-icons/md";
 function DesignWillBenefitYou() {
   return (
     <div className="w-full py-8 md:py-[60px] bg-[#F9F5EC] flex flex-col text-black px-4 md:px-[125px] space-y-8 md:space-y-[60px]">
-      <h1 className="text-2xl md:text-5xl font-bold text-start md:text-left">
+      <h1 className="text-3xl md:text-5xl text-start md:text-left font-thin ">
         Designera Will Benefit You.
       </h1>
-      
+
       <div className="flex flex-col space-y-6 md:space-y-[36px]">
         {/* First Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 bg-white rounded-lg overflow-hidden shadow-md">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-white rounded-md overflow-hidden shadow-md ">
           <div className="p-6 md:p-[50px] flex flex-col justify-center ">
-            <h2 className="text-xl md:text-[32px] font-bold text-start md:text-left">
+            <h2 className="text-3xl md:text-[32px] font-bold text-start md:text-left  lg:mb-8">
               Hire Us or On-board Top 1% Creative Talent ✨
             </h2>
-            <p className="text-base md:text-body text-start md:text-left">
-              Collaborate with our expert team for tailored, high-quality
-              designs aligned with your brand's goals, or onboard top creative
-              talent for fresh perspectives. Our flexible approach ensures
-              impactful, client-focused solutions that resonate with your
-              audience.
+            <p className="text-[18px] font-medium leading-[1.2rem] md:text-body text-start md:text-left pr-6">
+              Collaborate with vetted experts and creative teams who have a
+              proven track record with renowned brands such as ITC, Apollo,
+              Amazon, Kotak Bank, and many more.
             </p>
-            <div className="flex justify-start text-start items-start">
+            <div className="flex justify-start text-start items-start mt-4 w-fit">
               <WhiteButton
                 Component={MdArrowOutward}
                 children="Hire Designera"
-                className="text-background-blue-100 font-normal text-base md:text-cta flex items-start justify-center w-full md:w-[140px] text-start"
+                className="text-background-blue-100 font-normal text-base md:text-cta flex items-start justify-center  text-start"
               />
             </div>
           </div>
@@ -45,23 +43,26 @@ function DesignWillBenefitYou() {
           {/* Left Column */}
           <div className="bg-white rounded-lg p-6 md:p-[50px] flex flex-col items-center text-start relative">
             <div className="space-y-4 md:space-y-[20px] max-w-full">
-              <h2 className="text-xl md:text-[32px] font-bold">
+              <h2 className="text-3xl md:text-[32px] font-bold text-start md:text-lef lg:w-[290px]">
                 Creatives that Drives Revenue 💵
               </h2>
-              <p className="text-base md:text-body">
+              <p className="text-[18px] font-medium leading-[1.2rem] lg-leading-[2rem] md:text-body text-start md:text-left pr-6">
                 Strategically crafted concepts that captivates engagement and
                 boost conversions to maximize Profitability.
               </p>
-              <button className="mx-auto flex items-center justify-center space-x-1 text-background-blue-100 font-normal text-base md:text-cta">
-                <span>Know more</span>
-                <MdArrowOutward />
-              </button>
+              <div className="flex justify-start text-start items-start pb-8">
+                <WhiteButton
+                  Component={MdArrowOutward}
+                  children="Know more"
+                  className="text-background-blue-100 font-normal text-base md:text-cta flex items-start justify-center md:w-[140px] text-start"
+                />
+              </div>
             </div>
-            <div className="mt-8 md:mt-0 md:absolute md:bottom-0">
+            <div className="h-full w-full">
               <img
                 src="/images/creative.png"
                 alt="Creative design"
-                className="w-48 md:w-[327px] object-contain rounded-lg"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -69,20 +70,23 @@ function DesignWillBenefitYou() {
           {/* Right Column */}
           <div className="md:col-span-2 bg-white rounded-lg p-6 md:p-[60px] relative overflow-hidden">
             <div className="space-y-4 md:space-y-[20px] max-w-full md:max-w-[599px]">
-              <h2 className="text-xl md:text-[32px] font-bold">
+              <h2 className="text-3xl md:text-[32px] font-bold text-start md:text-lef pr-4">
                 Top-notch quality, consistently delivered with excellence 😍
               </h2>
-              <p className="text-base md:text-body">
-                Scale your content with precisely crafted visuals that ensure
-                consistency and lasting impact, seamlessly aligning with your
-                brand to create engaging, resonant results.
+              <p className="text-[18px] font-medium leading-[1.2rem] md:text-body text-start md:text-left pr-8">
+                Our video process is well-structured, with defined steps,
+                rigorous quality checks, and set turnaround times, ensuring a
+                seamless journey from start to finish.
               </p>
-              <button className="flex items-center justify-start space-x-1 text-background-blue-100 font-normal text-base md:text-cta">
-                <span>Know more</span>
-                <MdArrowOutward />
-              </button>
+              <div className="flex justify-start text-start items-start">
+                <WhiteButton
+                  Component={MdArrowOutward}
+                  children="Know more"
+                  className="text-background-blue-100 font-normal text-base md:text-cta flex items-start justify-center md:w-[140px] text-start space-x-1"
+                />
+              </div>
             </div>
-            <div className="mt-8 md:mt-0 md:absolute md:bottom-0 md:left-[60px]">
+            <div className="w-full h-full mt-4">
               <img
                 src="/images/excellence.png"
                 alt="Design excellence"

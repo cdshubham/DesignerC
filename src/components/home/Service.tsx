@@ -1,16 +1,15 @@
-import React from 'react'
-import WhiteButton from '../ui/WhiteButton'
+import React from "react";
+import WhiteButton from "../ui/WhiteButton";
 
 function Service() {
   return (
-    <div className="w-full py-8 md:py-[60px] px-4 md:px-[125px] bg-background-blue-100 text-white text-center 
-      flex flex-col items-center justify-center gap-6 md:gap-[30px]">
+    <div
+      className="w-full py-8 md:py-[60px] px-4 md:px-[125px] bg-background-blue-100 text-white text-center 
+      flex flex-col items-center justify-center gap-6 md:gap-[30px]"
+    >
       <div className="flex flex-col space-y-2 max-w-full">
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-          Unlock your Potential to get 
-        </p>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-          noticed among Top 1% ventures!
+        <p className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl lg:w-[740px]">
+          Unlock your Potential to get noticed among Top 1% ventures!
         </p>
       </div>
 
@@ -30,4 +29,4 @@ function Service() {
   );
 }
 
-export default Service
+export default Service;

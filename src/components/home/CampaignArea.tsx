@@ -56,7 +56,7 @@ function CampaignArea({
   ],
   image = "/images/home.png",
   cardheading1 = "Engaging Visual Creatives",
-  cardheading2 = "That Drive Results",
+  cardheading2 = "that Drive Results",
   cards = [
     {
       logo: "/icons/schedule.png",
@@ -98,9 +98,9 @@ function CampaignArea({
     <div className="flex flex-col w-full mx-auto bg-background-blue-300 text-white justify-between items-center py-10 ">
       {/* First Section: Heading, Keypoints, and Image */}
       <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center gap-6 md:gap-10 pb-15">
-        <div className="flex flex-col w-full md:w-1/2 gap-6 order-2 md:order-1 px-4 sm:px-6 lg:px-[125px]">
-          <div className=" space-y-2 p-2 text-4xl leading-12 lg:text-heading sm:text-3xl md:text-4xl md:leading-[0.9] lg:leading-[1]">
-            <span className="  font-normal  ">{heading}</span>
+        <div className="flex flex-col w-full md:w-1/2 gap-6 order-2 md:order-1 px-4 sm:px-6 lg:px-[120px]">
+          <div className=" space-y-2 p-2 text-4xl leading-12 lg:text-heading sm:text-3xl md:text-4xl md:leading-[1] lg:leading-[1.2] w-full">
+            <span className="  font-normal  lg:w-[900px]">{heading}</span>
             <span
               className={`pl-2   ${colorClasses[color] || "text-yellow-100"} `}
             >
@@ -120,7 +120,7 @@ function CampaignArea({
 
           <BlueButton
             children="Book a Demo"
-            className="text-sm md:text-base font-bold md:w-[153px] h-10 md:h-[37px] hover:bg-yellow-100 hover:text-black w-[120px] self-center md:self-start md:ml-4"
+            className="text-sm md:text-base font-bold md:w-[153px] h-10 md:h-[37px] hover:bg-yellow-100 hover:text-black w-[120px] self-center md:self-start md:ml-4 rounded-sm"
           />
         </div>
 
@@ -136,7 +136,7 @@ function CampaignArea({
       </div>
 
       {/* Marquee Section */}
-      <div className="w-full overflow-hidden py-6">
+      <div className="w-full overflow-hidden my-12">
         <Marquee speed={50} className="flex items-center">
           {images.map((item, index) => (
             <div key={index} className="px-4 flex items-center justify-center">
@@ -152,11 +152,12 @@ function CampaignArea({
 
       {/* Cards Section */}
       <div className="w-full flex flex-col items-center pt-10 md:pt-[60px]">
-        <div className="text-4xl md:text-heading text-center flex flex-col mb-10 md:leading-[1]">
-          <span>{cardheading1}</span>
-          <span>{cardheading2}</span>
+        <div className="px-6 text-4xl md:text-heading text-center flex flex-col mb-10 md:leading-[1] lg:w-[60%]">
+          <span>
+            {cardheading1} {cardheading2}
+          </span>
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-between gap-10 w-full px-2 md:px-0">
+        <div className="flex flex-col md:flex-row items-start justify-around gap-10 w-full px-2 md:px-12 mt-2">
           {cards.map((item, index) => (
             <div
               key={index}
@@ -170,7 +171,7 @@ function CampaignArea({
                 />
               </div>
 
-              <span className="text-2xl md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap">
+              <span className="text-2xl md:text-subheading text-left font-bold flex flex-col gap-1 whitespace-nowrap leading-6">
                 {item.title}
                 <div className="flex gap-2 items-center justify-start font-bold ">
                   <span>{item.subtitle}</span>
@@ -178,7 +179,7 @@ function CampaignArea({
                 </div>
               </span>
 
-              <span className="text-base font-normal text-justify text-gray-400">
+              <span className="text-base font-normal text-justify text-gray-400 leading-5">
                 {item.subheading}
               </span>
             </div>

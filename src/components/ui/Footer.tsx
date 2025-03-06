@@ -9,12 +9,12 @@ const Footer = () => {
   const platform = {
     heading: "PLATFORM",
     navs: [
-      { text: "Text 1", link: "" },
-      { text: "Text 2", link: "" },
-      { text: "Text 3", link: "" },
-      { text: "Text 4", link: "" },
-      { text: "Text 5", link: "" },
-      { text: "Text 6", link: "" },
+      { text: "Social Media Audit", link: "" },
+      { text: "Designera Learning", link: "" },
+      // { text: "Text 3", link: "" },
+      // { text: "Text 4", link: "" },
+      // { text: "Text 5", link: "" },
+      // { text: "Text 6", link: "" },
     ],
   };
 
@@ -29,13 +29,18 @@ const Footer = () => {
             <h3 className="font-bold text-yellow-200 mb-4">PLATFORM</h3>
             <ul className="space-y-2">
               {platform.navs.map((nav, index) => (
-                <li key={index} className="hover:text-yellow-200 transition-colors">
+                <li
+                  key={index}
+                  className="hover:text-yellow-200 transition-colors"
+                >
                   <Link href={nav.link}>{nav.text}</Link>
                 </li>
               ))}
             </ul>
             <div className="mt-6">
-              <h3 className="font-bold text-yellow-200 mb-4">YET TO BE DECIDED</h3>
+              <h3 className="font-bold text-yellow-200 mb-4">
+                YET TO BE DECIDED
+              </h3>
               <ul className="space-y-2">
                 <li>Text 1</li>
                 <li>Text 2</li>
@@ -48,11 +53,21 @@ const Footer = () => {
             <h3 className="font-bold text-yellow-200 mb-4">BRAND SERVICES</h3>
             <ul className="space-y-2">
               {[
-                "Content Writing", "Graphic Design", "Video Production", 
-                "Localization", "Product Design", "Packaging Design", 
-                "UI-UX Design", "Launch a Brand"
+                "Content Writing",
+                "Graphic Design",
+                "Video Production",
+                "Localization",
+                "Product Design",
+                "Packaging Design",
+                "UI-UX Design",
+                "Launch a Brand",
               ].map((service, index) => (
-                <li key={index} className="hover:text-yellow-200 transition-colors">{service}</li>
+                <li
+                  key={index}
+                  className="hover:text-yellow-200 transition-colors"
+                >
+                  {service}
+                </li>
               ))}
             </ul>
           </div>
@@ -62,11 +77,22 @@ const Footer = () => {
             <h3 className="font-bold text-yellow-200 mb-4">MARTECH SERVICES</h3>
             <ul className="space-y-2">
               {[
-                "Custom Web Development", "Performance Marketing", "Lead-Gen Funnel", 
-                "Technical SEO", "Market Research & Survey", "Social Media Marketing", 
-                "LinkedIn Marketing", "WhatsApp/Email Marketing", "CRM"
+                "Custom Web Development",
+                "Performance Marketing",
+                "Lead-Gen Funnel",
+                "Technical SEO",
+                "Market Research & Survey",
+                "Social Media Marketing",
+                "LinkedIn Marketing",
+                "WhatsApp/Email Marketing",
+                "CRM",
               ].map((service, index) => (
-                <li key={index} className="hover:text-yellow-200 transition-colors">{service}</li>
+                <li
+                  key={index}
+                  className="hover:text-yellow-200 transition-colors"
+                >
+                  {service}
+                </li>
               ))}
             </ul>
           </div>
@@ -77,20 +103,34 @@ const Footer = () => {
               <h3 className="font-bold text-yellow-200 mb-4">MEDIA SERVICES</h3>
               <ul className="space-y-2">
                 {[
-                  "Affluence Marketing", "Influencer Marketing", "Event Marketing"
+                  "Affluence Marketing",
+                  "Influencer Marketing",
+                  "Event Marketing",
                 ].map((service, index) => (
-                  <li key={index} className="hover:text-yellow-200 transition-colors">{service}</li>
+                  <li
+                    key={index}
+                    className="hover:text-yellow-200 transition-colors"
+                  >
+                    {service}
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="mt-6">
-              <h3 className="font-bold text-yellow-200 mb-4">TALENT NETWORK SERVICES</h3>
+              <h3 className="font-bold text-yellow-200 mb-4">
+                TALENT NETWORK SERVICES
+              </h3>
               <ul className="space-y-2">
-                {[
-                  "Get Hired", "Get Talent", "Evaluate Creative Talent"
-                ].map((service, index) => (
-                  <li key={index} className="hover:text-yellow-200 transition-colors">{service}</li>
-                ))}
+                {["Get Hired", "Get Talent", "Evaluate Creative Talent"].map(
+                  (service, index) => (
+                    <li
+                      key={index}
+                      className="hover:text-yellow-200 transition-colors"
+                    >
+                      {service}
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
@@ -100,10 +140,21 @@ const Footer = () => {
             <h3 className="font-bold text-yellow-200 mb-4">RESOURCES</h3>
             <ul className="space-y-2">
               {[
-                "Blogs", "Our Work", "Community", "E-books", 
-                "Events", "Creators Hub", "Global CMO's", "Help Center"
+                "Blogs",
+                "Our Work",
+                "Community",
+                "E-books",
+                "Events",
+                "Creators Hub",
+                "Global CMO's",
+                "Help Center",
               ].map((resource, index) => (
-                <li key={index} className="hover:text-yellow-200 transition-colors">{resource}</li>
+                <li
+                  key={index}
+                  className="hover:text-yellow-200 transition-colors"
+                >
+                  {resource}
+                </li>
               ))}
             </ul>
           </div>
@@ -115,8 +166,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-yellow-200 mb-4">COMPANY</h3>
             <ul className="space-y-2">
-              <li className="hover:text-yellow-200 transition-colors">About Us</li>
-              <li className="hover:text-yellow-200 transition-colors">Careers</li>
+              <li className="hover:text-yellow-200 transition-colors">
+                About Us
+              </li>
+              <li className="hover:text-yellow-200 transition-colors">
+                Careers
+              </li>
               <li className="py-2">
                 <span className="bg-background-blue-100 rounded-sm text-white px-3 py-2 hover:bg-opacity-90 transition-colors">
                   Join Team
@@ -129,7 +184,20 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-yellow-200 mb-4">ADDRESS</h3>
             <ul className="space-y-2">
-              <li>Address</li>
+              <li>
+                <p className="my-4">
+                  C 5 A Block - 24, Ground Floor, Janakpuri, New Delhi - 110058
+                </p>
+                <p className="my-4">
+                  {" "}
+                  14, Banshal Treashar,18, RamKrishna, Khanndwa, Madhya Pradesh
+                  - 450001
+                </p>{" "}
+                <p className="my-4">
+                  1901, DB Ozone, Ketkipada, Dahisar East, Mumbai, Maharashtra -
+                  400068
+                </p>
+              </li>
             </ul>
           </div>
 
@@ -138,10 +206,10 @@ const Footer = () => {
             <h3 className="font-bold text-yellow-200 mb-4">GET IN TOUCH</h3>
             <div className="space-y-2">
               <p>Please connect with us at</p>
-              <p className="font-semibold">+91-XXXXXXXXXX</p>
+              <p className="font-semibold mb-8">+91-XXXXXXXXXX</p>
               <p>or Write us at</p>
-              <Link 
-                href="mailto:designera@gmail.com" 
+              <Link
+                href="mailto:designera@gmail.com"
                 className="text-background-blue-100 hover:underline"
               >
                 designera@gmail.com
@@ -153,7 +221,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-yellow-200 mb-4">SOCIAL</h3>
             <div className="flex flex-row ">
-              <div className="flex space-x-4">
+              <div className="grid md:grid-cols-2 gap-4 grid-cols-4">
                 <Link href="#" className="hover:opacity-80 transition-opacity">
                   <Image src={facebook} alt="Facebook" width={24} height={24} />
                 </Link>
@@ -172,14 +240,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center py-6 text-light-violet-text">
-          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-center sm:text-left mb-4 sm:mb-0">
+        <div className="flex flex-col sm:flex-row justify-between  py-6 text-light-violet-text">
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm  sm:text-left mb-4 sm:mb-0">
             <span>© 2024, Designera Inc. All Rights Reserved</span>
             <span>Terms of service</span>
             <span>Privacy Policy</span>
             <span>Sitemap</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex">
             <span>A Proud&nbsp;</span>
             <Image src={india} alt="India flag" width={30} height={30} />
             <span>&nbsp;Design Agency</span>

@@ -33,24 +33,24 @@ function Faq() {
     },
   ];
 
-  const toggleAccordion = (index:any) => {
+  const toggleAccordion = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="w-full bg-white px-4 sm:px-6 md:px-12 lg:px-[125px] py-8 sm:py-12 md:py-[60px]">
+    <div className="w-full bg-white px-8 sm:px-6 md:px-12 lg:px-[125px] py-8 sm:py-12 md:py-[60px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 md:mb-[30px]">
           Resolve your Doubts here
         </h2>
-        
+
         <div className="space-y-4 sm:space-y-6 md:space-y-[30px]">
           {content.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="border-b border-gray-200 pb-4 sm:pb-6 md:pb-[30px]"
             >
-              <div 
+              <div
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleAccordion(index)}
               >
@@ -58,25 +58,26 @@ function Faq() {
                   <span className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-600 flex-shrink-0">
                     {index + 1}.
                   </span>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 truncate">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800">
                     {item.heading}
                   </h3>
                 </div>
-                
-                <div 
+
+                <div
                   className={`
                     flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 md:w-[45px] md:h-[45px] 
                     rounded-full flex items-center justify-center 
                     transition-all duration-800
-                    ${openIndex === index 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-blue-100 text-blue-600 hover:bg-blue-200 border-blue-600 border-[1.3px]'
+                    ${
+                      openIndex === index
+                        ? "bg-blue-900 text-white"
+                        : "bg-blue-100 text-blue-900 hover:bg-blue-200 border-blue-900 border-[1.3px]"
                     }`}
                 >
                   {openIndex !== index ? <FiPlus /> : <RxCross2 />}
                 </div>
               </div>
-              
+
               {openIndex === index && (
                 <div className="mt-4 sm:mt-6 md:mt-[30px] pl-0 sm:pl-10 md:pl-[50px]">
                   <p className="text-sm sm:text-base md:text-lg text-gray-600">
