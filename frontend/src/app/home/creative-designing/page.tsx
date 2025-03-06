@@ -78,10 +78,6 @@ const page = () => {
       {/* <Clients /> */}
       <Hiring />
       <Bestforyou/>
-<<<<<<< Updated upstream
-      {/* <Bestforyou/> */}
-=======
->>>>>>> Stashed changes
       <MileStones />
       <Faq />
       <Service />

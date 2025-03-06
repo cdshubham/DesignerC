@@ -2,8 +2,8 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 function Portfolio() {
   return (
-    <div className="w-full px-5 py-14 md:px-[125px] items-center justify-center  md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col font-normal bg-background-blue-100">
-      <div className="w-full flex gap-8 md:gap-0 md:flex-row flex-col justify-between  items-center ">
+    <div className="w-full md:px-[125px] px-[40px] items-center justify-center py-[40px] md:py-[60px] text-body/[20.7px] gap-[30px] flex flex-col font-normal bg-background-blue-100">
+      <div className="w-full flex md:flex-row flex-col gap-[30px] justify-between  items-center ">
         <div className="flex flex-col  gap-[30px]">
           <img
             src="/logos/zepto.png"
@@ -20,7 +20,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="w-[300px]  md:w-[812px] p-[30px] bg-white flex flex-col gap-[30px] rounded-cardradius ">
-          <span className="text-[18px]/[20.7px] md:text-body">
+          <span className="text-body">
             Zepto has partnered with Designera to enhance our brand’s visual
             identity through expert graphic design. This collaboration drives
             revenue growth by creating high-quality, engaging designs that
