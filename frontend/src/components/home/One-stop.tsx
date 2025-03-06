@@ -53,7 +53,7 @@ const Onestop = () => {
    return <section className="expertise md:py-[60px] py-[40px] md:px-[125px] px-[40px] flex flex-col gap-[30px] justify-center items-center w-full  ">
      <div className="flex flex-col gap-[30px] w-full">
        <div className="flex text-mediumheading">
-         A One-Stop Solution Crafted to Elevate Your Brand
+         A One-Stop Solution Crafted to Elevate Your Brandd
        </div>
        <div className="flex justify-between">
         {cardata.map((item, index) => (
