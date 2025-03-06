@@ -27,11 +27,10 @@ function HelpBussiness({heading,cardscontent}:props) {
 
     
   return (
-    <div className="flex flex-col  md:py-[60px] gap-5 bg-background-white-100 w-full  items-center justify-center py-9 ">
-      <div className=" w-full flex flex-col gap-[30px]">
-        <span className="text-[28px]/[32.2px] md:text-[43.88px]/[56px] font-normal md:px-[125px] text-center px-8  ">
+    <div className="flex flex-col py-[40px] md:py-[60px] gap-5   bg-background-white-100 w-full  items-center justify-center ">
+      <div className=" w-full flex flex-col gap-[30px] items-center">
+        <div className="text-start text-mobilesubheading/[32px] md:text-heading/[68.99px]   font-normal px-[30px]  lg:px-[125px] ">
           Let’s see how we can help your business
-          </span>
         </div>
         <Marquee speed={50}>
           {" "}
@@ -59,7 +58,7 @@ function HelpBussiness({heading,cardscontent}:props) {
           </div>
         </Marquee>
       </div>
-   
+    </div>
   );
 }
 
