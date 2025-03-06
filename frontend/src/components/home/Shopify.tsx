@@ -1,4 +1,4 @@
-import { FaArrowRight,FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import Image from "next/image";
 const Shopify = () => {
   return (
@@ -25,7 +25,8 @@ const Shopify = () => {
             />
           </div>
           <p className="text-subheading/[27px] md:text-start text-center">
-            "Designera makes it easy for Shopify's Growth team to get design done well and fast.
+            "Designera makes it easy for Shopify's Growth team to get design
+            done well and fast.
             <span className="font-semibold">
               {" "}
               Their platform is intuitive and enables speed.
@@ -40,7 +41,9 @@ const Shopify = () => {
               <h1 className="text-heading/[69px] text-background-blue-100">
                 250%
               </h1>
-              <p className="md:text-start text-center text-body">Increase in Click Rate</p>
+              <p className="md:text-start text-center text-body">
+                Increase in Click Rate
+              </p>
             </div>
             <div className="flex-col gap-[30px] md:items-start text-center">
               <h1 className="text-heading/[69px] text-background-blue-100">
@@ -53,7 +56,7 @@ const Shopify = () => {
           </div>
         </div>
         <div className="md:w-[10%] md:min-h-full flex flex-grow items-center justify-center md:justify-end gap-2">
-        <div className="w-[50px] h-[50px] border-[3px] cursor-pointer md:hidden    rounded-full flex items-center justify-center">
+          <div className="w-[50px] h-[50px] border-[3px] cursor-pointer md:hidden    rounded-full flex items-center justify-center">
             <FaArrowLeft size={30} />
           </div>
           <div className="w-[50px] h-[50px] border-[3px] cursor-pointer text-white bg-black rounded-full flex items-center justify-center">
@@ -63,6 +66,6 @@ const Shopify = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Shopify;

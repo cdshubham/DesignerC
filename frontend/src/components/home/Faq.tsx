@@ -31,7 +31,9 @@ function Faq() {
     },
   ];
 
-  const [accoridanstatus,setStatus] = useState<boolean[]>(content.map(()=>false));
+  const [accoridanstatus, setStatus] = useState<boolean[]>(
+    content.map(() => false)
+  );
   return (
     <div className="w-full bg-background-white-100 py-[40px] md:py-[60px] md:px-[125px] px-[40px] flex flex-col gap-[30px]">
       <span className="md:text-heading/[68.99%] text-mobilesubheading font-normal md:pb-[30px]">
@@ -72,7 +74,9 @@ function Faq() {
               </div>
               <span
                 className={`${
-                  (accoridanstatus[index] === true && item.sub!=="") ? "block" : "hidden"
+                  accoridanstatus[index] === true && item.sub !== ""
+                    ? "block"
+                    : "hidden"
                 } text-body/[27px] font-normal `}
               >
                 {item.sub}

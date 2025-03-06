@@ -20,10 +20,8 @@ import Shopify from "@/components/home/Shopify";
 import Bestforyou from "@/components/home/Bestforyou";
 import Onestop from "@/components/home/One-stop";
 
-
 const page = () => {
-
-      const data = {
+  const data = {
     heading: "Driving Sales and Capturing Attention Through",
     coloredHeading: "Creative Designing",
     color: "yellow-100",
@@ -64,27 +62,27 @@ const page = () => {
   };
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <CampaignArea {...data} />
       <HelpBussiness />
-      <Onestop/>
+      {/* <Onestop/> */}
 
       <DesignWillBenifitYou />
 
       <CaseStudy />
       <Expertise />
-      <Shopify/>
+      <Shopify />
       <Portfolio />
-      
+
       {/* <Clients /> */}
       <Hiring />
-      <Bestforyou/>
+      <Bestforyou />
       <MileStones />
       <Faq />
       <Service />
       <section></section>
     </div>
   );
-}
+};
 
 export default page;

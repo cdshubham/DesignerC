@@ -1,19 +1,15 @@
-
-const Card = ({content,main}:any)=>{
-    return (
-      <div className="md:w-[538px] border-b border-[#F7F9F226] md:border-0 py-[30px] grid grid-cols-[2fr_1fr]  items-center">
-        <div className="w-full h-full flex justify-center items-center">
-          <span className="text-body">{content}</span>
-        </div>
-        <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-[80px]/[91px]">
-          {main}
-        </div>
+const Card = ({ content, main }: any) => {
+  return (
+    <div className="md:w-[538px] border-b border-[#F7F9F226] md:border-0 py-[30px] grid grid-cols-[2fr_1fr]  items-center">
+      <div className="w-full h-full flex justify-center items-center">
+        <span className="text-body">{content}</span>
       </div>
-    );
-}
-
-
-
+      <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-[80px]/[91px]">
+        {main}
+      </div>
+    </div>
+  );
+};
 
 const Bestforyou = () => {
   return (
@@ -41,6 +37,6 @@ const Bestforyou = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Bestforyou;
