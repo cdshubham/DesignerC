@@ -1,39 +1,52 @@
-const Card = ({ content, main }: any) => {
+import React from "react";
+
+const Card = ({ content, main }: { content: string; main: string }) => {
   return (
-    <div className="md:w-[538px] border-b border-[#F7F9F226] md:border-0 py-[30px] grid grid-cols-[2fr_1fr]  items-center">
-      <div className="w-full h-full flex justify-center items-center">
-        <span className="text-body">{content}</span>
+    <div>
+      <div className="flex gap-2">
+        <div className="flex-grow flex items-center md:text-left lg:pr-6">
+          <span className="text-sm md:text-base">{content}</span>
+        </div>
+        <div className="flex items-center justify-center md:justify-end text-right min-w-[100px]">
+          <span className="text-4xl md:text-8xl font-bold">{main}</span>
+        </div>
       </div>
-      <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-[80px]/[91px]">
-        {main}
-      </div>
+      <div className="bg-gray-400 h-[0.5px] mt-4"></div>
     </div>
   );
 };
 
 const Bestforyou = () => {
+  const cardData = [
+    {
+      content: "Social media creative projects completed to date",
+      main: "20K+",
+    },
+    {
+      content: "Social media creative projects completed to date",
+      main: "190K+",
+    },
+    {
+      content: "Social media creative projects completed to date",
+      main: "30k+",
+    },
+    {
+      content: "Social media creative projects completed to date",
+      main: "4.8/5",
+    },
+  ];
+
   return (
-    <div className="w-full md:px-[125px] px-[40px] items-center justify-center md:py-[60px] py-[40px] text-body/[20.7px] gap-[30px] flex flex-col bg-[#7B23FD] text-white">
-      <h1 className="text-heading/[69px] text-center">
-        Designera is best for your business
-      </h1>
-      <div className="w-full flex md:flex-row flex-col flex-wrap justify-between md:gap-y-[30px]">
-        <Card
-          content="Social media creative projects completed to date"
-          main="20K+"
-        />{" "}
-        <Card
-          content="Social media creative projects completed to date"
-          main="1900+"
-        />{" "}
-        <Card
-          content="Social media creative projects completed to date"
-          main="30K+"
-        />{" "}
-        <Card
-          content="Social media creative projects completed to date"
-          main="4.8/5+"
-        />
+    <div className="w-full px-8 sm:px-8 md:px-[125px] py-10 md:py-[60px] bg-[#7B23FD] text-white">
+      <div className="container mx-auto">
+        <h1 className="text-5xl md:text-5xl mb-8 md:mb-12">
+          Designera is best for your business
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[30px]">
+          {cardData.map((card, index) => (
+            <Card key={index} content={card.content} main={card.main} />
+          ))}
+        </div>
       </div>
     </div>
   );
