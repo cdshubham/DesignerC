@@ -1,9 +1,9 @@
 
 const Card = ({content,main}:any)=>{
     return (
-      <div className="flex items-center gap-3 w-full">
-        <div className="flex justify-center items-center">
-          <span className="text-[18px]/[20.7px]">{content}</span>
+      <div className="md:w-[538px] border-b border-[#F7F9F226] md:border-0 py-[30px] grid grid-cols-[2fr_1fr]  items-center">
+        <div className="w-full h-full flex justify-center items-center">
+          <span className="text-body">{content}</span>
         </div>
         <div className="flex items-center justify-end text-end text-[48px]/[55.2px] md:text-[80px]/[91px]">
           {main}
@@ -17,26 +17,26 @@ const Card = ({content,main}:any)=>{
 
 const Bestforyou = () => {
   return (
-    <div className="w-full p-8 md:px-[125px] items-center justify-center md:py-[60px] text-body/[20.7px] gap-[50px] flex flex-col bg-[#7B23FD] text-white">
-      <h1 className="text-[48px]/[55.2px] md:text-heading/[69px] md:text-center">
+    <div className="w-full md:px-[125px] px-[40px] items-center justify-center md:py-[60px] py-[40px] text-body/[20.7px] gap-[30px] flex flex-col bg-[#7B23FD] text-white">
+      <h1 className="text-heading/[69px] text-center">
         Designera is best for your business
       </h1>
-      <div className="w-full flex flex-col gap-12 md:grid md:grid-cols-2 md:gap-[30px]">
+      <div className="w-full flex md:flex-row flex-col flex-wrap justify-between md:gap-y-[30px]">
         <Card
           content="Social media creative projects completed to date"
           main="20K+"
         />{" "}
         <Card
           content="Social media creative projects completed to date"
-          main="20K+"
+          main="1900+"
         />{" "}
         <Card
           content="Social media creative projects completed to date"
-          main="20K+"
+          main="30K+"
         />{" "}
         <Card
           content="Social media creative projects completed to date"
-          main="20K+"
+          main="4.8/5+"
         />
       </div>
     </div>

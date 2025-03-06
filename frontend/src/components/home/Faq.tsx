@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { FiPlus } from "react-icons/fi";
@@ -31,50 +31,52 @@ function Faq() {
     },
   ];
 
-  // State to track which items are open
-  const [openIndex, setOpenIndex] = useState(null);
-
-  // Toggle function to show/hide content
-  const handleToggle = (index:any) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
-
+  const [accoridanstatus,setStatus] = useState<boolean[]>(content.map(()=>false));
   return (
-    <div className="w-full bg-background-white-100 py-[60px] px-[30px] md:px-[125px] flex flex-col gap-[30px]">
-      <span className="text-[28px]/[32px] md:text-heading/[68.99%] font-normal md:pt-[30px]">
+    <div className="w-full bg-background-white-100 py-[40px] md:py-[60px] md:px-[125px] px-[40px] flex flex-col gap-[30px]">
+      <span className="md:text-heading/[68.99%] text-mobilesubheading font-normal md:pb-[30px]">
         Resolve your Doubts here.
       </span>
-
-      <ol className="flex flex-col w-full">
+      <ol className="flex flex-col gap-[30px]  w-full">
         {content.map((item, index) => (
-          <li key={index} className="flex md:gap-[30px] gap-[10px] w-full py-[30px]">
-            <span className="text-[16px] md:text-subheading/[28px] font-semibold">
+          <li className="flex gap-[30px] w-full ">
+            <span className="text-subheading/[28px] font-semibold">
               {index + 1}.
             </span>
-
-            <div className="flex flex-col w-full text-[16px]/[18.4px] md:text-subheading/[27.6px] font-bold gap-[20px]">
-              {/* Question Header */}
+            <div className="flex flex-col w-full text-subheading/[27.6px] font-bold md:gap-[20px]">
               <div className="flex justify-between w-full">
-                <span className="md:w-full w-[70%]">{item.heading}</span>
-
-                <div
-                  className={`md:w-[45px] md:h-[45px] w-[30px] h-[30px] rounded-full cursor-pointer flex items-center justify-center ${
-                    openIndex === index
-                      ? "bg-background-blue-100 text-white"
-                      : "border border-background-blue-100 text-background-blue-100"
-                  }`}
-                  onClick={() => handleToggle(index)}
-                >
-                  {openIndex === index ? <RxCross2 /> : <FiPlus />}
-                </div>
+                <span>{item.heading}</span>
+                {accoridanstatus[index] ? (
+                  <div
+                    className="w-[45px] h-[45px] rounded-full cursor-pointer bg-background-blue-100 flex text-white items-center justify-center"
+                    onClick={() => {
+                      const newstatus = [...accoridanstatus];
+                      newstatus[index] = !newstatus[index];
+                      setStatus(newstatus);
+                    }}
+                  >
+                    <RxCross2 />
+                  </div>
+                ) : (
+                  <div
+                    className="w-[45px] h-[45px] rounded-full text-background-blue-100 cursor-pointer flex border border-background-blue-100 items-center justify-center"
+                    onClick={() => {
+                      const newstatus = [...accoridanstatus];
+                      newstatus[index] = !newstatus[index];
+                      setStatus(newstatus);
+                    }}
+                  >
+                    <FiPlus />
+                  </div>
+                )}
               </div>
-
-              {/* Conditionally Rendered Content */}
-              {openIndex === index && (
-                <span className="text-[14px]/[16px] md:text-body/[27px] font-normal">
-                  {item.sub}
-                </span>
-              )}
+              <span
+                className={`${
+                  (accoridanstatus[index] === true && item.sub!=="") ? "block" : "hidden"
+                } text-body/[27px] font-normal `}
+              >
+                {item.sub}
+              </span>
             </div>
           </li>
         ))}
