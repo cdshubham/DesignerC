@@ -18,6 +18,7 @@ import Navbar from "@/components/ui/navbar";
 import Expertise from "@/components/home/Expertise";
 import Shopify from "@/components/home/Shopify";
 import Bestforyou from "@/components/home/Bestforyou";
+import Onestop from "@/components/home/One-stop";
 
 
 const page = () => {
@@ -66,7 +67,7 @@ const page = () => {
     <div className="w-full ">
       <CampaignArea {...data} />
       <HelpBussiness />
-    
+      <Onestop/>
 
       <DesignWillBenifitYou />
 
@@ -74,7 +75,7 @@ const page = () => {
       <Expertise />
       <Shopify/>
       <Portfolio />
-    
+      
       {/* <Clients /> */}
       <Hiring />
       <Bestforyou/>
